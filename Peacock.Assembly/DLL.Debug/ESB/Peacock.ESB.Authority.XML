@@ -1,0 +1,3915 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Peacock.ESB.Authority</name>
+    </assembly>
+    <members>
+        <member name="T:Peacock.ESB.Service.UserRoleService">
+            <summary>
+            权限服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:23:22</para>
+            </remarks>
+        </member>
+        <member name="T:Peacock.ESB.IService.IUserRoleService">
+            <summary>
+            用户角色服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:21:14</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IService.IUserRoleService.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserRoleService.GetObjectList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象列表
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserRoleService.GetObjectCount(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象数量
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserRoleService.GetObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            	2 [可选]是否获取子对象。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserRoleService.GetObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号获取对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 id: 对象的TID
+            	2 [可选]是否获取子对象。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserRoleService.AddObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            添加对象
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 DTO: 已序列化为XML的DTO对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserRoleService.UpdateObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 DTO: 已序列化为XML的DTO对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserRoleService.DeleteObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号删除对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 id: 要删除对象的ID.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserRoleService.DeleteObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserRoleService.Exists(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserRoleService.#ctor">
+            <summary>
+            权限服务。
+            </summary>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserRoleService.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.Service.UserGroupService">
+            <summary>
+            权限服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:23:22</para>
+            </remarks>
+        </member>
+        <member name="T:Peacock.ESB.IService.IUserGroupService">
+            <summary>
+            用户组服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:21:14</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IService.IUserGroupService.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserGroupService.GetObjectList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象列表
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserGroupService.GetObjectCount(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象数量
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserGroupService.GetObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            	2 [可选]是否获取子对象。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserGroupService.GetObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号获取对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 id: 对象的TID
+            	2 [可选]是否获取子对象。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserGroupService.AddObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            添加对象
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 DTO: 已序列化为XML的DTO对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserGroupService.UpdateObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 DTO: 已序列化为XML的DTO对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserGroupService.DeleteObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号删除对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 id: 要删除对象的ID.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserGroupService.DeleteObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserGroupService.Exists(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserGroupService.#ctor">
+            <summary>
+            权限服务。
+            </summary>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserGroupService.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.IService.IValidateCodeService">
+            <summary>
+            系统界面服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/9/12 11:50:36</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IService.IValidateCodeService.GetValidateImage(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取验证图像。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 len: 验证图像长度。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.Model.Entity.UserBaseInfo">
+            <summary>
+            用户基础信息
+            </summary>
+            <remarks>
+                <para>    Creator：FRANK-E420</para>
+                <para>CreatedTime：2012-6-21 10:56:15</para>
+            </remarks>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.UserBaseInfo.User">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.UserBaseInfo.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.DTO.RegionPowerDTO">
+            <summary>
+            范围权限表
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2013/03/08 10:50:37</para>
+            </remarks>
+        </member>
+        <member name="P:Peacock.ESB.DTO.RegionPowerDTO.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.RegionPowerDTO.RoleId">
+            <summary>
+            用户角色ID
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.RegionPowerDTO.GroupId">
+            <summary>
+            用户组ID
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.RegionPowerDTO.PackageId">
+            <summary>
+            权限包id
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.RegionPowerDTO.PackageCode">
+            <summary>
+            权限包代码
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.RegionPowerDTO.RegionId">
+            <summary>
+            范围权限idid
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.RegionPowerDTO.RegionCode">
+            <summary>
+            范围权限码
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Helper.CodeType">
+            <summary>
+            验证码类型
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Helper.CodeType.Number">
+            <summary>
+            纯数字
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Helper.CodeType.Alphabet">
+            <summary>
+            纯字母
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Helper.CodeType.NumberAlphabet">
+            <summary>
+            数字与字母组合
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Helper.CodeType.Chinese">
+            <summary>
+            纯汉字
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Helper.ValidateCode">
+            <summary>
+            验证码生成类
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/9/25 11:59:08</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Helper.ValidateCode.GetRandomString(System.Int32,Peacock.ESB.Helper.CodeType)">
+            <summary>
+            获取随机字符串
+            </summary>
+            <param name="codeLen"></param>
+            <param name="codeType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Helper.ValidateCode.GetRandomColor">
+            <summary>
+            获取随机颜色
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Helper.ValidateCode.CreateImage(System.Int32,Peacock.ESB.Helper.CodeType)">
+            <summary>
+            创建图像
+            </summary>
+            <param name="codeLen"></param>
+            <param name="codeType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Helper.ValidateCode.CreateImage(System.String)">
+            <summary>
+            创建图像
+            </summary>
+            <param name="validateCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Helper.ValidateCode.Validate(System.String,System.Boolean)">
+            <summary>
+            验证
+            </summary>
+            <param name="input"></param>
+            <param name="dx"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Peacock.ESB.Helper.ValidateCode.Instance">
+            <summary>
+            实例
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Service.WSServiceCorrespond">
+            <summary>
+            参数对照相关
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012-8-23 15:03:03</para>
+            </remarks>
+        </member>
+        <member name="T:Peacock.ESB.Service.AuthorityWSServiceBase">
+            <summary>
+            WSServiceBase
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2013/3/8 11:20:29</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Service.AuthorityWSServiceBase.GetObjectList``1(GHSoft.Event.IEvent)">
+            <summary>
+            获取对象列表
+            </summary>
+            <param name="eventObj">事件参数对象。</param>
+        </member>
+        <member name="M:Peacock.ESB.Service.AuthorityWSServiceBase.GetObjectCount``1(GHSoft.Event.IEvent)">
+            <summary>
+            获取对象数量
+            </summary>
+            <param name="eventObj">事件参数对象。</param>
+        </member>
+        <member name="M:Peacock.ESB.Service.AuthorityWSServiceBase.GetObject``1(GHSoft.Event.IEvent)">
+            <summary>
+            获取对象信息
+            </summary>
+            <param name="eventObj">事件参数对象。</param>
+        </member>
+        <member name="M:Peacock.ESB.Service.AuthorityWSServiceBase.GetObjectById``1(GHSoft.Event.IEvent)">
+            <summary>
+            按照编号获取对象信息
+            </summary>
+            <param name="eventObj">事件参数对象。</param>
+        </member>
+        <member name="M:Peacock.ESB.Service.AuthorityWSServiceBase.AddObject``1(GHSoft.Event.IEvent)">
+            <summary>
+            添加对象
+            </summary>
+            <param name="eventObj">事件参数对象。</param>
+        </member>
+        <member name="M:Peacock.ESB.Service.AuthorityWSServiceBase.UpdateObject``1(GHSoft.Event.IEvent)">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="eventObj">事件参数对象。</param>
+        </member>
+        <member name="M:Peacock.ESB.Service.AuthorityWSServiceBase.DeleteObjectById``1(GHSoft.Event.IEvent)">
+            <summary>
+            按照编号删除对象信息
+            </summary>
+            <param name="eventObj">事件参数对象。</param>
+        </member>
+        <member name="M:Peacock.ESB.Service.AuthorityWSServiceBase.DeleteObject``1(GHSoft.Event.IEvent)">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="eventObj">事件参数对象。</param>
+        </member>
+        <member name="M:Peacock.ESB.Service.AuthorityWSServiceBase.Exists``1(GHSoft.Event.IEvent)">
+            <summary>
+            检测对象是否存在
+            </summary>
+            <param name="eventObj">事件参数对象。</param>
+        </member>
+        <member name="P:Peacock.ESB.Service.AuthorityWSServiceBase.ResultCache">
+            <summary>
+            结果缓存
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.WSServiceCorrespond.m_instance">
+            <summary>
+            唯一实例
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Service.WSServiceCorrespond.Instance">
+            <summary>
+            获取 <see cref="T:Peacock.ESB.Service.WSServiceCorrespond"/> 对象的唯一实例。
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Service.PowerPackageService">
+            <summary>
+            权限服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:23:22</para>
+            </remarks>
+        </member>
+        <member name="T:Peacock.ESB.IService.IPowerPackageService">
+            <summary>
+            权限服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:21:14</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IService.IPowerPackageService.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IService.IPowerPackageService.ExistsTitle(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同标题对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象标题。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IService.IPowerPackageService.GetItemList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取子权限列表
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerPackageService.GetObjectList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取权限列表
+            </summary>
+            <param name="dtoInput">
+            输入的DTO权限。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction权限.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerPackageService.GetObjectCount(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取权限数量
+            </summary>
+            <param name="dtoInput">
+            输入的DTO权限。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction权限.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerPackageService.GetObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取权限信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO权限。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction权限.
+            	2 [可选]是否获取子权限。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerPackageService.GetObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号获取权限信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO权限。
+            参数:
+            	1 id: 权限的TID
+            	2 [可选]是否获取子权限。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerPackageService.AddObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            添加权限
+            </summary>
+            <param name="dtoInput">
+            输入的DTO权限。
+            参数:
+            	1 DTO: 已序列化为XML的DTO权限.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerPackageService.UpdateObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            修改权限信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO权限。
+            参数:
+            	1 DTO: 已序列化为XML的DTO权限.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerPackageService.DeleteObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号删除权限信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO权限。
+            参数:
+            	1 id: 要删除权限的ID.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerPackageService.DeleteObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            删除权限信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO权限。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction权限.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerPackageService.Exists(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测权限是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO权限。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction权限.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerPackageService.#ctor">
+            <summary>
+            权限服务。
+            </summary>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerPackageService.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerPackageService.ExistsTitle(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同标题对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象标题。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerPackageService.GetItemList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取子权限列表
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.Service.UserService">
+            <summary>
+            权限服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:23:22</para>
+            </remarks>
+        </member>
+        <member name="T:Peacock.ESB.IService.IUserService">
+            <summary>
+            用户服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:21:14</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IService.IUserService.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IService.IUserService.Login(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            登陆系统
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 用户名称。
+            	2 passwrod：登陆密码
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IService.IUserService.GetCurrentUser(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取当前登陆用户
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserService.GetObjectList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象列表
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserService.GetObjectCount(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象数量
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserService.GetObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            	2 [可选]是否获取子对象。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserService.GetObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号获取对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 id: 对象的TID
+            	2 [可选]是否获取子对象。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserService.AddObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            添加对象
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 DTO: 已序列化为XML的DTO对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserService.UpdateObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 DTO: 已序列化为XML的DTO对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserService.DeleteObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号删除对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 id: 要删除对象的ID.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserService.DeleteObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserService.Exists(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserService.#ctor">
+            <summary>
+            权限服务。
+            </summary>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserService.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserService.Login(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            登陆系统
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 用户名称。
+            	2 passwrod：登陆密码
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.UserService.GetCurrentUser(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取当前登陆用户
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.Model.Entity.GHCorrespond">
+            <summary>
+            参数对照表
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/11/30 15:31:37</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Model.Entity.GHCorrespond.ConvertToDTO``1(System.Boolean)">
+            <summary>
+            将当前对象转换为DTO对象。
+            </summary>
+            <typeparam name="T">DTO对象的类型。</typeparam>
+            <param name="isInitRelationData">是否把关联的属性列表一并加载出来，默认不加载</param>
+            <returns>转换结果对象。</returns>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.GHCorrespond.PowerCode">
+            <summary>
+            权限码
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.GHCorrespond.ObjectName">
+            <summary>
+            对象名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.GHCorrespond.PropertyName">
+            <summary>
+            属性名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.GHCorrespond.Parameter">
+            <summary>
+            参数ID
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Service.WSServicePackage">
+            <summary>
+            权限模块相关
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012-8-23 15:03:03</para>
+            </remarks>
+        </member>
+        <member name="F:Peacock.ESB.Service.WSServicePackage.m_instance">
+            <summary>
+            唯一实例
+            </summary>
+        </member>
+        <member name="M:Peacock.ESB.Service.WSServicePackage.ExistsName(GHSoft.Event.IEvent)">
+            <summary>
+            按照名称检测对象是否存在
+            </summary>
+            <param name="eventObj">事件参数对象。</param>
+        </member>
+        <member name="M:Peacock.ESB.Service.WSServicePackage.ExistsTitle(GHSoft.Event.IEvent)">
+            <summary>
+            检测同标题对象是否存在
+            </summary>
+            <param name="eventObj">事件参数对象。</param>
+        </member>
+        <member name="P:Peacock.ESB.Service.WSServicePackage.Instance">
+            <summary>
+            获取 <see cref="T:Peacock.ESB.Service.WSServicePackage"/> 对象的唯一实例。
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.DTO.PowerPackageDTO">
+            <summary>
+            权限包DTO
+            </summary>
+            <remarks>
+                <para>    Creator：helang</para>
+                <para>CreatedTime：2012-7-3 18:11:44</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.DTO.PowerPackageDTO.#ctor">
+            <summary>
+            角色DTO
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PowerPackageDTO.Name">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PowerPackageDTO.Title">
+            <summary>
+            权限包标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PowerPackageDTO.Code">
+            <summary>
+            权限包代码
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PowerPackageDTO.PowerCodes">
+            <summary>
+            包含的权限列表
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PowerPackageDTO.ItemCodes">
+            <summary>
+            包含的范围权限列表
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Helper.CurrentUser">
+            <summary>
+            CurrentUser
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/11/13 17:33:22</para>
+            </remarks>
+        </member>
+        <member name="P:Peacock.ESB.Helper.CurrentUser.Instance">
+            <summary>
+            获取当前用户实例
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Service.ValidateCodeService">
+            <summary>
+            系统界面服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/9/12 11:50:36</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Service.ValidateCodeService.GetValidateImage(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取验证图像。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 len: 验证图像长度。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.IService.ICorrespondService">
+            <summary>
+            系统参数服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:21:14</para>
+            </remarks>
+        </member>
+        <member name="T:Peacock.ESB.IBLL.ICorrespondBLL">
+            <summary>
+            参数对照操作逻辑接口
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/22 11:50:36</para>
+            </remarks>
+        </member>
+        <member name="T:Peacock.ESB.Model.Entity.PowerItem">
+            <summary>
+            权限
+            </summary>
+            <remarks>
+                <para>    Creator：FRANK-E420</para>
+                <para>CreatedTime：2012-6-21 11:08:27</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Model.Entity.PowerItem.ConvertToDTO``1(System.Boolean)">
+            <summary>
+            将当前对象转换为DTO对象。
+            </summary>
+            <typeparam name="T">DTO对象的类型。</typeparam>
+            <param name="isInitRelationData">是否把关联的属性列表一并加载出来，默认不加载</param>
+            <returns>转换结果对象。</returns>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PowerItem.SystemId">
+            <summary>
+            系统编号
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PowerItem.SystemTitle">
+            <summary>
+            系统标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PowerItem.Name">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PowerItem.Title">
+            <summary>
+            权限标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PowerItem.TargetName">
+            <summary>
+            权限目标名称
+            如, 后台Services层方法名
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PowerItem.TargetCode">
+            <summary>
+            权限目标代码
+            如, 系统ID；组件ID等
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PowerItem.Code">
+            <summary>
+            权限代码
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PowerItem.Parent">
+            <summary>
+            父级权限
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PowerItem.Children">
+            <summary>
+            子类信息，延时加载
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Model.Entity.UserRole">
+            <summary>
+            角色
+            </summary>
+            <remarks>
+                <para>    Creator：FRANK-E420</para>
+                <para>CreatedTime：2012-6-21 11:10:27</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Model.Entity.UserRole.ConvertToDTO``1(System.Boolean)">
+            <summary>
+            将当前对象转换为DTO对象。
+            </summary>
+            <typeparam name="T">DTO对象的类型。</typeparam>
+            <param name="isInitRelationData">是否把关联的属性列表一并加载出来，默认不加载</param>
+            <returns>转换结果对象。</returns>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.UserRole.RoleName">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.UserRole.PowerCodes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.UserRole.ItemCodes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.BLL.UserBLL">
+            <summary>
+            用户操作逻辑实现
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 12:03:05</para>
+            </remarks>
+        </member>
+        <member name="T:Peacock.ESB.IBLL.IUserBLL">
+            <summary>
+            用户操作逻辑接口。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/24 15:03:56</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IUserBLL.ExistsName(System.String)">
+            <summary>
+            检测同名控件是否存在
+            </summary>
+            <param name="name">控件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IUserBLL.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名控件是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 控件名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IUserBLL.Login(System.String,System.String,System.Boolean)">
+            <summary>
+            用户系统
+            </summary>
+            <param name="name">用户名称</param>
+            <param name="password">用户密码</param>
+            <param name="isEncryption">用户的密码是否已经进行MD5加密</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IUserBLL.GetUserByName(System.String)">
+            <summary>
+            通过用户名获取用户信息
+            </summary>
+            <param name="name">用户名</param>
+            <returns></returns>
+            Add By Frank@2013-3-26
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IUserBLL.Login(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            登陆系统
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 用户名称。
+            	2 passwrod：登陆密码
+            	3 code：验证码
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IUserBLL.GetCurrentUser(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取当前登陆用户。
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.UserBLL.AddObject(GHSoft.DTO.UserDTO)">
+            <summary>
+            添加对象。
+            </summary>
+            <param name="data">DTO对象。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.UserBLL.UpdateObject(GHSoft.DTO.UserDTO)">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.UserBLL.DeleteObject(GHSoft.Model.GHR,System.Boolean)">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="restriction">条件对象。</param>
+            <param name="delChild">是否删除子项内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.UserBLL.ExistsName(System.String)">
+            <summary>
+            检测同名组件是否存在
+            </summary>
+            <param name="name">组件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.UserBLL.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名组件是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 组件名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.UserBLL.Login(System.String,System.String,System.Boolean)">
+            <summary>
+            用户系统
+            </summary>
+            <param name="name">用户名称</param>
+            <param name="password">用户密码</param>
+            <param name="isEncryption">用户的密码是否已经进行MD5加密</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.UserBLL.GetOtherUserInfo(GHSoft.DTO.UserDTO)">
+            <summary>
+            获取用户其他系统的信息
+            </summary>
+            <param name="user"></param>
+        </member>
+        <member name="M:Peacock.ESB.BLL.UserBLL.GetUserByName(System.String)">
+            <summary>
+            通过用户名获取用户信息
+            </summary>
+            <param name="name">用户名</param>
+            <returns></returns>
+            Add By Frank@2013-3-26
+        </member>
+        <member name="M:Peacock.ESB.BLL.UserBLL.Login(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            登陆系统
+            </summary>
+            <param name="dtoInput">
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.UserBLL.GetCurrentUser(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取当前登陆用户。
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.IService.IDepartmentService">
+            <summary>
+            部门服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:21:14</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IService.IDepartmentService.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IService.IDepartmentService.GetDepartmentTree(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取部门的树形结构
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.Model.Entity.RegionPower">
+            <summary>
+            范围权限表
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2013/03/08 10:50:37</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Model.Entity.RegionPower.ConvertToDTO``1(System.Boolean)">
+            <summary>
+            将当前对象转换为DTO对象。
+            </summary>
+            <typeparam name="T">DTO对象的类型。</typeparam>
+            <param name="isInitRelationData">是否把关联的属性列表一并加载出来，默认不加载</param>
+            <returns>转换结果对象。</returns>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.RegionPower.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.RegionPower.RoleId">
+            <summary>
+            用户角色ID
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.RegionPower.GroupId">
+            <summary>
+            用户组ID
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.RegionPower.PackageId">
+            <summary>
+            权限包id
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.RegionPower.PackageCode">
+            <summary>
+            权限包代码
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.RegionPower.RegionId">
+            <summary>
+            范围权限idid
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.RegionPower.RegionCode">
+            <summary>
+            范围权限码
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.DTO.CorrespondDTO">
+            <summary>
+            参数对照DTO
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/11/30 15:40:08</para>
+            </remarks>
+        </member>
+        <member name="P:Peacock.ESB.DTO.CorrespondDTO.PowerCode">
+            <summary>
+            权限码
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.CorrespondDTO.PowerTitle">
+            <summary>
+            权限标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.CorrespondDTO.ObjectName">
+            <summary>
+            对象名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.CorrespondDTO.PropertyName">
+            <summary>
+            属性名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.CorrespondDTO.ParameterTitle">
+            <summary>
+            参数名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.CorrespondDTO.ParameterId">
+            <summary>
+            参数编号
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.IBLL.IPowerItemBLL">
+            <summary>
+            权限操作逻辑接口。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/24 15:03:56</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IPowerItemBLL.GetObjectByCode(System.String)">
+            <summary>
+            按照代码获取对象。
+            </summary>
+            <param name="code">对象代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IPowerItemBLL.GetObjectByCode(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照代码获取对象
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IPowerItemBLL.ExistsName(System.String)">
+            <summary>
+            检测同名对象是否存在
+            </summary>
+            <param name="name">对象名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IPowerItemBLL.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IPowerItemBLL.ExistsTitle(System.String)">
+            <summary>
+            检测同标题对象是否存在
+            </summary>
+            <param name="title">对象标题</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IPowerItemBLL.ExistsTitle(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同标题对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象标题。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IPowerItemBLL.GetItemList(System.Int64,System.Collections.Generic.List{Peacock.ESB.DTO.PowerItemDTO})">
+            <summary>
+            获取子权限列表
+            </summary>
+            <param name="itemid"></param>
+            <param name="items"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IPowerItemBLL.GetItemList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取子权限列表
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.Service.WSServiceRegionPower">
+            <summary>
+            WSService
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2013/3/8 11:23:36</para>
+            </remarks>
+        </member>
+        <member name="F:Peacock.ESB.Service.WSServiceRegionPower.m_instance">
+            <summary>
+            唯一实例
+            </summary>
+        </member>
+        <member name="M:Peacock.ESB.Service.WSServiceRegionPower.GetRegionPowerList(GHSoft.Event.IEvent)">
+            <summary>
+            获取范围权限列表
+            </summary>
+            <param name="eventObj">事件对象</param>
+        </member>
+        <member name="M:Peacock.ESB.Service.WSServiceRegionPower.AddRegionPower(GHSoft.Event.IEvent)">
+            <summary>
+            添加范围权限
+            </summary>
+            <param name="eventObj">事件对象</param>
+        </member>
+        <member name="M:Peacock.ESB.Service.WSServiceRegionPower.DeleteRegionPower(GHSoft.Event.IEvent)">
+            <summary>
+            删除范围权限
+            </summary>
+            <param name="eventObj">事件对象</param>
+        </member>
+        <member name="P:Peacock.ESB.Service.WSServiceRegionPower.Instance">
+            <summary>
+            获取 <see cref="T:Peacock.ESB.Service.WSServiceRegionPower"/> 对象的唯一实例。
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Service.WSServiceParameter">
+            <summary>
+            权限模块相关
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012-8-23 15:03:03</para>
+            </remarks>
+        </member>
+        <member name="F:Peacock.ESB.Service.WSServiceParameter.m_instance">
+            <summary>
+            唯一实例
+            </summary>
+        </member>
+        <member name="M:Peacock.ESB.Service.WSServiceParameter.GetParameterTree(GHSoft.Event.IEvent)">
+            <summary>
+            获取对象树列表
+            </summary>
+            <param name="eventObj">事件参数对象。</param>
+        </member>
+        <member name="M:Peacock.ESB.Service.WSServiceParameter.GetSysParameterTree(GHSoft.Event.IEvent)">
+            <summary>
+            获取对象树列表
+            </summary>
+            <param name="eventObj">事件参数对象。</param>
+        </member>
+        <member name="P:Peacock.ESB.Service.WSServiceParameter.Instance">
+            <summary>
+            获取 <see cref="T:Peacock.ESB.Service.WSServiceParameter"/> 对象的唯一实例。
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Model.Entity.PowerPackage">
+            <summary>
+            权限包
+            </summary>
+            <remarks>
+                <para>    Creator：FRANK-E420</para>
+                <para>CreatedTime：2012-6-21 11:08:27</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Model.Entity.PowerPackage.ConvertToDTO``1(System.Boolean)">
+            <summary>
+            将当前对象转换为DTO对象。
+            </summary>
+            <typeparam name="T">DTO对象的类型。</typeparam>
+            <param name="isInitRelationData">是否把关联的属性列表一并加载出来，默认不加载</param>
+            <returns>转换结果对象。</returns>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PowerPackage.Name">
+            <summary>
+            权限包名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PowerPackage.Title">
+            <summary>
+            权限包标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PowerPackage.Code">
+            <summary>
+            权限包代码
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PowerPackage.Powers">
+            <summary>
+            该权限包拥有的权限集合
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PowerPackage.Regions">
+            <summary>
+            该权限包拥有的范围权限集合
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.BLL.AuthorityInitializeBLL">
+            <summary>
+            界面初始化功能
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 12:03:05</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.BLL.AuthorityInitializeBLL.Initialize(System.Object[])">
+            <summary>
+            初始化方法。
+            </summary>
+            <param name="args">可选参数列表。</param>
+            <returns>是否初始化成功。</returns>
+        </member>
+        <member name="T:Peacock.ESB.Service.WSServiceAuthority">
+            <summary>
+            权限模块相关
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012-8-23 15:03:03</para>
+            </remarks>
+        </member>
+        <member name="F:Peacock.ESB.Service.WSServiceAuthority.m_instance">
+            <summary>
+            唯一实例
+            </summary>
+        </member>
+        <member name="M:Peacock.ESB.Service.WSServiceAuthority.ExistsDepartmentName(GHSoft.Event.IEvent)">
+            <summary>
+            按照名称检测对象是否存在
+            </summary>
+            <param name="eventObj">事件参数对象。</param>
+        </member>
+        <member name="M:Peacock.ESB.Service.WSServiceAuthority.GetDepartmentTree(GHSoft.Event.IEvent)">
+            <summary>
+            获取部门树
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:Peacock.ESB.Service.WSServiceAuthority.ExistsUserName(GHSoft.Event.IEvent)">
+            <summary>
+            按照名称检测对象是否存在
+            </summary>
+            <param name="eventObj">事件参数对象。</param>
+        </member>
+        <member name="M:Peacock.ESB.Service.WSServiceAuthority.Login(GHSoft.Event.IEvent)">
+            <summary>
+            用户登陆
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:Peacock.ESB.Service.WSServiceAuthority.GetCurrentUser(GHSoft.Event.IEvent)">
+            <summary>
+            获取当前登陆用户
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:Peacock.ESB.Service.WSServiceAuthority.GetValidateImage(GHSoft.Event.IEvent)">
+            <summary>
+            获取验证码
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:Peacock.ESB.Service.WSServiceAuthority.GetPowerItemList(GHSoft.Event.IEvent)">
+            <summary>
+            获取子权限列表
+            </summary>
+            <param name="eventObj"></param>
+        </member>
+        <member name="M:Peacock.ESB.Service.WSServiceAuthority.ExistsGroupName(GHSoft.Event.IEvent)">
+            <summary>
+            按照名称检测对象是否存在
+            </summary>
+            <param name="eventObj">事件参数对象。</param>
+        </member>
+        <member name="M:Peacock.ESB.Service.WSServiceAuthority.ExistsRoleName(GHSoft.Event.IEvent)">
+            <summary>
+            按照名称检测对象是否存在
+            </summary>
+            <param name="eventObj">事件参数对象。</param>
+        </member>
+        <member name="P:Peacock.ESB.Service.WSServiceAuthority.Instance">
+            <summary>
+            获取 <see cref="T:Peacock.ESB.Service.WSServiceAuthority"/> 对象的唯一实例。
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Service.RegionPowerService">
+            <summary>
+            系统界面服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:23:22</para>
+            </remarks>
+        </member>
+        <member name="T:Peacock.ESB.IService.IRegionPowerService">
+            <summary>
+            系统参数服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:21:14</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IService.IRegionPowerService.GetRegionPowerList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取范围权限列表
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IService.IRegionPowerService.AddRegionPower(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            添加范围权限
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 DTO: 已序列化为XML的DTO对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IService.IRegionPowerService.DeleteRegionPower(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            删除范围权限
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 id: 要删除对象的ID.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.RegionPowerService.GetRegionPowerList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取范围权限列表
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.RegionPowerService.AddRegionPower(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            添加范围权限
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 DTO: 已序列化为XML的DTO对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.RegionPowerService.DeleteRegionPower(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号删除范围权限信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 id: 要删除对象的ID.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.RegionPowerService.#ctor">
+            <summary>
+            系统界面服务。
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Service.CorrespondService">
+            <summary>
+            系统界面服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:23:22</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Service.CorrespondService.GetObjectList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象列表
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.CorrespondService.GetObjectCount(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象数量
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.CorrespondService.GetObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            	2 [可选]是否获取子对象。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.CorrespondService.GetObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号获取对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 id: 对象的TID
+            	2 [可选]是否获取子对象。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.CorrespondService.AddObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            添加对象
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 DTO: 已序列化为XML的DTO对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.CorrespondService.UpdateObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 DTO: 已序列化为XML的DTO对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.CorrespondService.DeleteObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号删除对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 id: 要删除对象的ID.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.CorrespondService.DeleteObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.CorrespondService.Exists(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.CorrespondService.#ctor">
+            <summary>
+            系统界面服务。
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.DTO.DeparmentTreeDTO">
+            <summary>
+            部门的树形结构
+            </summary>
+            <remarks>
+                <para>    Creator：helang</para>
+                <para>CreatedTime：2012-7-2 10:30:05</para>
+            </remarks>
+        </member>
+        <member name="P:Peacock.ESB.DTO.DeparmentTreeDTO.TreeName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.DeparmentTreeDTO.TreeValue">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.DeparmentTreeDTO.children">
+            <summary>
+            子集
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.BLL.PowerItemBLL">
+            <summary>
+            权限操作逻辑实现
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 12:03:05</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PowerItemBLL.AddObject(Peacock.ESB.DTO.PowerItemDTO)">
+            <summary>
+            添加对象。
+            </summary>
+            <param name="data">DTO对象。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PowerItemBLL.UpdateObject(Peacock.ESB.DTO.PowerItemDTO)">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PowerItemBLL.DeleteObject(GHSoft.Model.GHR,System.Boolean)">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="restriction">条件对象。</param>
+            <param name="delChild">是否删除子项内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PowerItemBLL.ExistsName(System.String)">
+            <summary>
+            检测同名对象是否存在
+            </summary>
+            <param name="name">对象名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PowerItemBLL.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PowerItemBLL.ExistsTitle(System.String)">
+            <summary>
+            检测同标题对象是否存在
+            </summary>
+            <param name="title">对象标题</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PowerItemBLL.ExistsTitle(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同标题对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象标题。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PowerItemBLL.GetObjectByCode(System.String)">
+            <summary>
+            按照代码获取对象。
+            </summary>
+            <param name="code">对象代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PowerItemBLL.GetObjectByCode(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照代码获取对象
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PowerItemBLL.GetItemList(System.Int64,System.Collections.Generic.List{Peacock.ESB.DTO.PowerItemDTO})">
+            <summary>
+            获取子权限列表
+            </summary>
+            <param name="itemid"></param>
+            <param name="items"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PowerItemBLL.GetItemList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取子权限列表
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.BLL.DepartmentBLL">
+            <summary>
+            部门操作逻辑实现
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 12:03:05</para>
+            </remarks>
+        </member>
+        <member name="T:Peacock.ESB.IBLL.IDepartmentBLL">
+            <summary>
+            部门操作逻辑接口。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/24 15:03:56</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IDepartmentBLL.GetDepartmentTree(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取部门的树形结构
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IDepartmentBLL.ExistsName(System.String)">
+            <summary>
+            检测同名控件是否存在
+            </summary>
+            <param name="name">控件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IDepartmentBLL.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名控件是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 控件名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.DepartmentBLL.AddObject(GHSoft.DTO.DepartmentDTO)">
+            <summary>
+            添加对象。
+            </summary>
+            <param name="data">DTO对象。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.DepartmentBLL.UpdateObject(GHSoft.DTO.DepartmentDTO)">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.DepartmentBLL.DeleteObject(GHSoft.Model.GHR,System.Boolean)">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="restriction">条件对象。</param>
+            <param name="delChild">是否删除子项内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.DepartmentBLL.ExistsName(System.String)">
+            <summary>
+            检测同名组件是否存在
+            </summary>
+            <param name="name">组件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.DepartmentBLL.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名组件是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 组件名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.DepartmentBLL.GetDepartmentTree(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取部门的树形结构
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.DepartmentBLL.GetArrDepartment(System.Collections.Generic.IList{Peacock.ESB.Model.Entity.Department})">
+            <summary>
+            转换模板树形的数据结构
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.Service.AuthorityServiceConfig">
+            <summary>
+            AuthorityServiceConfig
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2013/3/8 14:47:58</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Service.AuthorityServiceConfig.ServiceConfig(GHSoft.Event.IEventDispatcher,System.Collections.IDictionary)">
+            <summary>
+            权限服务的相关配置
+            </summary>
+            <param name="dispatcher"></param>
+            <param name="resultCache"></param>
+        </member>
+        <member name="T:Peacock.ESB.Model.Entity.UserSecurityInfo">
+            <summary>
+            用户安全信息
+            </summary>
+            <remarks>
+                <para>    Creator：FRANK-E420</para>
+                <para>CreatedTime：2012-6-21 10:59:13</para>
+            </remarks>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.UserSecurityInfo.User">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.UserSecurityInfo.Password">
+            <summary>
+            用户密码
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Service.DepartmentService">
+            <summary>
+            部门服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:23:22</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Service.DepartmentService.GetObjectList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象列表
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.DepartmentService.GetObjectCount(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象数量
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.DepartmentService.GetObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            	2 [可选]是否获取子对象。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.DepartmentService.GetObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号获取对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 id: 对象的TID
+            	2 [可选]是否获取子对象。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.DepartmentService.AddObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            添加对象
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 DTO: 已序列化为XML的DTO对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.DepartmentService.UpdateObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 DTO: 已序列化为XML的DTO对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.DepartmentService.DeleteObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号删除对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 id: 要删除对象的ID.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.DepartmentService.DeleteObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.DepartmentService.Exists(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.DepartmentService.#ctor">
+            <summary>
+            部门服务。
+            </summary>
+        </member>
+        <member name="M:Peacock.ESB.Service.DepartmentService.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.DepartmentService.GetDepartmentTree(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取部门的树形结构
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.IService.IPowerItemService">
+            <summary>
+            权限服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:21:14</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IService.IPowerItemService.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IService.IPowerItemService.ExistsTitle(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同标题对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象标题。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IService.IPowerItemService.GetObjectByCode(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照代码获取对象
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.IService.AuthorityServiceGlobal">
+            <summary>
+            服务层接口注入
+            </summary>
+            <remarks>
+                <para>    Creator：FRANK-E420</para>
+                <para>CreatedTime：2012/6/28 9:38:07</para>
+            </remarks>
+        </member>
+        <member name="P:Peacock.ESB.IService.AuthorityServiceGlobal.Container">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.DTO.PowerItemDTO">
+            <summary>
+            权限DTO
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/24 10:36:54</para>
+            </remarks>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PowerItemDTO.SystemId">
+            <summary>
+            系统编号
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PowerItemDTO.SystemTitle">
+            <summary>
+            系统标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PowerItemDTO.ParentId">
+            <summary>
+            父级ID
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PowerItemDTO.ParentCode">
+            <summary>
+            父级编码
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PowerItemDTO.Name">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PowerItemDTO.Title">
+            <summary>
+            权限标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PowerItemDTO.TargetName">
+            <summary>
+            权限目标名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PowerItemDTO.TargetCode">
+            <summary>
+            权限目标代码
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PowerItemDTO.ObjectName">
+            <summary>
+            对象名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PowerItemDTO.PropertyName">
+            <summary>
+            属性名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PowerItemDTO.Code">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PowerItemDTO.children">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Helper.AuthorityHelper">
+            <summary>
+            安全助手
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/7/11 11:01:06</para>
+            </remarks>
+        </member>
+        <member name="F:Peacock.ESB.Helper.AuthorityHelper.UserSessionKey">
+            <summary>
+            用户 Session Key
+            </summary>
+        </member>
+        <member name="M:Peacock.ESB.Helper.AuthorityHelper.PWDEncryption(System.String)">
+            <summary>
+            密码加密
+            </summary>
+            <param name="passWord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Helper.AuthorityHelper.GetCurrentUser">
+            <summary>
+            获取当前登录过的用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Helper.AuthorityHelper.GetCurrentUser(System.String)">
+            <summary>
+            通过用户名获取登录的用户
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+            Add By Frank@2013-3-26
+        </member>
+        <member name="M:Peacock.ESB.Helper.AuthorityHelper.HashString(System.String)">
+            <summary>
+            将字符串转换为自定义哈希码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Helper.AuthorityHelper.MakePowerCode(Peacock.ESB.Model.Entity.PowerItem,System.String)">
+            <summary>
+            生成权限码
+            </summary>
+            <param name="power">权限对象。</param>
+            <param name="prefix">代码前缀。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Helper.AuthorityHelper.MakeAssemblyPowers(System.Reflection.Assembly)">
+            <summary>
+            生成指定程序集的权限项。
+            </summary>
+            <param name="assembly"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Helper.AuthorityHelper.makeAssemblyPowersByCollection(System.Collections.Generic.IList{Peacock.ESB.Model.Entity.PowerItem},Peacock.ESB.AuthorityAttribute,System.Type)">
+            <summary>
+            根据类中的特征值中定义的方法权限，生成权限项
+            </summary>
+            <param name="powerItemList"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:Peacock.ESB.Helper.AuthorityHelper.MakeAssemblyPowers(System.String)">
+            <summary>
+            生成指定程序集的权限项。
+            </summary>
+            <param name="assemblyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Helper.AuthorityHelper.CheckUserItemPower(System.Int64,System.String)">
+            <summary>
+            验证用户是否拥有某项权限
+            </summary>
+            <param name="uid">用户编号</param>
+            <param name="itemCode">权限项代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Helper.AuthorityHelper.CheckUserRegionPower(System.Int64,System.String,System.String)">
+            <summary>
+            验证用户是否拥有某范围权限
+            </summary>
+            <param name="uid">用户编号</param>
+            <param name="packageCode">权限包代码</param>
+            <param name="pItemCode">权限项代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Helper.AuthorityHelper.EncryptUserInfo(System.String,System.String)">
+            <summary>
+            加密用户的登陆名和密码
+            </summary>
+            <param name="loginName">登录账号</param>
+            <param name="password">登录密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Helper.AuthorityHelper.DecryptUserInfo(System.String,System.String@)">
+            <summary>
+            解密用户的登陆名和密码
+            </summary>
+            <param name="userInfo">加密之后的用户信息</param>
+            <param name="password">解密之后的密码</param>
+            <returns>解密之后的用户名</returns>
+        </member>
+        <member name="P:Peacock.ESB.Helper.AuthorityHelper.CurrentUser">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.IBLL.IRegionPowerBLL">
+            <summary>
+            范围权限操作逻辑接口
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2013/03/08 10:50:37</para>
+            </remarks>
+        </member>
+        <member name="T:Peacock.ESB.IBLL.IUserRoleBLL">
+            <summary>
+            用户角色操作逻辑接口。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/24 15:03:56</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IUserRoleBLL.ExistsName(System.String)">
+            <summary>
+            检测同名对象是否存在
+            </summary>
+            <param name="name">对象名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IUserRoleBLL.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.BLL.PowerPackageBLL">
+            <summary>
+            权限操作逻辑实现
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 12:03:05</para>
+            </remarks>
+        </member>
+        <member name="T:Peacock.ESB.IBLL.IPowerPackageBLL">
+            <summary>
+            权限操作逻辑接口。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/24 15:03:56</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IPowerPackageBLL.ExistsName(System.String)">
+            <summary>
+            检测同名对象是否存在
+            </summary>
+            <param name="name">对象名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IPowerPackageBLL.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IPowerPackageBLL.ExistsTitle(System.String)">
+            <summary>
+            检测同标题对象是否存在
+            </summary>
+            <param name="title">对象标题</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IPowerPackageBLL.ExistsTitle(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同标题对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象标题。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IPowerPackageBLL.GetItemList(System.String)">
+            <summary>
+            获取子权限列表
+            </summary>
+            <param name="code">权限包代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IPowerPackageBLL.GetItemList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取子权限列表
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PowerPackageBLL.AddObject(Peacock.ESB.DTO.PowerPackageDTO)">
+            <summary>
+            添加对象。
+            </summary>
+            <param name="data">DTO对象。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PowerPackageBLL.UpdateObject(Peacock.ESB.DTO.PowerPackageDTO)">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PowerPackageBLL.DeleteObject(GHSoft.Model.GHR,System.Boolean)">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="restriction">条件对象。</param>
+            <param name="delChild">是否删除子项内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PowerPackageBLL.ExistsName(System.String)">
+            <summary>
+            检测同名对象是否存在
+            </summary>
+            <param name="name">对象名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PowerPackageBLL.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PowerPackageBLL.ExistsTitle(System.String)">
+            <summary>
+            检测同标题对象是否存在
+            </summary>
+            <param name="title">对象标题</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PowerPackageBLL.ExistsTitle(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同标题对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象标题。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PowerPackageBLL.GetItemList(System.String)">
+            <summary>
+            获取子权限列表
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PowerPackageBLL.GetItemList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取子权限列表
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.Service.PowerItemService">
+            <summary>
+            权限服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:23:22</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerItemService.GetObjectList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取权限列表
+            </summary>
+            <param name="dtoInput">
+            输入的DTO权限。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction权限.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerItemService.GetObjectCount(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取权限数量
+            </summary>
+            <param name="dtoInput">
+            输入的DTO权限。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction权限.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerItemService.GetObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取权限信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO权限。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction权限.
+            	2 [可选]是否获取子权限。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerItemService.GetObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号获取权限信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO权限。
+            参数:
+            	1 id: 权限的TID
+            	2 [可选]是否获取子权限。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerItemService.AddObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            添加权限
+            </summary>
+            <param name="dtoInput">
+            输入的DTO权限。
+            参数:
+            	1 DTO: 已序列化为XML的DTO权限.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerItemService.UpdateObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            修改权限信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO权限。
+            参数:
+            	1 DTO: 已序列化为XML的DTO权限.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerItemService.DeleteObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号删除权限信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO权限。
+            参数:
+            	1 id: 要删除权限的ID.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerItemService.DeleteObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            删除权限信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO权限。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction权限.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerItemService.Exists(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测权限是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO权限。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction权限.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerItemService.#ctor">
+            <summary>
+            权限服务。
+            </summary>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerItemService.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名权限是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO权限。
+            参数:
+            	1 name: 权限名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerItemService.ExistsTitle(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同标题权限是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO权限。
+            参数:
+            	1 name: 权限标题。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.PowerItemService.GetObjectByCode(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照代码获取权限
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.DTO.UserRoleDTO">
+            <summary>
+            角色DTO
+            </summary>
+            <remarks>
+                <para>    Creator：helang</para>
+                <para>CreatedTime：2012-7-3 18:11:44</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.DTO.UserRoleDTO.#ctor">
+            <summary>
+            角色DTO
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.UserRoleDTO.Name">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.UserRoleDTO.PowerCodes">
+            <summary>
+            权限id(1,2,3,4)
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.UserRoleDTO.ItemCodes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.UserRoleDTO.Powers">
+            <summary>
+            角色权限
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.IBLL.IUserGroupBLL">
+            <summary>
+            用户组操作逻辑接口。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/24 15:03:56</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IUserGroupBLL.ExistsName(System.String)">
+            <summary>
+            检测同名控件是否存在
+            </summary>
+            <param name="name">控件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IUserGroupBLL.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名控件是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 控件名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.BLL.UserRoleBLL">
+            <summary>
+            角色操作逻辑实现
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 12:03:05</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.BLL.UserRoleBLL.AddObject(Peacock.ESB.DTO.UserRoleDTO)">
+            <summary>
+            添加对象。
+            </summary>
+            <param name="data">DTO对象。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.UserRoleBLL.UpdateObject(Peacock.ESB.DTO.UserRoleDTO)">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.UserRoleBLL.DeleteObject(GHSoft.Model.GHR,System.Boolean)">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="restriction">条件对象。</param>
+            <param name="delChild">是否删除子项内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.UserRoleBLL.ExistsName(System.String)">
+            <summary>
+            检测同名对象是否存在
+            </summary>
+            <param name="name">对象名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.UserRoleBLL.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.IBLL.AuthorityBLLGlobal">
+            <summary>
+            逻辑层接口的注入
+            </summary>
+            <remarks>
+                <para>    Creator：Lally</para>
+                <para>CreatedTime：2012/6/27 17:04:57</para>
+            </remarks>
+        </member>
+        <member name="P:Peacock.ESB.IBLL.AuthorityBLLGlobal.UserGroupBLL">
+            <summary>
+            用户组BLL
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.IBLL.AuthorityBLLGlobal.UserRoleBLL">
+            <summary>
+            用户角色BLL
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.IBLL.AuthorityBLLGlobal.RegionPowerBLL">
+            <summary>
+            范围权限操作BLL
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.IBLL.AuthorityBLLGlobal.CorrespondBLL">
+            <summary>
+            参数对照操作BLL
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.IBLL.AuthorityBLLGlobal.UserBLL">
+            <summary>
+            用户操作BLL
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.IBLL.AuthorityBLLGlobal.PowerItemBLL">
+            <summary>
+            权限项操作BLL
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.IBLL.AuthorityBLLGlobal.PowerPackageBLL">
+            <summary>
+            权限包操作BLL
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.IBLL.AuthorityBLLGlobal.Container">
+            <summary>
+            IoC容器对象
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Service.WSServicePItem">
+            <summary>
+            权限模块相关
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012-8-23 15:03:03</para>
+            </remarks>
+        </member>
+        <member name="F:Peacock.ESB.Service.WSServicePItem.m_instance">
+            <summary>
+            唯一实例
+            </summary>
+        </member>
+        <member name="M:Peacock.ESB.Service.WSServicePItem.ExistsName(GHSoft.Event.IEvent)">
+            <summary>
+            按照名称检测对象是否存在
+            </summary>
+            <param name="eventObj">事件参数对象。</param>
+        </member>
+        <member name="M:Peacock.ESB.Service.WSServicePItem.ExistsTitle(GHSoft.Event.IEvent)">
+            <summary>
+            检测同标题对象是否存在
+            </summary>
+            <param name="eventObj">事件参数对象。</param>
+        </member>
+        <member name="M:Peacock.ESB.Service.WSServicePItem.GetObjectByCode(GHSoft.Event.IEvent)">
+            <summary>
+            按照代码获取对象
+            </summary>
+            <param name="eventObj">事件参数对象。</param>
+        </member>
+        <member name="P:Peacock.ESB.Service.WSServicePItem.Instance">
+            <summary>
+            获取 <see cref="T:Peacock.ESB.Service.WSServicePItem"/> 对象的唯一实例。
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.BLL.CorrespondBLL">
+            <summary>
+            参数对照操作逻辑实现
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 12:03:05</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.BLL.CorrespondBLL.AddObject(Peacock.ESB.DTO.CorrespondDTO)">
+            <summary>
+            添加对象。
+            </summary>
+            <param name="data">DTO对象。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.CorrespondBLL.UpdateObject(Peacock.ESB.DTO.CorrespondDTO)">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.CorrespondBLL.DeleteObject(GHSoft.Model.GHR,System.Boolean)">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="restriction">条件对象。</param>
+            <param name="delChild">是否删除子项内容</param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.BLL.RegionPowerBLL">
+            <summary>
+            参数对照操作逻辑实现
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 12:03:05</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.BLL.RegionPowerBLL.AddObject(Peacock.ESB.DTO.RegionPowerDTO)">
+            <summary>
+            添加对象。
+            </summary>
+            <param name="data">DTO对象。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.RegionPowerBLL.UpdateObject(Peacock.ESB.DTO.RegionPowerDTO)">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.RegionPowerBLL.DeleteObject(GHSoft.Model.GHR,System.Boolean)">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="restriction">条件对象。</param>
+            <param name="delChild">是否删除子项内容</param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.BLL.UserGroupBLL">
+            <summary>
+            用户组操作逻辑实现
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 12:03:05</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.BLL.UserGroupBLL.AddObject(Peacock.ESB.DTO.UserGroupDTO)">
+            <summary>
+            添加对象。
+            </summary>
+            <param name="data">DTO对象。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.UserGroupBLL.UpdateObject(Peacock.ESB.DTO.UserGroupDTO)">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.UserGroupBLL.DeleteObject(GHSoft.Model.GHR,System.Boolean)">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="restriction">条件对象。</param>
+            <param name="delChild">是否删除子项内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.UserGroupBLL.ExistsName(System.String)">
+            <summary>
+            检测同名对象是否存在
+            </summary>
+            <param name="name">对象名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.UserGroupBLL.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.Aspect.AuthorityInterceptor">
+            <summary>
+            权限验证的拦截器
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012-11-12 11:26:17</para>
+                <para>Modify by Frank:2013-3-26 用户信息不能用静态方法来存储</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Aspect.AuthorityInterceptor.Intercept(Castle.DynamicProxy.IInvocation)">
+            <summary>
+            
+            </summary>
+            <param name="invocation"></param>
+        </member>
+        <member name="M:Peacock.ESB.Aspect.AuthorityInterceptor.Login(System.String,System.String,System.Boolean)">
+            <summary>
+            登录的拦截验证
+            </summary>
+            <param name="userName"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Aspect.AuthorityInterceptor.Logout">
+            <summary>
+            退出登录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.Service.AuthorityEvents">
+            <summary>
+            AuthorityEvents
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2013/3/8 14:43:35</para>
+            </remarks>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetPowerItemList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetDepartmentList">
+            <summary>
+            获取对象列表
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetDepartmentCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetDepartment">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetDepartmentById">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.AddDepartment">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.UpdateDepartment">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.DeleteDepartmentById">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.DeleteDepartment">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.ExistsDepartment">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.ExistsDepartmentName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetDepartmentTree">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetUserList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetUserCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetUserById">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.AddUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.UpdateUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.DeleteUserById">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.DeleteUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.ExistsUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.ExistsUserName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.Login">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetCurrentUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetValidateImage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetPowerList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetPowerCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetPower">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetPowerById">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.AddPower">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.UpdatePower">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.DeletePowerById">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.DeletePower">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.ExistsPower">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.ExistsPowerName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.ExistsPowerTitle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.ExistsPowerCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetPowerByCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetGroupList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetGroupCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetGroup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetGroupById">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.AddGroup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.UpdateGroup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.DeleteGroupById">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.DeleteGroup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.ExistsGroup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.ExistsGroupName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetRoleList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetRoleCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetRole">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.GetRoleById">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.AddRole">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.UpdateRole">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.DeleteRoleById">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.DeleteRole">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.ExistsRole">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.ExistsRoleName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Service.AuthorityEvents.PItem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.PItem.GetList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.PItem.GetList2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.PItem.GetCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.PItem.GetItem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.PItem.GetItemById">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.PItem.Add">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.PItem.Update">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.PItem.DeleteById">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.PItem.Delete">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.PItem.Exists">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.PItem.ExistsName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.PItem.ExistsTitle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.PItem.GetObjectByCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Service.AuthorityEvents.PPackage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.PPackage.GetList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.PPackage.GetCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.PPackage.GetPackage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.PPackage.GetPackageById">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.PPackage.Add">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.PPackage.Update">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.PPackage.DeleteById">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.PPackage.Delete">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.PPackage.Exists">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.PPackage.ExistsName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.PPackage.ExistsTitle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Service.AuthorityEvents.SParameter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.SParameter.GetList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.SParameter.GetCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.SParameter.GetParameter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.SParameter.GetParameterById">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.SParameter.Add">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.SParameter.Update">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.SParameter.DeleteById">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.SParameter.Delete">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.SParameter.Exists">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.SParameter.ExistsName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.SParameter.ExistsTitle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.SParameter.ExistsValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.SParameter.GetParameterTree">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.SParameter.GetSysParameterTree">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Service.AuthorityEvents.Correspond">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.Correspond.GetList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.Correspond.GetCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.Correspond.GetCorrespond">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.Correspond.GetCorrespondById">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.Correspond.Add">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.Correspond.Update">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.Correspond.DeleteById">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.Correspond.Delete">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Service.AuthorityEvents.Correspond.Exists">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Model.Entity.Department">
+            <summary>
+            部门
+            </summary>
+            <remarks>
+                <para>    Creator：FRANK-E420</para>
+                <para>CreatedTime：2012-6-21 11:04:19</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Model.Entity.Department.ConvertToDTO``1(System.Boolean)">
+            <summary>
+            将当前对象转换为DTO对象。
+            </summary>
+            <typeparam name="T">DTO对象的类型。</typeparam>
+            <param name="isInitRelationData">是否把关联的属性列表一并加载出来，默认不加载</param>
+            <returns>转换结果对象。</returns>
+        </member>
+        <member name="M:Peacock.ESB.Model.Entity.Department.getChildrenUserIds(GHSoft.DTO.DepartmentDTO,System.Collections.Generic.IList{System.Int64})">
+            <summary>
+            获取部门的所有用户Id信息
+            </summary>
+            <param name="department"></param>
+            <param name="userIds"></param>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.Department.Parent">
+            <summary>
+            父部门
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.Department.Name">
+            <summary>
+            部门名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.Department.Children">
+            <summary>
+            子部门
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Model.Entity.UserGroup">
+            <summary>
+            用户组
+            </summary>
+            <remarks>
+                <para>    Creator：FRANK-E420</para>
+                <para>CreatedTime：2012-6-21 11:11:21</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Model.Entity.UserGroup.ConvertToDTO``1(System.Boolean)">
+            <summary>
+            将当前对象转换为DTO对象。
+            </summary>
+            <typeparam name="T">DTO对象的类型。</typeparam>
+            <param name="isInitRelationData">是否把关联的属性列表一并加载出来，默认不加载</param>
+            <returns>转换结果对象。</returns>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.UserGroup.GroupName">
+            <summary>
+            组名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.UserGroup.PowerCodes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.UserGroup.ItemCodes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.UserGroup.Roles">
+            <summary>
+            组拥有的角色
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Model.Entity.User">
+            <summary>
+            用户信息
+            </summary>
+            <remarks>
+                <para>    Creator：FRANK-E420</para>
+                <para>CreatedTime：2012-6-21 11:03:17</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Model.Entity.User.ConvertToDTO``1(System.Boolean)">
+            <summary>
+            将当前对象转换为DTO对象。
+            </summary>
+            <typeparam name="T">DTO对象的类型。</typeparam>
+            <param name="isInitRelationData">是否把关联的属性列表一并加载出来，默认不加载</param>
+            <returns>转换结果对象。</returns>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.User.BaseInfo">
+            <summary>
+            用户基本资料
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.User.SecurityInfo">
+            <summary>
+            用户安全信息
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.User.PowerCodes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.User.ItemCodes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.User.Department">
+            <summary>
+            用户所在部门
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.User.Roles">
+            <summary>
+            用户所在的角色
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.User.Groups">
+            <summary>
+            用户所在的用户组
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.DTO.UserGroupDTO">
+            <summary>
+            用户组
+            </summary>
+            <remarks>
+                <para>    Creator：helang</para>
+                <para>CreatedTime：2012-7-5 11:19:58</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.DTO.UserGroupDTO.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.UserGroupDTO.Name">
+            <summary>
+            用户组名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.UserGroupDTO.Roles">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.UserGroupDTO.PowerCodes">
+            <summary>
+            权限
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.UserGroupDTO.ItemCodes">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,247 @@
+﻿(one) 不使用线程列表上传文件到资源库
+一：所需要使用的方法
+(1) SingleFileManager.SaveFileResource  		保存媒体文件到资源库，返回资源库保存的ID
+(2) SingleFileManager.DeleteRelationResource            删除资源库图片中的应用
+(3) SingleFileManager.GetFileUrl		        根据资源ID返回指定尺寸完整路径
+(4) SingleFileManager.CreateRelationInfo                添加资源引用信息
+(5) SingleFileManager.UpdateResourceFile                文件更新
+(6) SingleFileManager.SaveFileResourceByNetPath         保存媒体文件到资源库，返回资源库保存的ID
+
+二：config配置
+    <!-- 资源库使用变量 -->
+    <!-- 媒体文件存放目录 WebSite -->
+    <add key="ResourcesRootPath" value="http://192.168.2.196:9000/UploadFile/" />
+    <!-- 资源库域名 API-->
+    <add key="ResourceLibraryDomainName" value="http://192.168.2.196:9009/" />
+    <!-- 调用资源库系统名称 -->
+    <add key="SystemName" value="报告生成系统" />
+    <!-- 资源库上传中操作集合所保存的xml文件存放路径 -->
+    <add key="ResouceExecuteTaskFilePath" value="/Content/ResourceLibrary/" />
+
+三：Global设置
+    // 单个任务执行时（不使用线程）的统一异常抛出处  外采系统暂无使用
+    SingleTaskManager.OnSingleTaskException += ProjectBLL.WriteResourceTaskLog;
+
+四：实现Global设置的日志记录方法
+    /// <summary>
+    /// 记录线程执行中反馈的异常信息(返回对象的异常信息：ExceptionMsg-异常描述，TaskException-异常对象)
+    /// </summary>
+    /// <param name="sendTask">单个任务对象</param>
+    public static void WriteResourceTaskLog(SingleTask sendTask)
+    {
+        LogInfoHelper.WriteLog("上传到资源库失败，信息如下："+sendTask.ExceptionMsg);
+    }
+
+(two) 使用线程列表上传文件到资源库
+一：所需要使用的方法
+(1) ThreadsManager<T>.AddUploadTaskList			添加单个操作对象。
+(2) ThreadsManager<T>.StartThreadWhenItFinish         	检测列表是否有值，有则进行上传操作。
+(3) ThreadsManager<T>.SendValueResult			保存媒体文件到资源库，返回资源库保存的ID。（在线程中执行）。
+(4) ThreadsManager<T>.SendValueNeedSplitResult		批量的SendValueResult操作,value中的原来路径列表用splitStr区分，返回值都是用splitStr区分。（SplitStr默认是';'，如需修改直接令ThreadsManager<T>.splitStr='?'）
+(5) ThreadsManager<T>.SetUploadIngTask			赋值当前正在上传的操作
+(6) ThreadsManager<T>.GetUploadIngTask			取得当前上传的操作ID
+(7) ThreadsManager<T>.UploadTaskList	   		适用于每个标示有多个文件,并用分隔符分开处理的情况
+
+(8) SingleTaskManagerInThread<T>.SaveFileResource       保存媒体文件到资源库，返回资源库保存的ID(与上边的区别是加了个T作为泛型，异常返回委托不同。)
+(9) SingleTaskManagerInThread<T>.DeleteRelationResource 删除资源库图片中的应用，返回资源库保存的ID(与上边的区别是加了个T作为泛型，异常返回委托不同。)
+(10) ResourceIdRuleHelper<T>.GetThumbnailPath            根据图片ID返回指定尺寸完整路径，返回资源库保存的ID(与上边的区别是加了个T作为泛型，异常返回委托不同。)
+
+二：config配置
+    与上边一样
+
+三：Global设置
+    // 初始化读取文件中的任务队列
+    ThreadsManager<ResourceInfoDto>.UploadTaskList = SaveTaskFile<ResourceInfoDto>.ReadInFile() ?? new List<SingleTask<ResourceInfoDto>>();
+    // 提交任务资源到资源库后触发的事件。
+    ThreadsManager<ResourceInfoDto>.OnTaskSubmitEnd += ProjectBLL.AfterRunSingleTask;
+    // 任务提交按照每个系统逻辑不同自己编写适用于自己系统的事件，可参照外采系统。
+    ThreadsManager<ResourceInfoDto>.OnSingleTaskSubmit += ProjectBLL.RunSingleTask;
+    // 任务提交到资源库中的统一异常抛出处。
+    ThreadsManager<ResourceInfoDto>.OnThreadsSingleTaskException += ProjectBLL.WriteResourceTaskLog;
+
+四：关于泛型T的含义：每个线程执行时所代表的其余信息。
+    外采例子：
+    /// <summary>
+    /// 资源库上传记录所需信息
+    /// </summary>
+    [Serializable]
+    public class ResourceInfoDto
+    {
+        public ResourceInfoDto()
+        {
+            TaskId = "";
+            TaskNum = "";
+            ClientName = "";
+            ClientTelephone = "";
+            TargetAddress = "";
+            Owner = "";
+            OwnerTelePhone = "";
+            UploadUser = "";
+        }
+
+        /// <summary>
+        /// 任务编号
+        /// </summary>
+        public string TaskId;
+        /// <summary>
+        /// 项目编号
+        /// </summary>
+        public string TaskNum;
+        /// <summary>
+        /// 地址
+        /// </summary>
+        public string TargetAddress;
+        /// <summary>
+        /// 委托方
+        /// </summary>
+        public string ClientName;
+        /// <summary>
+        /// 委托人联系电话
+        /// </summary>        
+        public string ClientTelephone;
+        /// <summary>
+        /// 业主
+        /// </summary>
+        public string Owner;
+        /// <summary>
+        /// 业主电话
+        /// </summary>
+        public string OwnerTelePhone;
+        /// <summary>
+        /// 上传人
+        /// </summary>
+        public string UploadUser;
+    }
+
+五：实现Global设置的线程执行后运行方法、线程执行中运行方法、线程执行中日志记录。
+	
+       （1）线程执行后运行方法
+        /// <summary>
+        /// 执行完单个任务后的回调函数
+        /// </summary>
+        /// <param name="singleTask">单个操作对象</param>
+        public static void AfterRunSingleTask(SingleTask<ResourceInfoDto> singleTask)
+        {
+            var repositoryItems = new OriginalItemsRepository();
+            List<long> itemIds = singleTask.Items.Select(x => x.ItemId).ToList();
+            IList<OriginalItem> mediaItems = repositoryItems.GetItemsByItemIdList(itemIds);
+            var insertOrUpdates = new List<OriginalItem>();
+            foreach (var scItem in singleTask.Items)
+            {
+                var tempItem = mediaItems.FirstOrDefault(x => x.ID == scItem.ItemId);
+                if (tempItem != null)
+                {
+                    tempItem.Value = scItem.Value;
+                    insertOrUpdates.Add(tempItem);
+                }
+            }
+            // 插入新数据到数据库
+            repositoryItems.InsertOrUpdataItems(insertOrUpdates);
+            // 删除本地原来图片
+            foreach (var oldValue in singleTask.Items)
+            {
+                if (oldValue.OldData != null)
+                {
+                    DelOldPic(oldValue.OldData);
+                }
+            }
+            // 上传完成，修改任务状态和结束时间
+            new OriginalDataRepository().UpdateTaskResourceStatusOrDate(singleTask.TaskId, emResourceUploadStatus.同步完成,resourceUploadedDate:DateTime.Now);
+        }
+
+       （2）线程执行中运行方法
+        /// <summary>
+        /// 执行单个个任务(因每个系统存在字段、结构不同，因此此块抽出在引用系统中实现。)
+        /// </summary>
+        /// <param name="sendTask">单个操作对象</param>
+        public static void RunSingleTask(SingleTask<ResourceInfoDto> sendTask)
+        {
+            try
+            {
+                // 上传中，修改任务状态
+                new OriginalDataRepository().UpdateTaskResourceStatusOrDate(sendTask.TaskId, emResourceUploadStatus.同步中);
+                sendTask.UploadStatus = UploadStatusEnum.上传中;
+                // 设置正在上传的任务
+                ThreadsManager<ResourceInfoDto>.SetUploadIngTask(sendTask);
+                // 循环操作的子项
+                foreach (Item item in sendTask.Items)
+                {
+                    // 若正在上传的列表中存在两个以上的相同操作，则跳过当前操作（只要执行Index最新的TaskID相同项）。
+                    // 若是单个任务子项上传，则其不会检测所有需要删除的子项，并在相同的任务下不需要跳过该任务。
+                    if (ThreadsManager<ResourceInfoDto>.UploadTaskList.Count(x => x.TaskId == sendTask.TaskId) > 1 &&
+                        sendTask.CheckTaskCompareItems)
+                    {
+                        // 当同一任务有多个操作时，无论是否失败，保留最新的操作并去除所有旧的操作。
+                        KeepOnlyOneNewTask(sendTask.TaskId);
+                        // 上传完成后将正在上传项设回null
+                        ThreadsManager<ResourceInfoDto>.SetUploadIngTask(null);
+                        // 完成一个操作后将任务剩余列表保存到操作列表文件中
+                        SaveTaskFile<ResourceInfoDto>.WriteInFile(ThreadsManager<ResourceInfoDto>.UploadTaskList);
+                        return;
+                    }
+                    // 调用value里边存在分隔符来分割单张图片的方法
+                    if (!item.OldData.IsNullOrEmpty())
+                    {
+                        item.Value = ThreadsManager<ResourceInfoDto>.SendValueNeedSplitResult(item.OldData, item.ItemId, sendTask.TaskId, ThreadsManager<ResourceInfoDto>.SplitStr,
+                            item.FileTypeEnum, (sendTask.Other).TaskNum, item.FileTitle);
+                    }
+                    else
+                    {
+                        item.Value = "";
+                    }
+                }
+                // 删除资源库多余引用
+                if (sendTask.CheckTaskCompareItems)
+                {
+                    foreach (Item item in sendTask.Items)
+                    {
+                        string ids = item.Value.Replace(";", ",");
+                        if (!SingleTaskManagerInThread<ResourceInfoDto>.CheckIdsResource(ids, item.BelongId, item.BelongpId, item.FileTypeEnum))
+                        {
+                            throw new Exception("删除图片多余引用失败");
+                        }
+                    }
+                }
+                // 执行上传完后保存数据到数据库的操作
+                if (ThreadsManager<ResourceInfoDto>.OnTaskSubmitEnd != null)
+                {
+                    ThreadsManager<ResourceInfoDto>.OnTaskSubmitEnd(sendTask);
+                } 
+            }
+            catch (Exception ex)
+            {
+                // 上传失败，修改任务状态
+                new OriginalDataRepository().UpdateTaskResourceStatusOrDate(sendTask.TaskId, emResourceUploadStatus.同步失败);
+                sendTask.UploadStatus = UploadStatusEnum.上传失败;
+                // 记录日志
+                string userName = sendTask.Other == null ? "暂无" : (sendTask.Other).UploadUser;
+                string taskNum = sendTask.Other == null ? "暂无" : (sendTask.Other).TaskNum;
+                LogInfoHelper.WriteLog(userName, "资源库操作", "上传文件到资源库", "任务编号[" + taskNum +
+                        "]上传到资源库失败，信息如下:" + Environment.NewLine + ex);
+                // 上传完成后将正在上传项设回null
+                ThreadsManager<ResourceInfoDto>.SetUploadIngTask(null);
+                // 完成一个操作后将任务剩余列表保存到操作列表文件中
+                SaveTaskFile<ResourceInfoDto>.WriteInFile(ThreadsManager<ResourceInfoDto>.UploadTaskList);
+                return;
+            }
+            // 上传成功后将其从列表中去除
+            ThreadsManager<ResourceInfoDto>.UploadTaskList.Remove(sendTask);
+            // 上传完成后将正在上传项设回null
+            ThreadsManager<ResourceInfoDto>.SetUploadIngTask(null);
+            // 完成一个操作后将任务剩余列表保存到操作列表文件中
+            SaveTaskFile<ResourceInfoDto>.WriteInFile(ThreadsManager<ResourceInfoDto>.UploadTaskList);
+        }
+
+       （3）线程执行中日志记录
+	/// <summary>
+        /// 记录线程执行中反馈的异常信息(返回对象的异常信息：ExceptionMsg-异常描述，TaskException-异常对象)
+        /// </summary>
+        /// <param name="sendTask">单个任务对象</param>
+        public static void WriteResourceTaskLog(SingleTask<ResourceInfoDto> sendTask)
+        {
+            string userName = sendTask.Other == null ? "暂无" : (sendTask.Other).UploadUser;
+            string taskNum = sendTask.Other == null ? "暂无" : (sendTask.Other).TaskNum;
+            LogInfoHelper.WriteLog(userName, "资源库操作", "上传文件到资源库", "任务编号[" + taskNum +
+                                                                         "]上传到资源库失败，信息如下:"
+                                                                         + Environment.NewLine + sendTask.ExceptionMsg);
+        }

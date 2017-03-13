@@ -1,0 +1,6260 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Peacock.DataBase.DataConvert</name>
+    </assembly>
+    <members>
+        <member name="T:GHSoft.DTO2.WebOutputResult`1">
+            <summary>
+            调用服务后接收的对象
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-4-18 10:51:40</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.DTO2.WebOutputResult`1.#ctor(System.String)">
+            <summary>
+            对象构造函数
+            </summary>
+        </member>
+        <member name="F:GHSoft.DTO2.WebOutputResult`1.resultDataXML">
+            <summary>
+            结果数据XML
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.WebOutputResult`1.ReturnType">
+            <summary>
+            获取返回值类型 默认为xml
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.WebOutputResult`1.ClientType">
+            <summary>
+            调用的客户端类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.WebOutputResult`1.CommandName">
+            <summary>
+            服务调用的命令名称。
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.WebOutputResult`1.ResultFormat">
+            <summary>
+            返回结果的格式信息，可以是文件的格式名称，例如：xls,doc等,
+                             也可以是序列化的格式名称，如：Json,XML等。
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.WebOutputResult`1.Security">
+            <summary>
+            服务调用的安全对象
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.WebOutputResult`1.ResultData">
+            <summary>
+            服务调用的参数对象
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.WebOutputResult`1.Others">
+            <summary>
+            其他信息，用于扩展使用
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.WebOutputResult`1.IsList">
+            <summary>
+            返回的数据是否为列表
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.WebOutputResult`1.Status">
+            <summary>
+            服务调用的状态信息
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.WebOutputResult`1.Paging">
+            <summary>
+            分页信息
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.WebOutputResult`1.ResultDataXML">
+            <summary>
+            结果对象的XML字符串
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.BaseDTO2">
+            <summary>
+            DTO的基类
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-8-16 10:08:02</para>
+                <para>    Modifier：贺隽</para>
+                <para>ModifierTime：2013-3-25 16:08:15</para>
+            </remarks>
+        </member>
+        <member name="T:GHSoft.DTO2.IDTO">
+            <summary>
+            DTO接口。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 11:21:56</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.DTO2.IDTO.TID">
+            <summary>
+            系统唯一标识
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.IDTO.CreatedDate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.IDTO.PID">
+            <summary>
+            分区ID，有需要时使用
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.IDTO.Status">
+            <summary>
+            数据对象的状态
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.IDTO.TGuid">
+            <summary>
+             Guid字符，有需要时使用
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.IDTO.Expansion">
+            <summary>
+            扩充数据
+            </summary>
+        </member>
+        <member name="M:GHSoft.DTO2.BaseDTO2.#ctor">
+            <summary>
+            BaseDTO的构造函数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.BaseDTO2.TID">
+            <summary>
+            系统唯一标识
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.BaseDTO2.CreatedDate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.BaseDTO2.ModifyDate">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.BaseDTO2.PID">
+            <summary>
+            分区ID，有需要时使用
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.BaseDTO2.Status">
+            <summary>
+            数据对象的状态
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.BaseDTO2.TGuid">
+            <summary>
+             Guid字符，有需要时使用
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.BaseDTO2.Expansion">
+            <summary>
+            扩充数据
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.BaseDTO2.InputType">
+             <summary>
+            录入类型  FLASH/ACCESS/EXCEL
+             </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.CaseDetailsPriceTimesDTO">
+            <summary>
+            案例详细价格时间分布图模型
+            </summary>
+            <remarks>
+                <para>    Creator：SEN</para>
+                <para>CreatedTime：2013/11/8 17:37:51</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.CaseDetailsPriceTimesDTO.CasePrice">
+            <summary>
+            案例价格
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.CaseDetailsPriceTimesDTO.CaseTime">
+            <summary>
+            案例时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.CaseDetailsPriceTimesDTO.CaseName">
+            <summary>
+            案例名称
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.CaseMonthAveragePricesDTO">
+            <summary>
+            月份案例单价均价分布图模型
+            </summary>
+            <remarks>
+                <para>    Creator：SEN</para>
+                <para>CreatedTime：2013/11/8 17:30:16</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.CaseMonthAveragePricesDTO.Price">
+            <summary>
+            均价
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.CaseMonthAveragePricesDTO.CaseTime">
+            <summary>
+            案例时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.CaseMonthAveragePricesDTO.CaseName">
+            <summary>
+            案例名称
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.CaseMonthCountsDTO">
+            <summary>
+            月份案例单价均价分布图模型
+            </summary>
+            <remarks>
+                <para>    Creator：SEN</para>
+                <para>CreatedTime：2013/11/8 17:30:29</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.CaseMonthCountsDTO.CaseCount">
+            <summary>
+            案例数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.CaseMonthCountsDTO.CaseTime">
+            <summary>
+            案例时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.CaseMonthCountsDTO.CaseName">
+            <summary>
+            案例名称
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.CasePriceRangesDTO">
+            <summary>
+            案例价格区间案例数分布图模型
+            </summary>
+            <remarks>
+                <para>    Creator：SEN</para>
+                <para>CreatedTime：2013/11/8 17:34:57</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.CasePriceRangesDTO.CaseCount">
+            <summary>
+            案例数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.CasePriceRangesDTO.CasePrice">
+            <summary>
+            案例价格区间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.CasePriceRangesDTO.CaseName">
+            <summary>
+            案例名称
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.ITemplateDTO">
+            <summary>
+            文件模板类
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/9/24 14:10:39</para>
+            </remarks>	
+        </member>
+        <member name="T:GHSoft.DTO2.TemplateDTO">
+            <summary>
+            模板对象的属性
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-4-18 14:41:03</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.DTO2.TemplateDTO.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:GHSoft.DTO2.TemplateDTO.SetStream(System.IO.Stream)">
+            <summary>
+            设置文件流
+            </summary>
+            <param name="stream"></param>
+        </member>
+        <member name="M:GHSoft.DTO2.TemplateDTO.GetStream">
+            <summary>
+            获取文件流
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.DTO2.TemplateDTO.LoadFile(System.String)">
+            <summary>
+            加载文件流
+            </summary>
+            <param name="fullName">物理路径</param>
+            <returns>是否加载成功</returns>
+        </member>
+        <member name="M:GHSoft.DTO2.TemplateDTO.SaveFile(System.String,System.Boolean)">
+            <summary>
+            保存文件
+            </summary>
+            <param name="fullName">文件保存的地址,物理路径</param>
+            <param name="isCheckFolder">是否检查文件夹是否存在，如果是，当最后一级文件夹不存在时，自动创建，但如果最次一级文件夹也不存在，会出错</param>
+            <returns>是否加载成功</returns>
+        </member>
+        <member name="P:GHSoft.DTO2.TemplateDTO.Name">
+            <summary>
+            模板名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.TemplateDTO.Path">
+            <summary>
+            模板地址
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.TemplateDTO.Type">
+            <summary>
+            模板类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.TemplateDTO.Format">
+            <summary>
+            模板文件的格式，例如：xls,doc
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.TemplateDTO.FileBytes">
+            <summary>
+            文件流存放属性
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.TemplateDTO.ParentInfo">
+            <summary>
+            父对象信息
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.TemplateDTO.UploadedTime">
+            <summary>
+            上传时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.TemplateDTO.UploaderInfo">
+            <summary>
+            上传者信息
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.CaseSumDTO">
+            <summary>
+            案例统计图形信息
+            </summary>
+            <remarks>
+                <para>    Creator：SEN</para>
+                <para>CreatedTime：2014/3/7 10:33:30</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.CaseSumDTO.ResidentialAreaId">
+            <summary>
+            小区对象信息，外键约束
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.CaseSumDTO.CaseType">
+            <summary>
+            案例类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.CaseSumDTO.CaseDate">
+            <summary>
+            统计年/月
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.CaseSumDTO.CaseCount">
+            <summary>
+            案例数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.CaseSumDTO.Price">
+            <summary>
+            均价
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.HouseAppraisalCaseDTO">
+            <summary>
+            房屋评估案例DTO
+            </summary>
+            <remarks>
+                <para>    Creator：SEN</para>
+                <para>CreatedTime：2013/10/11 11:58:07</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.ResidentialAreaID">
+            <summary>
+            小区ID 外键约束
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.BuildingID">
+            <summary>
+            楼栋ID 外键约束
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.BuildingName">
+            <summary>
+            楼栋名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.UnitID">
+            <summary>
+            单元ID 外键约束
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.UnitName">
+            <summary>
+            单元名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.HouseID">
+            <summary>
+            户ID 外键约束
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.HouseName">
+            <summary>
+            户名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.BuildingStructure">
+            <summary>
+            建筑类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.DistrictName">
+            <summary>
+            行政区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.ResidentialAreaName">
+            <summary>
+            小区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.CaseTime">
+            <summary>
+            案例时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.CaseFrom">
+            <summary>
+            案例来源
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.SourceID">
+            <summary>
+            源标识
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.SourceMeta">
+            <summary>
+            源描述
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.ExtData">
+            <summary>
+            扩展数据
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.AppraisalPurpose">
+            <summary>
+            估价目的
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.TypeofValue">
+            <summary>
+            价值类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.DateofValue">
+            <summary>
+            估价时点
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.UnitShape">
+            <summary>
+            户型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.UnitStructure">
+            <summary>
+            户型结构
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.Floor">
+            <summary>
+            实际层
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.Floors">
+            <summary>
+            总楼层
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.BuildingArea">
+            <summary>
+            建筑面积
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.InsideOfBuildingArea">
+            <summary>
+            使用面积
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.Toward">
+            <summary>
+            主体朝向
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.HouseNature">
+            <summary>
+            房屋性质
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.HouseType">
+            <summary>
+            房屋类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.HouseUseType">
+            <summary>
+            房屋用途
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.RealUseType">
+            <summary>
+            实际用途
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.NatureOfPropertyRight">
+            <summary>
+            产权性质
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.BuildingCategory">
+            <summary>
+            建筑类别
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.BuildingCompletedYear">
+            <summary>
+            建成年代
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.RemainYear">
+            <summary>
+            剩余使用年限
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.Decoration">
+            <summary>
+            装修
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.Valuationmethods">
+            <summary>
+            估价方法
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.TotalPrice">
+            <summary>
+            总价
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.UnitPrice">
+            <summary>
+            单价
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.ZoneCaseFrom">
+            <summary>
+            板块
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.Partition">
+            <summary>
+            分期
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.Rooms">
+            <summary>
+            室数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.Halls">
+            <summary>
+            厅数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.Kitchens">
+            <summary>
+            厨房数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.Toilets">
+            <summary>
+            卫生间数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.Balconys">
+            <summary>
+            阳台数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.FloorName">
+            <summary>
+            层名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.FloorCount">
+            <summary>
+            层数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseAppraisalCaseDTO.FloorType">
+            <summary>
+            层类型
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.HouseOfferForRentDTO">
+            <summary>
+            房屋出租报盘DTO
+            </summary>
+            <remarks>
+                <para>    Creator：SEN</para>
+                <para>CreatedTime：2013/10/11 11:59:28</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.ResidentialAreaID">
+            <summary>
+            小区ID 外键约束
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.BuildingID">
+            <summary>
+            楼栋ID 外键约束
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.BuildingName">
+            <summary>
+            楼栋名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.UnitID">
+            <summary>
+            单元ID 外键约束
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.UnitName">
+            <summary>
+            单元名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.HouseID">
+            <summary>
+            户ID 外键约束
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.HouseName">
+            <summary>
+            户名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.DistrictName">
+            <summary>
+            行政区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.ResidentialAreaName">
+            <summary>
+            小区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.CaseTime">
+            <summary>
+            案例时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.CaseFrom">
+            <summary>
+            案例来源
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.SourceID">
+            <summary>
+            源标识
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.SourceMeta">
+            <summary>
+            源描述
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.ExtData">
+            <summary>
+            扩展数据
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.UnitShape">
+            <summary>
+            户型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.UnitStructure">
+            <summary>
+            户结构
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.Floor">
+            <summary>
+            实际层
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.Floors">
+            <summary>
+            总楼层
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.BuildingArea">
+            <summary>
+            建筑面积
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.InsideOfBuildingArea">
+            <summary>
+            使用面积
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.Toward">
+            <summary>
+            主体朝向
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.Decoration">
+            <summary>
+            装修
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.HouseNature">
+            <summary>
+            房屋性质
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.HouseUseType">
+            <summary>
+            房屋用途
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.HouseType">
+            <summary>
+            房屋类型
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.RealUseType">
+            <summary>
+            实际用途
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.Supplementary">
+            <summary>
+            附带物品
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.RentType">
+            <summary>
+            租赁类型
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.MonthPrice">
+            <summary>
+            月租金
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.PaymentMode">
+            <summary>
+            付款方式
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.Comment">
+            <summary>
+            备注
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.NatureOfPropertyRight">
+            <summary>
+            产权性质
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.ZoneCaseFrom">
+            <summary>
+            板块
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.Partition">
+            <summary>
+            分期
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.Rooms">
+            <summary>
+            室数量
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.Halls">
+            <summary>
+            厅数量
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.Kitchens">
+            <summary>
+            厨房数量
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.Toilets">
+            <summary>
+            卫生间数量
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.Balconys">
+            <summary>
+            阳台数量
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.FloorName">
+            <summary>
+            层名
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.FloorCount">
+            <summary>
+            层数
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForRentDTO.FloorType">
+            <summary>
+            层类型
+            </summary> 
+        </member>
+        <member name="T:GHSoft.DTO2.HouseSoldCaseDTO">
+            <summary>
+            一手房出售案例DTO
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/10/11 17:54:25</para>
+            </remarks>	
+        </member>
+        <member name="M:GHSoft.DTO2.HouseSoldCaseDTO.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.ResidentialAreaID">
+            <summary>
+            小区对象信息，外键约束
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.BuildingID">
+            <summary>
+            楼栋对象信息，外键约束
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.BuildingName">
+            <summary>
+            楼栋名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.UnitID">
+            <summary>
+            单元对象信息，外键约束
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.UnitName">
+            <summary>
+            单元名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.HouseID">
+            <summary>
+            户对象信息，外键约束
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.HouseName">
+            <summary>
+            户名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.DistrictName">
+            <summary>
+            行政区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.ResidentialAreaName">
+            <summary>
+            小区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.CaseTime">
+            <summary>
+            案例时间
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.CaseFrom">
+            <summary>
+            案例来源
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.SourceID">
+            <summary>
+            源标识
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.SourceMeta">
+            <summary>
+            源描述
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.ExtData">
+            <summary>
+            扩展数据
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.UnitShape">
+            <summary>
+            户型
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.UnitStructure">
+            <summary>
+            户结构
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.Floor">
+            <summary>
+            实际层
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.Floors">
+            <summary>
+            总楼层
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.BuildingCategory">
+            <summary>
+            建筑类别
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.BuildingCompletedYear">
+            <summary>
+            建成年代
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.RemainYear">
+            <summary>
+            剩余使用年限
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.BuildingArea">
+            <summary>
+            建筑面积
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.InsideOfBuildingArea">
+            <summary>
+            使用面积
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.Toward">
+            <summary>
+            主体朝向
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.Decoration">
+            <summary>
+            装修
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.HouseNature">
+            <summary>
+            房屋性质
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.HouseUseType">
+            <summary>
+            房屋用途
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.HouseType">
+            <summary>
+            房屋类型
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.RealUseType">
+            <summary>
+            实际用途
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.Supplementary">
+            <summary>
+            附带物品
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.SupportingFacility">
+            <summary>
+            配套设施
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.UnitPrice">
+            <summary>
+            单价
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.TotalPrice">
+            <summary>
+            总价
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.OtherFactor">
+            <summary>
+            其它因素
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.Comment">
+            <summary>
+            备注
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.PropertyUser">
+            <summary>
+            产权人
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.TransactionCount">
+            <summary>
+            成交套数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.OwnershipNo">
+            <summary>
+            所有权证号
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.NatureOfPropertyRight">
+            <summary>
+            产权性质
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.ZoneCaseFrom">
+            <summary>
+            板块
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.Partition">
+            <summary>
+            分期
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.Rooms">
+            <summary>
+            室数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.Halls">
+            <summary>
+            厅数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.Kitchens">
+            <summary>
+            厨房数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.Toilets">
+            <summary>
+            卫生间数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.Balconys">
+            <summary>
+            阳台数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.FloorName">
+            <summary>
+            层名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.FloorCount">
+            <summary>
+            层数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseSoldCaseDTO.FloorType">
+            <summary>
+            层类型
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.CityDetailDTO">
+            <summary>
+            城市详细DTO
+            </summary>
+            <remarks>
+                <para>    Creator：SEN</para>
+                <para>CreatedTime：2013/11/20 9:16:06</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.CityDetailDTO.Area">
+            <summary>
+            面积
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.CityDetailDTO.Population">
+            <summary>
+            常住人口
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.CityDetailDTO.FloatingPopulation">
+            <summary>
+            流动人口
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.CityDetailDTO.Summary">
+            <summary>
+            概述
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.CityDetailDTO.CityName">
+            <summary>
+            城市名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.CityDetailDTO.Attribute_30">
+            <summary>
+            城市曾用名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.CityDetailDTO.Attribute_32">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.CityDetailDTO.DescriptionDate">
+            <summary>
+            描述时点
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.CityDetailDTO.DespEndDate">
+            <summary>
+            描述失效时点
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.CityDTO">
+            <summary>
+            城市DTO
+            </summary>
+            <remarks>
+                <para>    Creator：HCLI</para>
+                <para>CreatedTime：2014/4/28 9:16:06</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.CityDTO.Name">
+            <summary>
+            城市名称
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.CityDTO.IsUse">
+            <summary>
+            是否使用
+            </summary> 
+        </member>
+        <member name="T:GHSoft.DTO2.TokenDTO">
+            <summary>
+            Token信息
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.TokenDTO.TID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.TokenDTO.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.TokenDTO.ExpirationTime">
+            <summary>
+            失效时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.TokenDTO.Token">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.TokenDTO.RefreshToken">
+            <summary>
+            刷新Token
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.TokenDTO.AuthType">
+            <summary>
+            令牌类型
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.ClientDTO">
+            <summary>
+            客户端DTO
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ClientDTO.Img">
+            <summary>
+            应用图片
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ClientDTO.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ClientDTO.Paw">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ClientDTO.Name">
+            <summary>
+            名字
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ClientDTO.ClientSecret">
+            <summary>
+            客户端公钥
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ClientDTO.ClientIdentifier">
+            <summary>
+            客户端识别号
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ClientDTO.Desc">
+            <summary>
+            简介
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ClientDTO.RedirectUrl">
+            <summary>
+            回调地址 (没有callback参数时候使用)
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.DistrictDescriptionDateDTO">
+            <summary>
+            描述时点
+            </summary>
+            <remarks>
+                <para>    Creator：helang</para>
+                <para>CreatedTime：2013/5/27 14:38:29</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDescriptionDateDTO.id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDescriptionDateDTO.DescriptionDate">
+            <summary>
+            描述时点
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.DistrictDTO">
+            <summary>
+            行政区Dto
+            </summary>
+            <remarks>
+                <para>    Creator：helang</para>
+                <para>CreatedTime：2013/5/22 14:28:06</para>
+            </remarks>  
+        </member>
+        <member name="F:GHSoft.DTO2.DistrictDTO._districtFullName">
+            <summary>
+            行政区全名
+            标识所属父及祖先行政节点，由"/祖先节点名称/"组成，如越秀区的全名为：/广东省/广州市/越秀区/
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.Area">
+            <summary>
+            行政区面积
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.Population">
+            <summary>
+            常住人口
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.FloatingPopulation">
+            <summary>
+            流动人口
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.Summary">
+            <summary>
+            概述
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.EastTo">
+            <summary>
+            东至
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.SouthTo">
+            <summary>
+            南至
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.WestTo">
+            <summary>
+            西至
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.NorthTo">
+            <summary>
+            北至
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.XCoordinate">
+            <summary>
+            标识点X坐标
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.YCoordinate">
+            <summary>
+            标识点Y坐标
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.XYCoordinateArray">
+            <summary>
+            XY坐标组
+            以 x,y|x,y|x,y 的形式保存
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.BaiduMapLongitude">
+            <summary>
+            百度地图标识点经度
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.BaiduMapLatitude">
+            <summary>
+            百度地图标识点纬度
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.BaiduLatLngArray">
+            <summary>
+            百度地图标识点经纬度组
+            以 a,b|a,b|a,b 的形式保存
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.GoogleMapLongitude">
+            <summary>
+            谷歌标识点经度
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.GoogleMapLatitude">
+            <summary>
+            谷歌标识点纬度
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.GoogleLatLngArray">
+            <summary>
+            谷歌地图标识点经纬度组
+            以 a,b|a,b|a,b 的形式保存
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.DistrictName">
+            <summary>
+            行政区名称
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.DistrictParentFullName">
+            <summary>
+            行政区父级名称
+            标识所属父及祖先行政节点，由"/祖先节点名称/"组成，如广州的全名为：/广东省/广州市/
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.DistrictFullName">
+            <summary>
+            行政区全名
+            标识所属父及祖先行政节点，由"/祖先节点名称/"组成，如越秀区的全名为：/广东省/广州市/越秀区/
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.DistrictType">
+            <summary>
+            行政区域类型
+            省=0,城市16:省会城市=16,普通城市=17,行政区32:城区 = 32,郊区 = 33,开发区 = 34,行政区、县、县级市、建制镇
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.DescriptionDate">
+            <summary>
+            描述时点
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.Alias">
+            <summary>
+            别名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.Code">
+            <summary>
+            行政区编码
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.PostCode">
+            <summary>
+            邮政编码
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.Pictures">
+            <summary>
+            图片列表信息，相关图片集合
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.Comment">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.DespEndDate">
+            <summary>
+            描述失效时点
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.DisappearDate">
+            <summary>
+            消亡时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.DistrictDTO.UploadImageList">
+            <summary>
+            上传图片列表
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.EnumItemDTO">
+            <summary>
+            枚举类型值DTO
+            </summary>
+            <remarks>
+                <para>    Creator：SEN</para>
+                <para>CreatedTime：2013/11/20 15:22:42</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.EnumItemDTO.EnumItemName">
+            <summary>
+            枚举值名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.EnumItemDTO.EnumId">
+            <summary>
+            枚举类型ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.EnumItemDTO.EnumItemValue">
+            <summary>
+            枚举值
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.EnumItemDTO.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.EnumMapperHistoryDTO">
+            <summary>
+            枚举映射记录DTO
+            </summary>
+            <remarks>
+                <para>    Creator：SEN</para>
+                <para>CreatedTime：2013/11/20 15:21:43</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.EnumMapperHistoryDTO.EnumID">
+            <summary>
+            枚举类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.EnumMapperHistoryDTO.TableName">
+            <summary>
+            表名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.EnumMapperHistoryDTO.FieldName">
+            <summary>
+            字段名
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.EnumsDTO">
+            <summary>
+            枚举类型
+            </summary>
+            <remarks>
+                <para>    Creator：SEN</para>
+                <para>CreatedTime：2013/11/20 15:20:45</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.EnumsDTO.TypeName">
+            <summary>
+            分类名 用于检索
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.EnumsDTO.EnumName">
+            <summary>
+            枚举类型名称
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.EnumsListDTO">
+            <summary>
+            枚举列表 DTO
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/11/21 10:20:56</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.EnumsListDTO.TypeName">
+            <summary>
+            分类名 用于检索
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.EnumsListDTO.EnumName">
+            <summary>
+            枚举类型名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.EnumsListDTO.Desc">
+            <summary>
+            枚举描述
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.EnumsListDTO.EnumItem">
+            <summary>
+            枚举值
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.HouseBuildingExtDTO">
+            <summary>
+            楼栋扩展属性DTO
+            </summary>
+            <remarks>
+                <para>    Creator：SEN</para>
+                <para>CreatedTime：2013/10/10 11:25:35</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingExtDTO.BuildingID">
+            <summary>
+            楼栋ID 外键约束
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingExtDTO.SourceFrom">
+            <summary>
+            采集来源
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingExtDTO.SourceID">
+            <summary>
+            源标识
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingExtDTO.SourceMeta">
+            <summary>
+            源描述
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingExtDTO.When">
+            <summary>
+            采集时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingExtDTO.ExtData">
+            <summary>
+            扩展数据
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.HouseExtDTO">
+            <summary>
+            户扩展数据
+            </summary>
+            <remarks>
+                <para>    Creator：SEN</para>
+                <para>CreatedTime：2013/10/10 11:39:28</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.HouseExtDTO.HouseID">
+            <summary>
+            户ID 外键约束
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseExtDTO.SourceFrom">
+            <summary>
+            采集来源
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseExtDTO.SourceID">
+            <summary>
+            源标识
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseExtDTO.SourceMeta">
+            <summary>
+            源描述
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseExtDTO.When">
+            <summary>
+            采集时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseExtDTO.ExtData">
+            <summary>
+            扩展数据
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.HousePurposeUnitExtDTO">
+            <summary>
+            楼栋单元扩展数据
+            </summary>
+            <remarks>
+                <para>    Creator：SEN</para>
+                <para>CreatedTime：2013/10/10 11:37:15</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.HousePurposeUnitExtDTO.UnitID">
+            <summary>
+            单元ID 外键约束
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HousePurposeUnitExtDTO.SourceFrom">
+            <summary>
+            采集来源
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HousePurposeUnitExtDTO.SourceID">
+            <summary>
+            源标识
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HousePurposeUnitExtDTO.SourceMeta">
+            <summary>
+            源描述
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HousePurposeUnitExtDTO.When">
+            <summary>
+            采集时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HousePurposeUnitExtDTO.ExtData">
+            <summary>
+            扩展数据
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.ResidentialAreaExtDTO">
+            <summary>
+            小区扩展属性DTO
+            </summary>
+            <remarks>
+                <para>    Creator：SEN</para>
+                <para>CreatedTime：2013/10/10 11:25:12</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaExtDTO.ResidentialAreaID">
+            <summary>
+            小区ID 外键约束
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaExtDTO.SourceFrom">
+            <summary>
+            采集来源
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaExtDTO.SourceID">
+            <summary>
+            源标识
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaExtDTO.SourceMeta">
+            <summary>
+            源描述
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaExtDTO.When">
+            <summary>
+            采集时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaExtDTO.ExtData">
+            <summary>
+            扩展数据
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.GarageDTO">
+            <summary>
+            车库DTO
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/7/18 17:59:39</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.DTO2.GarageDTO.#ctor">
+            <summary>
+            GarageDTO的构造函数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.GarageDTO.Name">
+            <summary>
+            车库名称
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.GarageDTO.Amount">
+            <summary>
+            车位数量
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.GarageDTO.GarageType">
+            <summary>
+            车库类型
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.GarageDTO.Description">
+            <summary>
+            描述
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.GarageDTO.DisappearDate">
+            <summary>
+            消亡时间,如果没撤销则为空
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.GetUserTypesDTO">
+            <summary>
+            获取小区功能用途实体DTO
+            </summary>
+            <remarks>
+                <para>    Creator：helang</para>
+                <para>CreatedTime：2013/7/19 19:10:10</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.DTO2.GetUserTypesDTO.cname">
+            <summary>
+            功能用途
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.GetUserTypesDTO.cvalue">
+            <summary>
+            实际值
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.HouseBuildingDTO">
+            <summary>
+            楼幢的信息DTO
+            </summary>
+            <remarks>
+                <para>    Creator：Gorson Ng</para>
+                <para>CreatedTime：2013/7/17 14:26:31</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingDTO.ResidentialAreaID">
+            <summary>
+            小区对象ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingDTO.ResidentialAreaName">
+            <summary>
+            小区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingDTO.BuildingName">
+            <summary>
+            楼幢名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingDTO.AliasName">
+            <summary>
+            楼幢别名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingDTO.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingDTO.AddressAlias">
+            <summary>
+            地址别名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingDTO.BuildDateRecord">
+            <summary>
+            证载建成时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingDTO.BuildingStructure">
+            <summary>
+            建筑结构
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingDTO.BuildingHeight">
+            <summary>
+            建筑物高度
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingDTO.Floors">
+            <summary>
+            总楼层
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingDTO.OnTheGroundFloor">
+            <summary>
+            地上层数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingDTO.TheGroundFloor">
+            <summary>
+            地下层数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingDTO.Units">
+            <summary>
+            单元数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingDTO.HousingCount">
+            <summary>
+            总户数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingDTO.LandArea">
+            <summary>
+            土地面积
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingDTO.BuildingRealArea">
+            <summary>
+            建筑面积
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingDTO.Toward">
+            <summary>
+            主体朝向
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingDTO.NatureOfPropertyRight">
+            <summary>
+            产权性质
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingDTO.Dwelling">
+            <summary>
+            住宅类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingDTO.BuildingCategory">
+            <summary>
+            建筑类别
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingDTO.DisappearDate">
+            <summary>
+            消亡时间,如果没撤销则为空
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingDTO.Partition">
+            <summary>
+            分期
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.HouseBuildingNameInfoDTO">
+            <summary>
+            楼栋名录 
+            </summary>
+            <remarks>
+                <para>    Creator：SEN</para>
+                <para>CreatedTime：2013/10/10 11:51:01</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingNameInfoDTO.NameInSource">
+            <summary>
+             楼栋名陈
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingNameInfoDTO.AddressInSource">
+            <summary>
+             地址来源
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingNameInfoDTO.Source">
+            <summary>
+             来源
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingNameInfoDTO.BuildingId">
+            <summary>
+            楼栋ID
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseBuildingNameInfoDTO.ResidentialAreaId">
+            <summary>
+            小区ID
+            </summary> 
+        </member>
+        <member name="T:GHSoft.DTO2.ResidentialAreaNameInfoDTO">
+            <summary>
+            小区名录
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2014/3/7 16:30:52</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaNameInfoDTO.ResidentialAreaId">
+            <summary>
+            小区ID
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaNameInfoDTO.DistrictFullName">
+            <summary>
+            行政区全名
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaNameInfoDTO.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <!-- 对于成员“P:GHSoft.DTO2.ResidentialAreaNameInfoDTO.ResidentialAreaName”忽略有格式错误的 XML 注释 -->
+        <member name="P:GHSoft.DTO2.ResidentialAreaNameInfoDTO.NameInSource">
+            <summary>
+            来源小区名称
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaNameInfoDTO.Source">
+            <summary>
+            例如：搜房网，搜狐焦点等
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaNameInfoDTO.SourceKey">
+            <summary>
+            来源小区的Key
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaNameInfoDTO.SourceUrl">
+            <summary>
+            来源小区的Key
+            </summary> 
+        </member>
+        <member name="T:GHSoft.DTO2.HousePurposeUnitNameInfoDTO">
+            <summary>
+            功能单元名录 
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/10/10 11:51:01</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.HousePurposeUnitNameInfoDTO.NameInSource">
+            <summary>
+             单元名称
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HousePurposeUnitNameInfoDTO.Source">
+            <summary>
+             来源
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HousePurposeUnitNameInfoDTO.BuildingId">
+            <summary>
+            楼栋ID
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HousePurposeUnitNameInfoDTO.UnitId">
+            <summary>
+            单元ID
+            </summary> 
+        </member>
+        <member name="T:GHSoft.DTO2.HouseDTO">
+            <summary>
+            户DTO
+            </summary>
+            <remarks>
+                <para>    Creator：helang</para>
+                <para>CreatedTime：2013/7/18 17:44:09</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseDTO.HouseNumber">
+            <summary>
+            户号,不包含层号
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseDTO.HouseName">
+            <summary>
+            户名,包含层名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseDTO.Floor">
+            <summary>
+            实际层
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseDTO.FloorName">
+            <summary>
+            层名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseDTO.UnitStructure">
+            <summary>
+            户型结构
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseDTO.UnitShape">
+            <summary>
+            户型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseDTO.BuildingArea">
+            <summary>
+            建筑面积
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseDTO.InsideOfBuildingArea">
+            <summary>
+            使用面积
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseDTO.Toward">
+            <summary>
+            主体朝向
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseDTO.HouseUseType">
+            <summary>
+            房屋用途
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseDTO.HouseType">
+            <summary>
+            房屋类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseDTO.HouseNature">
+            <summary>
+            房屋性质
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseDTO.ResidentialAreaId">
+            <summary>
+            小区ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseDTO.HouseBuildingId">
+            <summary>
+            楼栋ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseDTO.FloorCount">
+            <summary>
+            层数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseDTO.FloorType">
+            <summary>
+            层类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseDTO.Rooms">
+            <summary>
+            室数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseDTO.Halls">
+            <summary>
+            厅数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseDTO.Kitchens">
+            <summary>
+            厨房数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseDTO.Toilets">
+            <summary>
+            卫生间数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseDTO.Balconys">
+            <summary>
+            阳台数量
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.HouseOfferForSaleDTO">
+            <summary>
+            房屋出售报盘DTO
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/10/14 16:46:39</para>
+            </remarks>	
+        </member>
+        <member name="M:GHSoft.DTO2.HouseOfferForSaleDTO.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.ResidentialAreaID">
+            <summary>
+            小区对象信息，外键约束
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.BuildingID">
+            <summary>
+            楼栋对象信息，外键约束
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.BuildingName">
+            <summary>
+            楼栋名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.UnitID">
+            <summary>
+            单元对象信息，外键约束
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.UnitName">
+            <summary>
+            单元名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.HouseID">
+            <summary>
+            户对象信息，外键约束
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.HouseName">
+            <summary>
+            户名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.DistrictName">
+            <summary>
+            行政区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.ResidentialAreaName">
+            <summary>
+            小区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.CaseTime">
+            <summary>
+            案例时间
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.CaseFrom">
+            <summary>
+            案例来源
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.SourceID">
+            <summary>
+            源标识
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.SourceMeta">
+            <summary>
+            源描述
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.ExtData">
+            <summary>
+            扩展数据
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.UnitShape">
+            <summary>
+            户型
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.UnitStructure">
+            <summary>
+            户结构
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.Floor">
+            <summary>
+            实际层
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.Floors">
+            <summary>
+            总楼层
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.BuildingCategory">
+            <summary>
+            建筑类别
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.BuildingCompletedYear">
+            <summary>
+            建成年代
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.RemainYear">
+            <summary>
+            剩余使用年限
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.BuildingArea">
+            <summary>
+            建筑面积
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.InsideOfBuildingArea">
+            <summary>
+            使用面积
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.Toward">
+            <summary>
+            主体朝向
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.Decoration">
+            <summary>
+            装修
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.HouseNature">
+            <summary>
+            房屋性质
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.HouseUseType">
+            <summary>
+            房屋用途
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.HouseType">
+            <summary>
+            房屋类型
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.RealUseType">
+            <summary>
+            实际用途
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.Supplementary">
+            <summary>
+            附带物品
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.SupportingFacility">
+            <summary>
+            配套设施
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.UnitPrice">
+            <summary>
+            单价
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.TotalPrice">
+            <summary>
+            总价
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.OtherFactor">
+            <summary>
+            其它因素
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.Comment">
+            <summary>
+            备注
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.NatureOfPropertyRight">
+            <summary>
+            产权性质
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.ZoneCaseFrom">
+            <summary>
+            板块
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.Partition">
+            <summary>
+            分期
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.Rooms">
+            <summary>
+            室数量
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.Halls">
+            <summary>
+            厅数量
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.Kitchens">
+            <summary>
+            厨房数量
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.Toilets">
+            <summary>
+            卫生间数量
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.Balconys">
+            <summary>
+            阳台数量
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.FloorName">
+            <summary>
+            层名
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.FloorCount">
+            <summary>
+            层数
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseOfferForSaleDTO.FloorType">
+            <summary>
+            层类型
+            </summary> 
+        </member>
+        <member name="T:GHSoft.DTO2.HousePurposeUnitDTO">
+            <summary>
+            功能单元基本信息DTO
+            </summary>
+            <remarks>
+                <para>    Creator：Gorson Ng</para>
+                <para>CreatedTime：2013/7/17 16:27:39</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.DTO2.HousePurposeUnitDTO.HouseBuildingID">
+            <summary>
+            楼幢对象信息ID
+            </summary>       
+        </member>
+        <member name="P:GHSoft.DTO2.HousePurposeUnitDTO.HouseBuildingName">
+            <summary>
+            楼幢对象信息名称
+            </summary>       
+        </member>
+        <member name="P:GHSoft.DTO2.HousePurposeUnitDTO.UnitName">
+            <summary>
+            单元名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HousePurposeUnitDTO.UnitAliasName">
+            <summary>
+            单元别名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HousePurposeUnitDTO.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HousePurposeUnitDTO.AliasAddress">
+            <summary>
+            地址别名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HousePurposeUnitDTO.StartFloor">
+            <summary>
+            起始楼层
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HousePurposeUnitDTO.Floors">
+            <summary>
+            总楼层
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HousePurposeUnitDTO.Toward">
+            <summary>
+            主体朝向
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HousePurposeUnitDTO.BuildingUseType">
+            <summary>
+            功能用途
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.HouseRentCaseDTO">
+            <summary>
+            房屋出租案例DTO
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/10/11 17:05:57</para>
+            </remarks>	
+        </member>
+        <member name="M:GHSoft.DTO2.HouseRentCaseDTO.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.ResidentialAreaID">
+            <summary>
+            小区对象信息，外键约束
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.BuildingID">
+            <summary>
+            楼栋对象信息，外键约束
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.BuildingName">
+            <summary>
+            楼栋名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.UnitID">
+            <summary>
+            单元对象信息，外键约束
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.UnitName">
+            <summary>
+            单元名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.HouseID">
+            <summary>
+            户对象信息，外键约束
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.HouseName">
+            <summary>
+            户名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.DistrictName">
+            <summary>
+            行政区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.ResidentialAreaName">
+            <summary>
+            小区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.CaseTime">
+            <summary>
+            案例时间
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.CaseFrom">
+            <summary>
+            案例来源
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.SourceID">
+            <summary>
+            源标识
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.SourceMeta">
+            <summary>
+            源描述
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.ExtData">
+            <summary>
+            扩展数据
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.UnitShape">
+            <summary>
+            户型
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.UnitStructure">
+            <summary>
+            户型结构
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.Floor">
+            <summary>
+            实际层
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.Floors">
+            <summary>
+            总楼层
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.BuildingArea">
+            <summary>
+            建筑面积
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.InsideOfBuildingArea">
+            <summary>
+            使用面积
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.Toward">
+            <summary>
+            主体朝向
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.Decoration">
+            <summary>
+            装修
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.HouseNature">
+            <summary>
+            房屋性质
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.HouseUseType">
+            <summary>
+            房屋用途
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.HouseType">
+            <summary>
+            房屋类型
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.RealUseType">
+            <summary>
+            实际用途
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.Supplementary">
+            <summary>
+            附带物品
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.RentType">
+            <summary>
+            租赁类型
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.MonthPrice">
+            <summary>
+            月租金
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.PaymentMode">
+            <summary>
+            付款方式
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.Comment">
+            <summary>
+            备注
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.NatureOfPropertyRight">
+            <summary>
+            产权性质
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.ZoneCaseFrom">
+            <summary>
+            板块
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.Partition">
+            <summary>
+            分期
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.Rooms">
+            <summary>
+            室数量
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.Halls">
+            <summary>
+            厅数量
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.Kitchens">
+            <summary>
+            厨房数量
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.Toilets">
+            <summary>
+            卫生间数量
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.Balconys">
+            <summary>
+            阳台数量
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.FloorName">
+            <summary>
+            层名
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.FloorCount">
+            <summary>
+            层数
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseRentCaseDTO.FloorType">
+            <summary>
+            层类型
+            </summary> 
+        </member>
+        <member name="T:GHSoft.DTO2.HouseResoldCaseDTO">
+            <summary>
+            二手房出售案例DTO
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/10/11 16:32:25</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.ResidentialAreaID">
+            <summary>
+            小区对象信息，外键约束
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.BuildingID">
+            <summary>
+            楼栋对象信息，外键约束
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.BuildingName">
+            <summary>
+            楼栋名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.UnitID">
+            <summary>
+            单元对象信息，外键约束
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.UnitName">
+            <summary>
+            单元名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.HouseID">
+            <summary>
+            户对象信息，外键约束
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.HouseName">
+            <summary>
+            户名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.DistrictName">
+            <summary>
+            行政区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.ResidentialAreaName">
+            <summary>
+            小区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.CaseTime">
+            <summary>
+            案例时间
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.CaseFrom">
+            <summary>
+            案例来源
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.SourceID">
+            <summary>
+            源标识
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.SourceMeta">
+            <summary>
+            源描述
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.ExtData">
+            <summary>
+            扩展数据
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.UnitShape">
+            <summary>
+            户型
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.UnitStructure">
+            <summary>
+            户结构
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.Floor">
+            <summary>
+            实际层
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.Floors">
+            <summary>
+            总楼层
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.BuildingCategory">
+            <summary>
+            建筑类别
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.BuildingCompletedYear">
+            <summary>
+            建成年代
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.RemainYear">
+            <summary>
+            剩余使用年限
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.BuildingArea">
+            <summary>
+            建筑面积
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.InsideOfBuildingArea">
+            <summary>
+            使用面积
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.Toward">
+            <summary>
+            主体朝向
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.Decoration">
+            <summary>
+            装修
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.HouseNature">
+            <summary>
+            房屋性质
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.HouseUseType">
+            <summary>
+            房屋用途
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.HouseType">
+            <summary>
+            房屋类型
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.RealUseType">
+            <summary>
+            实际用途
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.Supplementary">
+            <summary>
+            附带物品
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.SupportingFacility">
+            <summary>
+            配套设施
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.UnitPrice">
+            <summary>
+            单价
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.TotalPrice">
+            <summary>
+            总价
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.OtherFactor">
+            <summary>
+            其它因素
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.Comment">
+            <summary>
+            备注
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.TransactionCount">
+            <summary>
+            成交套数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.OwnershipNo">
+            <summary>
+            所有权证号
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.PropertyUser">
+            <summary>
+            产权人
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.NatureOfPropertyRight">
+            <summary>
+            产权性质
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.ZoneCaseFrom">
+            <summary>
+            板块
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.Partition">
+            <summary>
+            分期
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.Rooms">
+            <summary>
+            室数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.Halls">
+            <summary>
+            厅数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.Kitchens">
+            <summary>
+            厨房数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.Toilets">
+            <summary>
+            卫生间数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.Balconys">
+            <summary>
+            阳台数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.FloorName">
+            <summary>
+            层名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.FloorCount">
+            <summary>
+            层数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldCaseDTO.FloorType">
+            <summary>
+            层类型
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.HouseResoldTaxCaseDTO">
+            <summary>
+            二手房交易税案例DTO
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/10/11 17:55:15</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.ResidentialAreaID">
+            <summary>
+            小区ID 外键约束
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.BuildingID">
+            <summary>
+            楼栋对象信息，外键约束
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.BuildingName">
+            <summary>
+            楼栋名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.UnitID">
+            <summary>
+            单元对象信息，外键约束
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.UnitName">
+            <summary>
+            单元名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.HouseID">
+            <summary>
+            户ID 外键约束
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.HouseName">
+            <summary>
+            户名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.DistrictName">
+            <summary>
+            行政区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.ResidentialAreaName">
+            <summary>
+            小区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.CaseTime">
+            <summary>
+            案例时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.CaseFrom">
+            <summary>
+            案例来源
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.SourceID">
+            <summary>
+            源标识
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.SourceMeta">
+            <summary>
+            源描述
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.ExtData">
+            <summary>
+            扩展数据
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.Floors">
+            <summary>
+            总楼层
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.HouseUseType">
+            <summary>
+            房屋用途
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.HouseType">
+            <summary>
+            房屋类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.HouseNature">
+            <summary>
+            房屋性质
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.TaxArea">
+            <summary>
+            计税面积
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.BuildingArea">
+            <summary>
+            建筑面积
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.DeclarePrice">
+            <summary>
+            申报单价
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.DeclarePriceSum">
+            <summary>
+            申报总价
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.AssessPrice">
+            <summary>
+            评估单价
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.AssessPriceSum">
+            <summary>
+            评估总价
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.TaxPrice">
+            <summary>
+            计税价格
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.Toward">
+            <summary>
+            主体朝向
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.BuildingStructure">
+            <summary>
+            建筑结构
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.BuildingCompletedYear">
+            <summary>
+            建成年代
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.EndTaxInfo">
+            <summary>
+            完税情况
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.DeclareDate">
+            <summary>
+            申报日期
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.EndTaxDate">
+            <summary>
+            完税日期
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.StandardDate">
+            <summary>
+            基准时点
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.UnitShape">
+            <summary>
+            户型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.UnitStructure">
+            <summary>
+            户型结构
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.Rooms">
+            <summary>
+            室数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.Halls">
+            <summary>
+            厅数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.Kitchens">
+            <summary>
+            厨房数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.Toilets">
+            <summary>
+            卫生间数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.Balconys">
+            <summary>
+            阳台数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.FloorName">
+            <summary>
+            层名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.Floor">
+            <summary>
+            开始楼层
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.FloorCount">
+            <summary>
+            层数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.FloorType">
+            <summary>
+            层类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.ZoneCaseFrom">
+            <summary>
+            板块
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseResoldTaxCaseDTO.Partition">
+            <summary>
+            分期
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.HouseUnitDetailDTO">
+            <summary>
+            功能单元详情DTO
+            </summary>
+            <remarks>
+                <para>    Creator：Gorson Ng</para>
+                <para>CreatedTime：2013/7/18 14:24:30</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseUnitDetailDTO.HousePurposeUnitID">
+            <summary>
+            功能单元对象信息ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseUnitDetailDTO.HousePurposeUnitName">
+            <summary>
+            功能单元对象信息名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseUnitDetailDTO.ElevatorHouse">
+            <summary>
+            几梯几户
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseUnitDetailDTO.IsHasElevator">
+            <summary>
+            是否有电梯
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseUnitDetailDTO.ElevatorInfo">
+            <summary>
+            电梯情况
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseUnitDetailDTO.HallInfo">
+            <summary>
+            大堂情况
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseUnitDetailDTO.SupportingFacility">
+            <summary>
+            配套设施
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseUnitDetailDTO.DescriptionDate">
+            <summary>
+            描述时点
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseUnitDetailDTO.DespEndDate">
+            <summary>
+            描述失效时点
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ClientAuthorizationDto.ExpirationTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ClientAuthorizationDto.UserName">
+            <summary>
+            所属用户名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ClientAuthorizationDto.UserId">
+            <summary>
+            所属用户ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ClientAuthorizationDto.Token">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ClientAuthorizationDto.ClientName">
+            <summary>
+            客户端
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ClientAuthorizationDto.AuthType">
+            <summary>
+            鉴权类型
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.ParameterDTO">
+            <summary>
+            参数
+            </summary>
+            <remarks>
+                <para>    Creator：helang</para>
+                <para>CreatedTime：2013/7/18 12:44:36</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.DTO2.ParameterDTO.Name">
+            <summary>
+            name
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParameterDTO.Value">
+            <summary>
+            value
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParameterDTO.Size">
+            <summary>
+            size
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParameterDTO.Direction">
+            <summary>
+            Direction
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.ParkingSpaceDTO">
+            <summary>
+            车位信息
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/7/18 18:00:17</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.DTO2.ParkingSpaceDTO.#ctor">
+            <summary>
+            ParkingSpaceDTO的构造函数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpaceDTO.GarageId">
+            <summary>
+            车库ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpaceDTO.ParkingSpaceName">
+            <summary>
+            车位名称
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpaceDTO.ParkingSpaceArea">
+            <summary>
+            实际面积
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpaceDTO.Floor">
+            <summary>
+            实际层
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpaceDTO.ParkingSpaceDescription">
+            <summary>
+            描述
+            </summary> 
+        </member>
+        <member name="T:GHSoft.DTO2.HouseTradingCaseFullDTO">
+            <summary>
+            房屋交易案例 DTO
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/9/24 18:50:46</para>
+            </remarks>	
+        </member>
+        <member name="M:GHSoft.DTO2.HouseTradingCaseFullDTO.#ctor">
+            <summary>
+            房屋交易案例 DTO构造函数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.ProjectId">
+            <summary>
+            项目编号
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.ProjectName">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.ProvinceId">
+            <summary>
+            省份Id
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.ProvinceName">
+            <summary>
+            省份名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.ProvinceCode">
+            <summary>
+            省份编号
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.CityId">
+            <summary>
+            城市Id
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.CityName">
+            <summary>
+            城市名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.CityCode">
+            <summary>
+            城市编号
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.DistrictId">
+            <summary>
+            行政区Id
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.DistrictName">
+            <summary>
+            行政区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.DistrictCode">
+            <summary>
+            行政区编号
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.DistrictAreaId">
+            <summary>
+            片区Id
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.DistrictAreaName">
+            <summary>
+            片区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.DistrictAreaCode">
+            <summary>
+            片区编号
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.ResidentialAreaId">
+            <summary>
+            小区Id
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.ResidentialAreaName">
+            <summary>
+            小区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.ResidentialAreaCode">
+            <summary>
+            小区编号
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.Toward">
+            <summary>
+            房屋朝向
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.HouseNum">
+            <summary>
+            房号（户号）
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.Dwelling">
+            <summary>
+            住宅类别
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.BuildingPropertyType">
+            <summary>
+            物业类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.BuildingCategory">
+            <summary>
+            建筑类别
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.BuildingClass">
+            <summary>
+            建筑类别
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.HouseStructure">
+            <summary>
+            户型结构
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.IsHasParkingSpaces">
+            <summary>
+            是否有车库
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.UndergroundArea">
+            <summary>
+            地下室面积
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.HallStructure">
+            <summary>
+            厅结构
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.GardenInfo">
+            <summary>
+            花园情况
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.PublishedDate">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.PresentedInfo">
+            <summary>
+            赠送情况
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.Summary">
+            <summary>
+            房源简介
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.IsRetrofitting">
+            <summary>
+            是否加建、扩建
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.OperationInfo">
+            <summary>
+            操作情况
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.IsMatch">
+            <summary>
+            匹配情况
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.BuildingStructure">
+            <summary>
+            建筑结构
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.HouseType">
+            <summary>
+            房屋类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.HousePropertyType">
+            <summary>
+            房屋产权类别
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.UseWay">
+            <summary>
+            房屋登记用途
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.LandUseRigth">
+            <summary>
+            土地使用权类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.LandUseType">
+            <summary>
+            土地用途
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.LandUsingStartDate">
+            <summary>
+            土地使用权起始日期
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.LandUsingEndDate">
+            <summary>
+            土地使用权终止日期
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.LandShareArea">
+            <summary>
+            分摊土地使用权面积
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.TotalPrice">
+            <summary>
+            总价
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.UnitPrice">
+            <summary>
+            单价
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.StandardPrice">
+            <summary>
+            标准价
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.PriceDate">
+            <summary>
+            价格时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.ValueType">
+            <summary>
+            价值类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.CaseWeights">
+            <summary>
+            案例权重
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.NatureOfPropertyRight">
+            <summary>
+            产权性质
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.Description">
+            <summary>
+            其他描述
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.CaseType">
+            <summary>
+            案例类型/房屋用途
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.CaseSource">
+            <summary>
+            案例来源
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.ProductionType">
+            <summary>
+            产别
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.HouseBuildingID">
+            <summary>
+            楼幢号
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.HouseBuildingName">
+            <summary>
+            楼幢名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.HouseBuildingCode">
+            <summary>
+            楼幢编码
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.UnitName">
+            <summary>
+            单元名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.UnitId">
+            <summary>
+            单元ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.UnitCode">
+            <summary>
+            单元编码
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.Address">
+            <summary>
+            地址/房屋地址
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.Floor">
+            <summary>
+            所在楼层/所在层数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.MaxFloor">
+            <summary>
+            总楼层/总层数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.IsHasElevator">
+            <summary>
+            是否有电梯
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.BuiltDateRecord">
+            <summary>
+            证载建成时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.BuiltYear">
+            <summary>
+            建成年代
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.BuildDate">
+            <summary>
+            建成时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.ForTime">
+            <summary>
+            价值日期
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.ManagementFees">
+            <summary>
+            物业管理费
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.TransactionDate">
+            <summary>
+            交易日期
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.BaseFacilities">
+            <summary>
+            基础设施配套
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.EquipmentFacilities">
+            <summary>
+            设备设施
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.MarketStatus">
+            <summary>
+            市场状况
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.TradeStatus">
+            <summary>
+            交易情况
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.EnvironmentStatus">
+            <summary>
+            环境状况（自然和人文环境质量）
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.CommunityMaturity">
+            <summary>
+            社区成熟度
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.FloorAreaRatio">
+            <summary>
+            容积率
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.LandscapeAndGreenery">
+            <summary>
+            景观及绿化
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.OtherFactors">
+            <summary>
+            其他因素
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.InterestsStatus">
+            <summary>
+            权益状况
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.IsMortgage">
+            <summary>
+            抵押与否
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.IsAttach">
+            <summary>
+            查封与否
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.SubRealtyProjectID">
+            <summary>
+            项目案名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.BuildingArea">
+            <summary>
+            建筑面积
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.InsideOfBuildingArea">
+            <summary>
+            套内建筑面积(套内面积/使用面积)
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.UnitShape">
+            <summary>
+            房屋现在的户型--现状户型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.Decoration">
+            <summary>
+            装修
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.RightStatus">
+            <summary>
+            产权状态
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HouseTradingCaseFullDTO.Pictures">
+            <summary>
+            房屋图片信息
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.ParkingSpacesFullDTO">
+            <summary>
+            ParkingSpacesFullDTO Class
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/9/24 18:57:14</para>
+            </remarks>	
+        </member>
+        <member name="M:GHSoft.DTO2.ParkingSpacesFullDTO.#ctor">
+            <summary>
+            车位信息DTO构造函数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.ProvinceName">
+            <summary>
+            省份名称信息
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.ProvinceId">
+            <summary>
+            省份系统Id
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.ProvinceCode">
+            <summary>
+            省份编号
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.CityId">
+            <summary>
+            城市ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.CityCode">
+            <summary>
+            城市编码
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.CityName">
+            <summary>
+            城市名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.DistrictId">
+            <summary>
+            行政区ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.DistrictCode">
+            <summary>
+            行政区编码
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.DistrictName">
+            <summary>
+            行政区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.DistrictAreaId">
+            <summary>
+            片区ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.DistrictAreaName">
+            <summary>
+            片区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.DistrictAreaCode">
+            <summary>
+            片区代码
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.ProjectName">
+             <summary>
+            项目编号        	  	  	 
+             </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.ResidentialAreaName">
+            <summary>
+            房地产子项目名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.ParkingSpaceStatus">
+            <summary>
+            车位情况
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.ParkingNums">
+            <summary>
+             地上车位数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.AvgSpaceArea">
+            <summary>
+            车位平均建筑面积
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.ParkingUseWay">
+            <summary>
+            车位租售类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.AvgSaledPrice">
+            <summary>
+            地上车位平均售价
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.AvgRentedPrice">
+            <summary>
+             地上车位租金水平
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.Description">
+            <summary>
+            整体描述
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.BelowgroundParkingNums">
+            <summary>
+            地下车位总数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.BelowgroundSaledPrice">
+            <summary>
+            地下车位售价
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.BelowgroundRentedPrice">
+            <summary>
+            地下车位租金
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.AvgUseSpaceArea">
+            <summary>
+            车位评价使用面积
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.BelowgroundFloor">
+            <summary>
+            地下层数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.TotalArea">
+            <summary>
+            总建筑面积（平方米）
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.BuildingId">
+            <summary>
+            楼栋编号
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.BuildingName">
+            <summary>
+            楼栋名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.ForTime">
+            <summary>
+            信息获取时间/基准价时点
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.SetPropertyType">
+            <summary>
+            设定物业类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.SetBuildedYear">
+            <summary>
+            设定建成年份
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.SetBuildingStructure">
+            <summary>
+            设定建筑结构
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.Price">
+            <summary>
+            基准价格
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ParkingSpacesFullDTO.Pictures">
+            <summary>
+            图片地址
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.ProvinceFullDTO">
+            <summary>
+            省份 Dto
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/9/24 15:28:00</para>
+            </remarks>	
+        </member>
+        <member name="M:GHSoft.DTO2.ProvinceFullDTO.#ctor">
+            <summary>
+            ProvinceDTO的构造函数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ProvinceFullDTO.MapLongitude">
+            <summary>
+            地图经度
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ProvinceFullDTO.MapLatitude">
+            <summary>
+            地图纬度
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ProvinceFullDTO.Name">
+            <summary>
+            省份名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ProvinceFullDTO.Code">
+            <summary>
+            省份编码
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ProvinceFullDTO.Area">
+            <summary>
+            省份面积
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ProvinceFullDTO.Population">
+            <summary>
+            省份人口数量
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ProvinceFullDTO.Summary">
+            <summary>
+            省份概述
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ProvinceFullDTO.IsValid">
+            <summary>
+            是否有效
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ProvinceFullDTO.DisappearDate">
+            <summary>
+            消亡日期
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ProvinceFullDTO.Pictures">
+            <summary>
+            图片地址
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ProvinceFullDTO.XCoordinate">
+            <summary>
+            X坐标
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ProvinceFullDTO.YCoordinate">
+            <summary>
+            Y坐标
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ProvinceFullDTO.OldName">
+            <summary>
+            旧名称
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.RegionalTreeFullDTO">
+            <summary>
+            地理信息 DTO 
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/9/24 15:50:40</para>
+            </remarks>	
+        </member>
+        <member name="M:GHSoft.DTO2.RegionalTreeFullDTO.#ctor">
+            <summary>
+            造函数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.RegionalTreeFullDTO.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.RegionalTreeFullDTO.Code">
+            <summary>
+            城市编码
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.RegionalTreeFullDTO.ParentCode">
+            <summary>
+            父级编码
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.RegionalTreeFullDTO.ParentName">
+            <summary>
+            父级名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.RegionalTreeFullDTO.Type">
+            <summary>
+            标识是省、城市、行政区、片区
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.RegionalTreeFullDTO.ObjectXml">
+            <summary>
+            对应对象的XML，如果是省份的对象就放省份的，如果是城市的就放城市的
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.RegionalTreeFullDTO.IsHasChild">
+            <summary>
+            是否有子项
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.RegionalTreeFullDTO.Childs">
+            <summary>
+            子对象数据
+            </summary> 
+        </member>
+        <member name="T:GHSoft.DTO2.ResidentialAreaFullDTO">
+            <summary>
+            小区Dto
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/9/24 14:46:54</para>
+            </remarks>	
+        </member>
+        <member name="M:GHSoft.DTO2.ResidentialAreaFullDTO.#ctor">
+            <summary>
+            ResidentialAreaDTO对象构造函数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.ProjectName">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.ProjectId">
+            <summary>
+            项目ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.ProvinceId">
+            <summary>
+            省份Id
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.ProvinceName">
+            <summary>
+            省份名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.ProvinceCode">
+            <summary>
+            省份代码
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.CityId">
+            <summary>
+            城市Id
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.CityName">
+            <summary>
+            城市名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.CityCode">
+            <summary>
+            城市代码
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.DistrictId">
+            <summary>
+            行政区Id
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.DistrictName">
+            <summary>
+            行政区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.DistrictCode">
+            <summary>
+            行政区代码
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.DistrictAreaName">
+            <summary>
+            片区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.DistrictAreaCode">
+            <summary>
+            片区编码
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.DistrictAreaId">
+            <summary>
+            片区代码
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.Name">
+            <summary>
+            小区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.AliasName">
+            <summary>
+            小区别名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.Code">
+            <summary>
+            小区编号
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.Type">
+            <summary>
+            小区类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.BuildingInfo">
+            <summary>
+            楼层状况
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.DesignFor">
+            <summary>
+            设计用途
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.Dwelling">
+            <summary>
+            住宅类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.HouseType">
+            <summary>
+            房屋类型（洋房、别墅等）
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.LandArea">
+            <summary>
+            土地面积
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.BuildingCategory">
+            <summary>
+            建筑类别
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.BuildingArea">
+            <summary>
+            建筑总面积
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.IsSpecial">
+            <summary>
+            特征小区
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.Landscape">
+            <summary>
+            外景观
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.IsMoreSmallUnits">
+            <summary>
+            小户型多
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.BuildingStyle">
+            <summary>
+            建筑风格
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.GardensStyle">
+            <summary>
+            园林风格
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.Decoration">
+            <summary>
+            装修 
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.HouseStructure">
+            <summary>
+            户型结构
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.MainApartment">
+            <summary>
+            主力户型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.IsMix">
+            <summary>
+            混用
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.EmphasisArea">
+            <summary>
+            所属重点区域
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.IsCrossDistrict">
+            <summary>
+            是否跨行政区
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.IsCrossDistrictArea">
+            <summary>
+            是否跨片区
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.ApprovedCount">
+            <summary>
+            批准预售套数	   
+            </summary>  
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.ApprovedArea">
+            <summary>
+            批准预售面积	   
+            </summary>  
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.HouseBuildingCount">
+            <summary>
+            楼幢总数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.InsideLandscape">
+            <summary>
+            小区内景观
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.SellDate">
+            <summary>
+            开盘时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.CheckInDate">
+            <summary>
+            入住时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.CompletionDate">
+            <summary>
+            竣工时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.Address">
+            <summary>
+            小区地址
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.AddressAlias">
+            <summary>
+            地址别名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.ExportPath">
+            <summary>
+            导入出路径
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.CoordinateArray">
+            <summary>
+            坐标组 以 x,y|x,y|x,y 的形式保存
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.LatLngArray">
+            <summary>
+            经纬度组 以 a,b|a,b|a,b 的形式保存
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.XCoordinate">
+            <summary>
+            X坐标
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.YCoordinate">
+            <summary>
+            Y坐标
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.MapLongitude">
+            <summary>
+            地图经度
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.MapLatitude">
+            <summary>
+            地图纬度
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.ParkingSpacesInfo">
+            <summary>
+            车位情况
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.Supporting">
+            <summary>
+            项目内配套
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.BaseFacility">
+            <summary>
+            基础设施
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.Description">
+            <summary>
+            属性描述
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.PriceDifferenceType">
+            <summary>
+            价格差异类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaFullDTO.PriceDifferenceInfo">
+            <summary>
+            价格差异详情
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.PictrueDealInfoDTO">
+            <summary>
+            图片处理反馈信息
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2013-5-27 9:55:21</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.DTO2.PictrueDealInfoDTO.CopyDTO">
+            <summary>
+            Copy当前对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:GHSoft.DTO2.PictrueDealInfoDTO.SinglePicturePath">
+            <summary>
+            如果是单一图片处理，记录单一图片的地址
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.PictrueDealInfoDTO.SourceFolder">
+            <summary>
+            源图片所在的文件夹
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.PictrueDealInfoDTO.TargetFolder">
+            <summary>
+            目标文件存放的文件夹
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.PictrueDealInfoDTO.Resizes">
+            <summary>
+            图片文件尺寸，如：1024*768
+            如果有多个文件尺寸，则用“，”号隔开，如：800*600，1024*768   
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.PictrueDealInfoDTO.ResizedPictureType">
+            <summary>
+            图片生成的文件格式，默认为jpg
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.PictrueDealInfoDTO.Quality">
+            <summary>
+            图片质量，0-100,值越大质量越高，默认为80
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.PictrueDealInfoDTO.SuffixName">
+            <summary>
+            图片的后缀名称，默认为空值
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.PictrueDealInfoDTO.PrefixName">
+            <summary>
+            图片的后缀名称，默认为空值
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.PictrueDealInfoDTO.NumOfImagesAffected">
+            <summary>
+            受影响的文件数量，这里指的是生成目标图片数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.PictrueDealInfoDTO.NumOfFoldersAffected">
+            <summary>
+            受影响的文件夹数量，这里指是的源文件中，有多少个文件夹的图片是有参与目标文件生成的
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.PictrueDealInfoDTO.ResizedResult">
+            <summary>
+            图片生成结果
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.PictrueDealInfoDTO.ResizedError">
+            <summary>
+            图片生成抛出的异常信息，如果无异常，此值为NULL值
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.PictureDTO">
+            <summary>
+            图片Dto
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/8/22 10:06:09</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.PictureDTO.Id">
+            <summary>
+            图片ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.PictureDTO.Title">
+            <summary>
+            图片名称
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.PictureDTO.Format">
+            <summary>
+            图片格式
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.PictureDTO.Width">
+            <summary>
+            图片宽度
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.PictureDTO.Height">
+            <summary>
+            图片高度
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.PictureDTO.Path">
+            <summary>
+            图片存放地址，相对路径
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.PictureDTO.FileMD5">
+            <summary>
+            图片MD5的标识符，用与区分是否为同一张图片
+            </summary> 
+        </member>
+        <member name="T:GHSoft.DTO2.ResidentialAreaAverageValueDTO">
+            <summary>
+            小区均价 DTO
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/10/11 15:35:14</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaAverageValueDTO.ResidentialAreaID">
+            <summary>
+            小区对象信息，外键约束
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaAverageValueDTO.HouseBuildingID">
+            <summary>
+            楼栋对象信息，外键约束
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaAverageValueDTO.HousePurposeUnitID">
+            <summary>
+            功能单元对象信息，外键约束
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaAverageValueDTO.ValueFrom">
+            <summary>
+            价格来源
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaAverageValueDTO.SourceId">
+            <summary>
+            源标识
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaAverageValueDTO.SourceMeta">
+            <summary>
+            源描述
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaAverageValueDTO.ValueYear">
+            <summary>
+            价格年份
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaAverageValueDTO.ValueMonth">
+            <summary>
+            价格月份
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaAverageValueDTO.AverageValue">
+            <summary>
+            均价
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaAverageValueDTO.MaxValue">
+            <summary>
+            最高值
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaAverageValueDTO.MinValue">
+            <summary>
+            最低值
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaAverageValueDTO.ExtData">
+            <summary>
+            扩展数据
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaAverageValueDTO.UseType">
+            <summary>
+            用途
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.ResidentialAreaMapInofsDTO">
+            <summary>
+            小区的地图信息
+            主要用在首页，显示所有小区的标注点中
+            （注意：此对象不能有太多的属性，属性名称也尽量不要太长，减少网络传输量，凡不必要的属性一律不要，如果要添加属性，对应的存储过程可能也要添加查询字段）
+            </summary>
+            <remarks>
+                <para>    Creator：Gorson Ng</para>
+                <para>CreatedTime：2013/9/1 9:50:17</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaMapInofsDTO.CID">
+            <summary>
+            坐标对象ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaMapInofsDTO.RID">
+            <summary>
+            小区对象ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaMapInofsDTO.EncryptRID">
+            <summary>
+            加密后的小区对象ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaMapInofsDTO.Name">
+            <summary>
+            小区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaMapInofsDTO.Address">
+            <summary>
+            小区地址
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaMapInofsDTO.X">
+            <summary>
+            标识点X坐标
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaMapInofsDTO.Y">
+            <summary>
+            标识点Y坐标
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.ResidentialAreasImageDTO">
+            <summary>
+            小区图片
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/8/22 11:46:30</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreasImageDTO.ImageType">
+            <summary>
+            图片类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreasImageDTO.Images">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.ResidentialAreasImageItemDTO">
+            <summary>
+            图片项
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/8/22 11:47:11</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreasImageItemDTO.Id">
+            <summary>
+            图片ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreasImageItemDTO.ImageName">
+            <summary>
+            图片名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreasImageItemDTO.ImageFullPath">
+            <summary>
+            图片全路径
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.ResidentialAreaCaseCollectDTO">
+            <summary>
+            各种案例的总数以及其内容DTO
+            </summary>
+            <remarks>
+                <para>    Creator：SEN</para>
+                <para>CreatedTime：2013/11/15 9:11:41</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseCollectDTO.HouseAppraisalCaseCount">
+            <summary>
+            房屋评估案例总数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseCollectDTO.HouseOfferForRentCount">
+            <summary>
+            房屋出租报盘总数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseCollectDTO.HouseOfferForSaleCount">
+            <summary>
+            房屋出售报盘总数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseCollectDTO.HouseRentCaseCount">
+            <summary>
+            房屋出租案例总数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseCollectDTO.HouseResoldCaseCount">
+            <summary>
+            二手房出售案例总数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseCollectDTO.HouseSoldCaseCount">
+            <summary>
+            一手房出售案例总数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseCollectDTO.ResidentialAreaCaseDtoList">
+            <summary>
+            小区案例统计DTO列表
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.ResidentialAreaCaseDTO">
+            <summary>
+            小区案例
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2014/3/26 16:33:15</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseDTO.HouseBuildingId">
+            <summary>
+            楼栋ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseDTO.ResidentialAreaId">
+            <summary>
+            小区ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseDTO.ResidentialAreaName">
+            <summary>
+            小区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseDTO.Address">
+            <summary>
+            小区地址
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseDTO.BuildingArea">
+            <summary>
+            建筑面积
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseDTO.Toward">
+            <summary>
+            主题朝向
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseDTO.HouseType">
+            <summary>
+            房屋类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseDTO.FloorName">
+            <summary>
+            层名
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseDTO.Floor">
+            <summary>
+            当前层
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseDTO.Floors">
+            <summary>
+            总楼层
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseDTO.BuildingCompletedYear">
+            <summary>
+            建成年代
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseDTO.CaseTime">
+            <summary>
+            案例时间
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseDTO.UnitPrice">
+            <summary>
+            单价
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseDTO.TotalPrice">
+            <summary>
+            总价
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseDTO.SourceID">
+            <summary>
+            来源
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseDTO.UnitShape">
+            <summary>
+            户型
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseDTO.BuildingCategory">
+            <summary>
+            建筑类别
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseDTO.Decoration">
+            <summary>
+            装修
+            </summary> 
+        </member>
+        <member name="T:GHSoft.DTO2.ResidentialAreaCaseSummaryDTO">
+            <summary>
+            小区案例统计DTO
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/11/12 16:33:15</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseSummaryDTO.ResidentialAreaTid">
+            <summary>
+            小区ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseSummaryDTO.ResidentialAreaName">
+            <summary>
+            小区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseSummaryDTO.HouseSoldCaseCount">
+            <summary>
+            一手房出售案例总数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseSummaryDTO.HouseResoldCaseCount">
+            <summary>
+            二手房出售案例总数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseSummaryDTO.HouseRentCaseCount">
+            <summary>
+            房屋出租案例总数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseSummaryDTO.HouseOfferForRentCount">
+            <summary>
+            房屋出租报盘总数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseSummaryDTO.HouseOfferForSaleCount">
+            <summary>
+            房屋出售报盘总数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCaseSummaryDTO.HouseAppraisalCaseCount">
+            <summary>
+            房屋评估案例总数
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.ResidentialAreaPriceDTO">
+            <summary>
+            小区/楼栋/单元均价模型
+            </summary>
+            <remarks>
+                <para>    Creator：SEN</para>
+                <para>CreatedTime：2014/3/7 16:30:52</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaPriceDTO.AverageValue">
+            <summary>
+            均价
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaPriceDTO.AverageDate">
+            <summary>
+            均价时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaPriceDTO.MaxValue">
+            <summary>
+            最高价
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaPriceDTO.MinValue">
+            <summary>
+            最低价
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaPriceDTO.ValueFrom">
+            <summary>
+            均价来源
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.UseTypeDTO">
+            <summary>
+            均价用途DTO
+            </summary>
+            <remarks>
+                <para>    Creator：SEN</para>
+                <para>CreatedTime：2014/3/7 19:07:16</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.UseTypeDTO.UseType">
+            <summary>
+            均价用途
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.StandardHouseDTO">
+            <summary>
+            标准房DTO
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2014/3/26 16:33:15</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.StandardHouseDTO.ResidentialAreaId">
+            <summary>
+            所属小区ID
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.StandardHouseDTO.Dwelling">
+            <summary>
+            住宅类型
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.StandardHouseDTO.Area">
+            <summary>
+            面积
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.StandardHouseDTO.Floor">
+            <summary>
+            所在层
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.StandardHouseDTO.Floors">
+            <summary>
+            总楼层
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.StandardHouseDTO.BuildingYear">
+            <summary>
+            建成年代
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.StandardHouseDTO.Toward">
+            <summary>
+            朝向
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.StandardHouseDTO.HouseType">
+            <summary>
+            房屋类型
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.StandardHouseDTO.SHSource">
+            <summary>
+            来源
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.StandardHouseDTO.SLevel">
+            <summary>
+            层级类型 1城市 2行政区 3片区 4小区 5楼幢  
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.StandardHouseDTO.AreaMin">
+            <summary>
+            面积段
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.StandardHouseDTO.RecordNum">
+            <summary>
+            记录次数
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.StandardHouseDTO.IsFlag">
+            <summary>
+            是否标准房
+            </summary> 
+        </member>
+        <member name="T:GHSoft.DTO2.StandardHouseSummaryDTO">
+            <summary>
+            标准房统计接口
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2014/3/26 16:33:15</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.StandardHouseSummaryDTO.ResidentialAreaId">
+            <summary>
+            小区ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.StandardHouseSummaryDTO.HouseType">
+            <summary>
+            房屋类型
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.StandardHouseSummaryDTO.Area">
+            <summary>
+            面积
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.StandardHouseSummaryDTO.Floor">
+            <summary>
+            所在层
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.StandardHouseSummaryDTO.Floors">
+            <summary>
+            总楼层
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.StandardHouseSummaryDTO.BuildingYear">
+            <summary>
+            建成年代
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.StandardHouseSummaryDTO.Toward">
+            <summary>
+            朝向
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.StandardHouseSummaryDTO.Dwelling">
+            <summary>
+            住宅类型
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.StandardHouseSummaryDTO.AreaMin">
+            <summary>
+            面积段
+            </summary> 
+        </member>
+        <member name="T:GHSoft.DTO2.CaseCleaStandardHouseDTO">
+            <summary>
+            案例清洗标准房参数列表
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.CaseCleaStandardHouseDTO.Id">
+            <summary>
+            标准房ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.CaseCleaStandardHouseDTO.HouseType">
+            <summary>
+            住宅类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.CaseCleaStandardHouseDTO.UnitShape">
+            <summary>
+            户型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.CaseCleaStandardHouseDTO.BuildingArea">
+            <summary>
+            建筑面积
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.FieldInputDto">
+            <summary>
+            表字段 (输入)
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/12/4 11:11:37</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.FieldInputDto.CnName">
+            <summary>
+            字段中文名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.FieldInputDto.Value">
+            <summary>
+            字段值
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.TableInputDto">
+            <summary>
+            表对象 (输入) 
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/12/4 11:09:07</para>
+            </remarks>	
+        </member>
+        <member name="M:GHSoft.DTO2.TableInputDto.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.TableInputDto.CnName">
+            <summary>
+            表中文名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.TableInputDto.Fields">
+            <summary>
+            表字段
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.FieldOutPutDto">
+            <summary>
+            表字段 （输出）
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/12/4 11:07:27</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.FieldOutPutDto.EnName">
+            <summary>
+            字段英文名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.FieldOutPutDto.CnName">
+            <summary>
+            字段中文名
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.TableOutPutDto">
+            <summary>
+            表对象 (输出) 
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/12/4 11:06:12</para>
+            </remarks>	
+        </member>
+        <member name="M:GHSoft.DTO2.TableOutPutDto.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.CityRoleDTO">
+            <summary>
+            城市权限DTO
+            </summary>
+            <remarks>
+                <para>    Creator：SEN</para>
+                <para>CreatedTime：2014/2/12 18:00:07</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.CityRoleDTO.CityName">
+            <summary>
+            城市名
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.UserDTO">
+            <summary>
+            用户DTO
+            </summary>
+            <remarks>
+                <para>    Creator：SEN</para>
+                <para>CreatedTime：2014/2/12 17:58:56</para>
+            </remarks>	
+        </member>
+        <member name="M:GHSoft.DTO2.UserDTO.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.UserDTO.UserName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.UserDTO.UserAccount">
+            <summary>
+            登录名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.UserDTO.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.UserDTO.Email">
+            <summary>
+            电子邮箱
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.UserDTO.Token">
+            <summary>
+            用户Token
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.UserDTO.CreateTime">
+            <summary>
+            创建时间
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.UserDTO.IsLocked">
+            <summary>
+            是否锁定 
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.UserDTO.IsSuperUser">
+            <summary>
+            是否是超级用户
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.UserModuleValueDTO">
+            <summary>
+            功能值DTO
+            </summary>
+            <remarks>
+                <para>    Creator：SEN</para>
+                <para>CreatedTime：2014/2/12 17:59:40</para>
+            </remarks>	
+        </member>
+        <member name="P:GHSoft.DTO2.UserModuleValueDTO.Key">
+            <summary>
+            Key
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.UserModuleValueDTO.Value">
+            <summary>
+            Value
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.UserPowerDTO">
+            <summary>
+            权限列表DTO
+            </summary>
+            <remarks>
+                <para>    Creator：SEN</para>
+                <para>CreatedTime：2014/2/12 17:59:13</para>
+            </remarks>	
+        </member>
+        <member name="M:GHSoft.DTO2.UserPowerDTO.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.UserPowerDTO.PowerName">
+            <summary>
+            权限名称
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.UserPowerDTO.ActionName">
+            <summary>
+            Action名称 
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.UserPowerDTO.ControllerName">
+            <summary>
+            Controller名称 
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.UserPowerDTO.IsUse">
+            <summary>
+            是否使用
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.UserPowerDTO.ModulName">
+            <summary>
+            模块名称
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.UserPowerDTO.MenuName">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.UserPowerDTO.LinkUrl">
+            <summary>
+            指向链接
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.UserPowerDTO.SortOrder">
+            <summary>
+            排序
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.UserPowerDTO.IsAutomatic">
+            <summary>
+            是否自动添加
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.UserPowerDTO.UseType">
+            <summary>
+            用途
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.UserRoleDTO">
+            <summary>
+            用户角色DTO
+            </summary>
+            <remarks>
+                <para>    Creator：SEN</para>
+                <para>CreatedTime：2014/2/12 17:59:22</para>
+            </remarks>	
+        </member>
+        <member name="M:GHSoft.DTO2.UserRoleDTO.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.UserRoleDTO.RoleName">
+            <summary>
+            角色名称
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.UserRoleDTO.CityName">
+            <summary>
+            角色所属城市名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.UserRoleDTO.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.PagingDTO">
+            <summary>
+            分页对象
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-4-18 14:22:07</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.DTO2.PagingDTO.#ctor">
+            <summary>
+            对象构造函数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.PagingDTO.IsPaging">
+            <summary>
+            是否分页
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.PagingDTO.PageIndex">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.PagingDTO.PageSize">
+            <summary>
+            每页行数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.PagingDTO.Pages">
+            <summary>
+            页数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.PagingDTO.RecordCount">
+            <summary>
+            总行数
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.HandleStatus">
+            <summary>
+            操作结束后获取的结果状态
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-4-18 14:26:28</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.DTO2.HandleStatus.#ctor">
+            <summary>
+            对象构造函数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HandleStatus.Success">
+            <summary>
+            是否调用成功
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HandleStatus.Message">
+            <summary>
+            消息提示
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.HandleStatus.StartTime">
+            <summary>
+            开始时间
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HandleStatus.EndTime">
+            <summary>
+            结束时间
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.HandleStatus.IsComplete">
+            <summary>
+            是否完成
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.ParameterDTO`1">
+            <summary>
+            服务调用的参数对象
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-4-18 10:47:34</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.DTO2.ParameterDTO`1.Params">
+            <summary>
+            参数内容
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.SecurityDTO">
+            <summary>
+            服务调用的安全对象
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-4-18 10:48:21</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.DTO2.SecurityDTO.#ctor">
+            <summary>
+            对象构造函数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.SecurityDTO.IsAuthenticated">
+            <summary>
+            是否身份验证， 默认是已验证，只有 Success==false 时才有意义
+            即只有捕获到 AuthenticationException 异常时 IsAuthenticated才为 false
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.SecurityDTO.Content">
+            <summary>
+            验证的内容信息
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.SecurityDTO.UserDTO">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="M:Peacock.DataBase.DataConvert.Services.IdentityUser.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="P:Peacock.DataBase.DataConvert.Services.IdentityUser.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:Peacock.DataBase.DataConvert.Services.IdentityUser.UserName">
+            <summary>
+            昵称
+            </summary> 
+        </member>
+        <member name="P:Peacock.DataBase.DataConvert.Services.IdentityUser.UserAccount">
+            <summary>
+            登录名
+            </summary>
+        </member>
+        <member name="P:Peacock.DataBase.DataConvert.Services.IdentityUser.IsSuperUser">
+            <summary>
+            是否是超级管理员
+            </summary>
+        </member>
+        <member name="P:Peacock.DataBase.DataConvert.Services.IdentityUser.Email">
+            <summary>
+            电子邮箱
+            </summary> 
+        </member>
+        <member name="P:Peacock.DataBase.DataConvert.Services.IdentityUser.Token">
+            <summary>
+            用户Token
+            </summary>
+        </member>
+        <member name="P:Peacock.DataBase.DataConvert.Services.IdentityUser.CreateTime">
+            <summary>
+            创建时间
+            </summary> 
+        </member>
+        <member name="T:GHSoft.DTO2.UploadImageResult">
+            <summary>
+            图片DTO
+            </summary>
+            <remarks>
+                <para>    Creator：helang</para>
+                <para>CreatedTime：2013/5/27 18:00:19</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.DTO2.UploadImageResult.ID">
+            <summary>
+            图片ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.UploadImageResult.FileName">
+            <summary>
+            图片文件名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.UploadImageResult.Title">
+            <summary>
+            图片名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.UploadImageResult.Format">
+            <summary>
+            图片格式
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.UploadImageResult.Width">
+            <summary>
+            图片宽度
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.UploadImageResult.Height">
+            <summary>
+            图片高度
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.UploadImageResult.Path">
+            <summary>
+            图片存放地址，相对路径
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.UploadImageResult.FileMD5">
+            <summary>
+            图片MD5的标识符，用与区分是否为同一张图片
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.ResidentialAreaCoordinateInfoDTO">
+            <summary>
+            小区坐标信息DTO
+            </summary>
+            <remarks>
+                <para>    Creator：helang</para>
+                <para>CreatedTime：2013/7/16 17:40:30</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCoordinateInfoDTO.ResidentialAreaID">
+            <summary>
+            小区ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCoordinateInfoDTO.XLongitude">
+            <summary>
+            标识点X坐标
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCoordinateInfoDTO.YLatitude">
+            <summary>
+            标识点Y坐标
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCoordinateInfoDTO.MapType">
+            <summary>
+            地图类型：百度、Google、搜狐等
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaCoordinateInfoDTO.XYCoordinateArray3">
+            <summary>
+            XY坐标组
+            以 x,y|x,y|x,y 的形式保存
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.ResidentialAreaDetailDTO">
+            <summary>
+            小区详细信息DTO
+            </summary>
+            <remarks>
+                <para>    Creator：Gorson Ng</para>
+                <para>CreatedTime：2013/7/16 14:50:21</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.ResidentialAreaID">
+            <summary>
+            小区对象ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.ResidentialAreaName">
+            <summary>
+            小区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.DescriptionDate">
+            <summary>
+            描述时点
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.DespEndDate">
+            <summary>
+            描述失效时点
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.RingRoad">
+            <summary>
+            所处环域位置
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.GreeningRate">
+            <summary>
+            绿化率
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.RoomRate">
+            <summary>
+            得房率
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.ManagementFees">
+            <summary>
+            物业管理费
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.ManagementFeesDesp">
+            <summary>
+            物业管理附加信息
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.ManagementCompany">
+            <summary>
+            物业管理公司
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.SafetyCompany">
+            <summary>
+            物业安防管理
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.PositionInfo">
+            <summary>
+            位置状况
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.ParkingSpaceInfo">
+            <summary>
+            车位状况
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.BaseFacility">
+            <summary>
+            基础设施
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.EnvironmentInfo">
+            <summary>
+            环境状况
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.PublicSecurity">
+            <summary>
+            治安状况
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.StreetSituation">
+            <summary>
+            临街状况
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.PeripheralSupporting">
+            <summary>
+            周边配套
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.TrafficInfo">
+            <summary>
+            交通状况
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.Tags">
+            <summary>
+            特征标签
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.PlanningInfo">
+            <summary>
+            规划状况
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.PriceDifferenceType">
+            <summary>
+            价格差异类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.PriceDifferenceInfo">
+            <summary>
+            价格差异详情
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.Description">
+            <summary>
+            小区描述
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDetailDTO.Pictures">
+            <summary>
+            小区图片
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.ResidentialAreaDTO">
+            <summary>
+            小区DTO
+            </summary>
+            <remarks>
+                <para>    Creator：helang</para>
+                <para>CreatedTime：2013/7/15 16:24:19</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.EncryptId">
+            <summary>
+            加密后的ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.ResidentialAreaName">
+            <summary>
+            小区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.DistrictFullName">
+            <summary>
+            行政区全名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.ResidentialAreaAlias">
+            <summary>
+            小区别名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.ResidentialAreaType">
+            <summary>
+            小区类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.AddressAlias">
+            <summary>
+            地址别名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.DeveloperCompany">
+            <summary>
+            开发商
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.LandProperties">
+            <summary>
+            土地权属性质
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.WayObtainLand">
+            <summary>
+            土地取得方式
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.LandUseType">
+            <summary>
+            土地用途
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.LandUseYearsLimit">
+            <summary>
+            土地使用年限
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.LandGrade">
+            <summary>
+            土地等级
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.LandArea">
+            <summary>
+            土地面积
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.SellDate">
+            <summary>
+            开盘时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.HouseBuildingCount">
+            <summary>
+            楼幢总数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.MaxFloors">
+            <summary>
+            总楼层数(所有楼幢中最高的楼层数)
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.HousingCount">
+            <summary>
+            总户数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.FloorAreaRatio">
+            <summary>
+            容积率
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.BuildingArea">
+            <summary>
+            建筑面积
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.BuildingCategory">
+            <summary>
+            建筑类别
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.BuildingInfo">
+            <summary>
+            楼层状况
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.HouseStructureDesp">
+            <summary>
+            户型描述
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.MainApartment">
+            <summary>
+            主力户型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.IsMoreSmallUnits">
+            <summary>
+            是否小户型多
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.DisappearDate">
+            <summary>
+            消亡时间,行政区域的撤销时间，如果没撤销则为空
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.CompletionDate">
+            <summary>
+            竣工时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.Pictures">
+            <summary>
+            图片信息
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.CoordinateInfoID">
+            <summary>
+            坐标对象ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.XLongitude">
+            <summary>
+            标识点X坐标
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.YLatitude">
+            <summary>
+            标识点Y坐标
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.MapType">
+            <summary>
+            地图类型：百度、Google、搜狐等
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.XYCoordinateArray">
+            <summary>
+            XY坐标组
+            以 x,y|x,y|x,y 的形式保存
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaDTO.Pinyin">
+            <summary>
+            拼音
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.ResidentialAreaPictureDTO">
+            <summary>
+            图片DTO
+            </summary>
+            <remarks>
+                <para>    Creator：LHC</para>
+                <para>CreatedTime：2013/7/16 16:35:25</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaPictureDTO.Id">
+            <summary>
+            图片ID
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaPictureDTO.Title">
+            <summary>
+            图片名称
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaPictureDTO.Format">
+            <summary>
+            图片格式
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaPictureDTO.Width">
+            <summary>
+            图片宽度
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaPictureDTO.Height">
+            <summary>
+            图片高度
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaPictureDTO.Path">
+            <summary>
+            图片存放地址，相对路径
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaPictureDTO.FileMD5">
+            <summary>
+            图片MD5的标识符，用与区分是否为同一张图片
+            </summary> 
+        </member>
+        <member name="T:GHSoft.DTO2.ResidentialAreaProjectInfosDTO">
+            <summary>
+            小区项目DTO
+            </summary>
+            <remarks>
+                <para>    Creator：Gorson Ng</para>
+                <para>CreatedTime：2013/7/3 15:41:08</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaProjectInfosDTO.ProjectName">
+            <summary>
+            项目名称
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaProjectInfosDTO.ProjectAddress">
+            <summary>
+            项目地址
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaProjectInfosDTO.ProjectDetails">
+            <summary>
+            全部在证件信息组装成JSON格式在数据
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaProjectInfosDTO.Area">
+            <summary>
+            占地面积
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaProjectInfosDTO.BuildingArea">
+            <summary>
+            总建筑面积
+            </summary> 
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaProjectInfosDTO.ProjecYear">
+            <summary>
+            建筑年代
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidentialAreaProjectInfosDTO.PurposeHouseDescription">
+            <summary>
+            功能套数描述
+            例如：住宅：100，商业：10，车位20 等等
+            </summary> 
+        </member>
+        <member name="T:GHSoft.DTO2.ResidetnialAreaSummaryDTO">
+            <summary>
+            小区简介
+            </summary>
+            <remarks>
+                <para>    Creator：helang</para>
+                <para>CreatedTime：2013/7/24 14:21:09</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidetnialAreaSummaryDTO.ResidentialAreaId">
+            <summary>
+            小区id
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidetnialAreaSummaryDTO.ResidentialAreaName">
+            <summary>
+            小区名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidetnialAreaSummaryDTO.Address">
+            <summary>
+            小区地址
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidetnialAreaSummaryDTO.DistrictFullName">
+            <summary>
+            行政区全名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidetnialAreaSummaryDTO.ResidentialAreaType">
+            <summary>
+            小区类型
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidetnialAreaSummaryDTO.Pictures">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidetnialAreaSummaryDTO.buildingNum">
+            <summary>
+            楼幢数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidetnialAreaSummaryDTO.unitNum">
+            <summary>
+            单元数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidetnialAreaSummaryDTO.houseNum">
+            <summary>
+            户数
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.ResidetnialAreaSummaryDTO.userType">
+            <summary>
+            功能用途
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.TreeViewDTO">
+            <summary>
+            树的结构
+            </summary>
+            <remarks>
+                <para>    Creator：helang</para>
+                <para>CreatedTime：2013/5/23 18:17:12</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.DTO2.TreeViewDTO.id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.TreeViewDTO.name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.TreeViewDTO.fullName">
+            <summary>
+            全名
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.TreeViewDTO.parentName">
+            <summary>
+            父级名称名称
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.UploadImageDTO">
+            <summary>
+            图片上传类
+            </summary>
+            <remarks>
+                <para>作    者：lhc</para>
+                <para>创建时间：2012/4/17 17:03:28</para>
+            </remarks> 
+        </member>
+        <member name="P:GHSoft.DTO2.UploadImageDTO.ImageName">
+            <summary>
+            图片名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.DTO2.UploadImageDTO.FileStream">
+            <summary>
+            图片流
+            </summary>
+        </member>
+        <member name="F:Peacock.DataBase.DataConvert.Services.UserPrincipal._owrIdentity">
+            <summary>
+            用户标识
+            </summary>
+        </member>
+        <member name="F:Peacock.DataBase.DataConvert.Services.UserPrincipal._user">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="M:Peacock.DataBase.DataConvert.Services.UserPrincipal.#ctor(System.Security.Principal.IIdentity,Peacock.DataBase.DataConvert.Services.IdentityUser)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="identity"></param>
+            <param name="user"></param> 
+        </member>
+        <member name="P:Peacock.DataBase.DataConvert.Services.UserPrincipal.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:Peacock.DataBase.DataConvert.Services.UserPrincipal.UserName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Peacock.DataBase.DataConvert.Services.UserPrincipal.UserAccount">
+            <summary>
+            登录名
+            </summary>
+        </member>
+        <member name="P:Peacock.DataBase.DataConvert.Services.UserPrincipal.Email">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:Peacock.DataBase.DataConvert.Services.UserPrincipal.Token">
+            <summary>
+            用户Token
+            </summary>
+        </member>
+        <member name="P:Peacock.DataBase.DataConvert.Services.UserPrincipal.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.ClientType">
+            <summary>
+            调用的客户端类型
+            </summary>
+            <remarks>
+                <para>作    者：Lally</para>
+                <para>创建时间：2013/6/27 12:01:35</para>
+            </remarks>
+        </member>
+        <member name="F:GHSoft.DTO2.ClientType.ActionScript">
+            <summary>
+            AS端调用转换
+            </summary>
+        </member>
+        <member name="F:GHSoft.DTO2.ClientType.CSharp">
+            <summary>
+            C#端调用转换
+            </summary>
+        </member>
+        <member name="F:GHSoft.DTO2.ClientType.JavaScript">
+            <summary>
+            JavaScript端
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.IReturnType">
+            <summary>
+            返回值类型接口
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2013/3/28 10:37:28</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.DTO2.IReturnType.ReturnType">
+            <summary>
+            获取返回值类型
+            </summary>
+        </member>
+        <member name="T:GHSoft.DTO2.SerializableDictionary`2">
+            <summary>
+            支持XML序列化的泛型Dictionary类 
+            </summary>
+            <remarks>
+            <typeparam name="TKey"></typeparam>
+            <typeparam name="TValue"></typeparam>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-8-6 11:27:48</para>
+            </remarks>       
+        </member>
+        <member name="M:GHSoft.DTO2.SerializableDictionary`2.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GHSoft.DTO2.SerializableDictionary`2.#ctor(System.Collections.Generic.IDictionary{`0,`1})">
+            <summary>
+            
+            </summary>
+            <param name="dictionary"></param>
+        </member>
+        <member name="M:GHSoft.DTO2.SerializableDictionary`2.#ctor(System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            
+            </summary>
+            <param name="comparer"></param>
+        </member>
+        <member name="M:GHSoft.DTO2.SerializableDictionary`2.#ctor(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="capacity"></param>
+        </member>
+        <member name="M:GHSoft.DTO2.SerializableDictionary`2.#ctor(System.Int32,System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            
+            </summary>
+            <param name="capacity"></param>
+            <param name="comparer"></param>
+        </member>
+        <member name="M:GHSoft.DTO2.SerializableDictionary`2.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:GHSoft.DTO2.SerializableDictionary`2.GetSchema">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.DTO2.SerializableDictionary`2.ReadXml(System.Xml.XmlReader)">
+            <summary>
+            从对象的XML表示形式生成该对象
+            </summary>
+            <param name="reader"></param>
+        </member>
+        <member name="M:GHSoft.DTO2.SerializableDictionary`2.WriteXml(System.Xml.XmlWriter)">
+            <summary>
+            将对象转换为其XML表示形式
+            </summary>
+            <param name="writer"></param>
+        </member>
+    </members>
+</doc>

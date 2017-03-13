@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GHSoft.IO</name>
+    </assembly>
+    <members>
+        <member name="T:GHSoft.IO.AsposeExcelHelper">
+            <summary>
+            Excel文件操作类,不依赖MS的Office COM组件
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-5-11 14:23:32</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.IO.AsposeExcelHelper.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GHSoft.IO.AsposeExcelHelper.InsertDataToExcel``1(System.String,System.Collections.Generic.IList{``0},System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            将Ilist数据集，导出到Excel文件中
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="insertPath">Excel目标文件路径</param>
+            <param name="lSourceData">数据源集合</param>
+            <param name="sheetName">sheet表名称</param>
+            <param name="sFileFormat">目标文件后缀名</param>
+            <param name="isFieldNameShown">是否显示字段名称</param>
+            <param name="isCreateFile">是否需要创建目标文件</param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.IO.AsposeExcelHelper.InsertDataToExcel(System.String,System.Data.DataTable,System.Boolean,System.String,System.String,System.Boolean,System.Int32,System.Boolean)">
+            <summary>
+            将数据插入Excel表
+            </summary>
+            <param name="insertPath">目标文件路径</param>
+            <param name="sourceData">数据源</param>
+            <param name="isFieldNameShown">是否显示字段名称</param>
+            <param name="sheetName">表名称</param>
+            <param name="isCreateFile">目标文件是否需要自动创建</param>
+            <param name="sFileFormat">目标文件后缀名</param>
+            <param name="firstRowIndex">从哪一行开始，默认是从第0行开始</param>
+            <param name="checkMergedCells">是否判断合并的Cell,默认为否</param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.IO.AsposeExcelHelper.InsertDataSetToExcel(System.String,System.Data.DataSet,System.Boolean,System.Boolean)">
+            <summary>
+            将数据插入Excel表
+            </summary>
+            <param name="insertPath">Excel文件存放路径</param>
+            <param name="dsSourceData">数据源集合（每个DataTable必须要有TableName）</param>
+            <param name="isFieldNameShown">是否显示字段名称</param>
+            <param name="isCreateFile">目标文件是否需要自动创建</param>
+            <returns>bool值</returns>
+        </member>
+        <member name="M:GHSoft.IO.AsposeExcelHelper.getSheet(Aspose.Cells.Workbook,System.String)">
+            <summary>
+            获取指定的sheet,没有指定默认返回第一个sheet
+            </summary>
+            <param name="wb"></param>
+            <param name="sheetName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.IO.AsposeExcelHelper.GetCellDataFromExcelPath(System.String,System.String@,System.String,System.Int32,System.Int32)">
+            <summary>
+            把Excel数据中的列格中读数据，一格一格的读
+            </summary>
+            <param name="excelPath">Excel文件存放路径</param>
+            <param name="msg">返回错误消息</param>        
+            <param name="sheetName">sheet表名称</param>
+            <param name="iMaxReadRowsLength">最大读取行数</param>
+            <param name="columnNums">列头所占的行数，默认为一行</param>
+            <returns>返回读取数据</returns>
+        </member>
+        <member name="M:GHSoft.IO.AsposeExcelHelper.GetAllDataFromExcelPath(System.String,System.String@,System.Int32)">
+            <summary>
+            获取整个Excel的所有Sheet表数据
+            </summary>
+            <param name="excelPath"></param>
+            <param name="msg"></param>
+            <param name="iMaxReadRowsLength"></param>
+            <returns>返回DataSet，每个DataTable以Sheet表的表名命名</returns>
+        </member>
+        <member name="M:GHSoft.IO.AsposeExcelHelper.GetAllSheetNameFromExcelPath(System.String,System.String@)">
+            <summary>
+            获取Excel文档的所有的Sheet的名称
+            </summary>
+            <param name="excelPath">Excel文档路径</param>
+            <param name="msg">错误数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.IO.AsposeExcelHelper.GetDataFromExcelPath(System.String,System.String@,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取Excel表的数据
+            </summary>
+            <param name="sExcelPath">Excel文件的物理路径</param>
+            <param name="msg">返回错误消息</param>       
+            <param name="sheetName">sheet表名称</param>
+            <param name="iMaxReadRowsLength">最大读取行数</param>
+            <param name="columnNums">列头所占的行数，默认为一行</param>
+            <returns>读取的数据</returns>
+        </member>
+        <member name="M:GHSoft.IO.AsposeExcelHelper.getMergeColumnDt(System.Data.DataTable)">
+            <summary>
+            表头有多行的情况下，转成只有一行的表头
+            </summary>
+            <param name="dtHead"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.IO.AsposeExcelHelper.getSheetData(Aspose.Cells.Worksheet,System.Int32,System.Int32)">
+            <summary>
+            获取Sheet表的数据
+            </summary>
+            <param name="ws"></param>
+            <param name="iMaxReadRowsLength">默认最大读取条数</param>
+            <param name="columnNums">列头所占的行数，默认为一行</param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.IO.AsposeExcelHelper.CheckData(System.String,System.String@,System.String,System.Boolean)">
+            <summary>
+            分析数据
+            </summary>
+            <param name="excelPath"></param>
+            <param name="msg">返回出错信息</param>
+            <param name="sheetName"></param>
+            <param name="recordColumnIndex">True:记录列顺序，False：记录列名</param>
+            <returns>返回非法数据所在行列信息,标识每一行哪几列有问题，所有的行和列都是从0开始计算</returns>
+        </member>
+        <member name="M:GHSoft.IO.AsposeExcelHelper.CheckDtData(System.Data.DataTable,System.Collections.Generic.IDictionary{System.String,System.Type},System.Collections.Generic.IList{System.Type}@,System.String@,System.Boolean,System.Collections.Generic.IList{System.String})">
+            <summary>
+            检查DataTable中的数据是否为合法数据
+            如果不为合法数据，则替换成默认值
+            </summary>
+            <param name="dt">数据</param>
+            <param name="realProperties"></param>
+            <param name="dgvDataType"></param>
+            <param name="msg"></param>
+            <param name="recordColumnIndex"></param>
+            <param name="alaisNames"></param>
+            <returns>返回非法数据所在行列信息,标识每一行哪几列有问题，所有的行和列都是从0开始计算</returns>
+        </member>
+        <member name="M:GHSoft.IO.AsposeExcelHelper.GetRealValueByType(System.Type,System.String)">
+            <summary>
+            根据类型和值，返回转类型后的值
+            </summary>
+            <param name="t"></param>
+            <param name="tempValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.IO.AsposeExcelHelper.GetExcelSheetHeaderRows(System.String,System.String)">
+            <summary>
+            获取Excel文件指定sheet表的表头行数
+            </summary>
+            <param name="excelPath">Excel文件路径</param>
+            <param name="sheetName">sheet表名称，如果为空则默认取第一个sheet表</param>
+            <returns>sheet表的表头所占的行数</returns>
+        </member>
+        <member name="M:GHSoft.IO.AsposeExcelHelper.GetExcelSheetHeaderRowArray(System.String,System.String)">
+            <summary>
+            获取Excel文件指定sheet表的表头数组
+            </summary>
+            <param name="excelPath">Excel文件路径</param>
+            <param name="sheetName">sheet表名称，如果为空则默认取第一个sheet表</param>
+            <returns>sheet表的表头所占的行数</returns>
+        </member>
+        <member name="M:GHSoft.IO.AsposeExcelHelper.GetExcelColumnType(System.String,System.Int32@,System.String)">
+            <summary>
+            获取Excel文件某个Sheet表的列格式
+            </summary>
+            <param name="excelPath"></param>
+            <param name="dataFristRowIndex"></param>
+            <param name="sheetName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.IO.AsposeExcelHelper.excelTypeChangeToSystemType(Aspose.Cells.Cell)">
+            <summary>
+            Excel的格式类型转成C#的系统类型名称
+            </summary>
+            <param name="excelCell"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.IO.AsposeExcelHelper.DeleteSheetRows(System.String,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            循环删除Excel文件中指定区域的所有行
+            </summary>
+            <param name="filePath">文件地址</param>
+            <param name="startRow">开始行</param>
+            <param name="maxRow">最大行</param>
+            <param name="savePath">保存路径</param>
+            <param name="sheetName">sheet表的名称</param>
+            <returns></returns>
+        </member>
+        <member name="T:GHSoft.IO.ZipHelper">
+            <summary>
+            文件压缩操作通用辅助类
+            </summary>
+            <remarks>
+                <para>    Creator：贺隽</para>
+                <para>CreatedTime：2013-2-25 9:05:08</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.IO.ZipHelper.CreateZipFiles(System.String,ICSharpCode.SharpZipLib.Zip.ZipOutputStream,System.String)">
+            <summary> 
+            递归压缩文件 
+            </summary> 
+            <param name="sourceFilePath">待压缩的文件或文件夹路径</param> 
+            <param name="zipStream">打包结果的zip文件路径（类似 D:\WorkSpace\a.zip）,全路径包括文件名和.zip扩展名</param> 
+            <param name="staticFile"></param> 
+        </member>
+        <member name="M:GHSoft.IO.ZipHelper.CreateZip(System.String,System.String)">
+            <summary>
+            压缩文件
+            </summary>
+            <param name="sZipPath">压缩文件完整路径</param>
+            <param name="sZipFullName">压缩之后的完整路径+文件名</param>
+        </member>
+        <member name="M:GHSoft.IO.ZipHelper.UnZipFile(System.String,System.String)">
+            <summary>
+            解压文件
+            </summary>
+            <param name="sZipFullName">ZIP文件完整路径+文件名</param>
+            <param name="sUnZipPath">解压后的路径</param>
+        </member>
+        <member name="M:GHSoft.IO.ZipHelper.UnZipAllFile(System.String,System.String)">
+            <summary>
+            解压文件-按文件结构
+            </summary>
+            <param name="sZipFullName">ZIP文件完整路径+文件名</param>
+            <param name="sUnZipPath">解压后的路径</param>
+        </member>
+        <member name="M:GHSoft.IO.ZipHelper.ZipFolder(System.String,System.String,System.String)">
+            <summary>
+            压缩文件夹
+            </summary>
+            <param name="strSourcePath">源文件夹物理地址</param>
+            <param name="strZippedFilePath">目标文件夹物理地址</param>
+            <param name="strZippedFileName">压缩文件名</param>
+        </member>
+        <member name="M:GHSoft.IO.ZipHelper.ZipFolder(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            压缩文件夹
+            </summary>
+            <param name="strSourcePath">源文件夹物理地址</param>
+            <param name="strZippedFilePath">目标文件夹物理地址</param>
+            <param name="strZippedFileName">压缩文件名</param>
+            <param name="intZipLevel">压缩等级，0-9，数字越大压缩质量越好</param>
+        </member>
+        <member name="T:GHSoft.IO.FileHelper">
+            <summary>
+            文件操作通用辅助类
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-5-13 15:38:08</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.IO.FileHelper.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:GHSoft.IO.FileHelper.GetFileByties(System.String)">
+            <summary>
+            返回指定文件的二进制字节流
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.IO.FileHelper.Delete(System.String)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

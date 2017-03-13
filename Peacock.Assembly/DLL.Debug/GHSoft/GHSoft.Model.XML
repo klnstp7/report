@@ -1,0 +1,1652 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GHSoft.Model</name>
+    </assembly>
+    <members>
+        <member name="T:GHSoft.Model.Restriction">
+            <summary>
+            条件项
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/12/5 10:18:38</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.Model.Restriction.Type">
+            <summary>
+            条件的判断类型。
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Restriction.Compose">
+            <summary>
+            条件的组合类型。
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Restriction.Key">
+            <summary>
+            条件关键字。
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Restriction.Value">
+            <summary>
+            条件的取值。
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Restriction.InArgs">
+            <summary>
+            in 语句的参数。
+            </summary>
+        </member>
+        <member name="T:GHSoft.Model.DBSerialService">
+            <summary>
+            序列号的数据库存储器
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/7/5 15:09:43</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.Model.DBSerialService.Flush">
+            <summary>
+            加载存储内容,刷新生成器
+            </summary>
+        </member>
+        <member name="M:GHSoft.Model.DBSerialService.Flush(System.String)">
+            <summary>
+            加载存储内容,刷新生成器
+            </summary>
+            <param name="target">目标对象</param>
+        </member>
+        <member name="M:GHSoft.Model.DBSerialService.Save">
+            <summary>
+            将序号写入存储体
+            </summary>
+        </member>
+        <member name="M:GHSoft.Model.DBSerialService.#ctor(System.Double)">
+            <summary>
+            序列号的数据库存储器
+            </summary>
+            <param name="minute"></param>
+        </member>
+        <member name="M:GHSoft.Model.DBSerialService.getDBSerialByName(System.String)">
+            <summary>
+            按照名称获取序号器
+            </summary>
+            <param name="name">序号器名称</param>
+            <returns>如果存在, 返回序号器, 否则返回null.</returns>
+        </member>
+        <member name="M:GHSoft.Model.DBSerialService.getDBSerialValueByName(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GHSoft.Model.AbstratDataObjectBase`1">
+            <summary>
+            对象的抽象基类
+            </summary>
+            <remarks>
+                <para>    Creator：FRANK-E420</para>
+                <para>CreatedTime：2012-5-11 11:52:34</para>
+            </remarks>
+        </member>
+        <member name="T:GHSoft.Model.IDataObjectBase">
+            <summary>
+            对象的基类
+            </summary>
+            <remarks>
+                <para>    Creator：FRANK-E420</para>
+                <para>CreatedTime：2012-5-11 11:52:34</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.Model.IDataObjectBase.TID">
+            <summary>
+            唯一标识
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.IDataObjectBase.TGuid">
+            <summary>
+            Guid字符，有需要时使用
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.IDataObjectBase.PID">
+            <summary>
+            分区ID，有需要时使用
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.IDataObjectBase.Expansion">
+            <summary>
+            扩充数据
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.IDataObjectBase.CreatedDate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.IDataObjectBase.Status">
+            <summary>
+            数据对象的状态
+            </summary>
+        </member>
+        <member name="M:GHSoft.Model.AbstratDataObjectBase`1.#ctor">
+            <summary>
+            对象的抽象基类
+            </summary>
+        </member>
+        <member name="M:GHSoft.Model.AbstratDataObjectBase`1.Create">
+            <summary>
+            重写Create方法
+            </summary>
+        </member>
+        <member name="M:GHSoft.Model.AbstratDataObjectBase`1.CreateAndFlush">
+            <summary>
+            重写CreateAndFlush方法
+            </summary>
+        </member>
+        <member name="M:GHSoft.Model.AbstratDataObjectBase`1.Save">
+            <summary>
+            重写Create方法
+            </summary>
+        </member>
+        <member name="M:GHSoft.Model.AbstratDataObjectBase`1.SaveAndFlush">
+            <summary>
+            重写CreateAndFlush方法
+            </summary>
+        </member>
+        <member name="M:GHSoft.Model.AbstratDataObjectBase`1.ConvertToDTO``1(System.Boolean)">
+            <summary>
+            将当前对象转换为DTO对象。
+            </summary>
+            <typeparam name="OUT">DTO对象的类型。</typeparam>
+            <param name="isInitRelationData">是否转换引用成员</param>
+            <returns>转换结果对象。</returns>
+        </member>
+        <member name="M:GHSoft.Model.AbstratDataObjectBase`1.SaveEntity(GHSoft.Model.Enum.DataOperationType,System.Int32@)">
+            <summary>
+            导入Access时, 根据数据库里的记录.保存对象
+            </summary>
+            <param name="operation">操作的类别</param>
+            <param name="createORmodify">修改或是新增</param>
+            <returns></returns>
+        </member>
+        <member name="P:GHSoft.Model.AbstratDataObjectBase`1.TID">
+            <summary>
+            系统唯一标识
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.AbstratDataObjectBase`1.TGuid">
+            <summary>
+            Guid字符，有需要时使用
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.AbstratDataObjectBase`1.PID">
+            <summary>
+            分区ID，有需要时使用
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.AbstratDataObjectBase`1.Expansion">
+            <summary>
+            扩充数据
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.AbstratDataObjectBase`1.CreatedDate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.AbstratDataObjectBase`1.Status">
+            <summary>
+            数据对象的状态
+            </summary>
+        </member>
+        <member name="T:GHSoft.Model.ILogicAccess`2">
+            <summary>
+            逻辑层抽象接口。
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <typeparam name="TDto"></typeparam>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/22 11:50:36</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.Model.ILogicAccess`2.GetObjectList(GHSoft.Model.GHR,System.Int32,System.Int32)">
+            <summary>
+            获取对象列表
+            </summary>
+            <param name="ghr">条件对象。</param>
+            <param name="pageSize">页面大小，为0时，不按分页查询。</param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ILogicAccess`2.GetObjectList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象列表
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ILogicAccess`2.GetObjectCount(GHSoft.Model.GHR)">
+            <summary>
+            获取对象数量
+            </summary>
+            <param name="ghr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ILogicAccess`2.GetObjectCount(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象数量
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ILogicAccess`2.GetObject(GHSoft.Model.GHR)">
+            <summary>
+            获取对象信息
+            </summary>
+            <param name="ghr">条件对象。</param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ILogicAccess`2.GetObjectById(System.Int64)">
+            <summary>
+            按照编号获取对象信息
+            </summary>
+            <param name="id">对象的TID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ILogicAccess`2.GetObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            	2 [可选]是否获取子对象。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ILogicAccess`2.GetObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号获取对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 id: 对象的TID
+            	2 [可选]是否获取子对象。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ILogicAccess`2.AddObject(`1)">
+            <summary>
+            添加对象。
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ILogicAccess`2.AddObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            添加对象
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 DTO: 已序列化为XML的DTO对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ILogicAccess`2.UpdateObject(`1)">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="data">DTO对象。</param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ILogicAccess`2.UpdateObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 DTO: 已序列化为XML的DTO对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ILogicAccess`2.DeleteObject(GHSoft.Model.GHR,System.Boolean)">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="ghr"></param>
+            <param name="delChild">是否删除子项内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ILogicAccess`2.DeleteObjectById(System.Int64,System.Boolean)">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="id">对象编号</param>
+            <param name="delChild">是否删除子项内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ILogicAccess`2.DeleteObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号删除对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 id: 要删除对象的ID.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ILogicAccess`2.DeleteObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ILogicAccess`2.Exists(GHSoft.Model.GHR)">
+            <summary>
+            检测对象是否存在。
+            </summary>
+            <param name="ghr">条件对象。</param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ILogicAccess`2.ExistsById(System.Int64)">
+            <summary>
+            检测对象是否存在。
+            </summary>
+            <param name="id">对象TID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ILogicAccess`2.Exists(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="T:GHSoft.Model.AbstratDataObjectBase">
+            <summary>
+            对象的抽象基类
+            </summary>
+            <remarks>
+                <para>    Creator：FRANK-E420</para>
+                <para>CreatedTime：2012-5-11 11:52:34</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.Model.AbstratDataObjectBase.#ctor">
+            <summary>
+            对象的抽象基类
+            </summary>
+        </member>
+        <member name="M:GHSoft.Model.AbstratDataObjectBase.Create">
+            <summary>
+            重写Create方法
+            </summary>
+        </member>
+        <member name="M:GHSoft.Model.AbstratDataObjectBase.CreateAndFlush">
+            <summary>
+            重写CreateAndFlush方法
+            </summary>
+        </member>
+        <member name="M:GHSoft.Model.AbstratDataObjectBase.Save">
+            <summary>
+            重写Create方法
+            </summary>
+        </member>
+        <member name="M:GHSoft.Model.AbstratDataObjectBase.SaveAndFlush">
+            <summary>
+            重写CreateAndFlush方法
+            </summary>
+        </member>
+        <member name="M:GHSoft.Model.AbstratDataObjectBase.ConvertToDTO``1(System.Boolean)">
+            <summary>
+            将当前对象转换为DTO对象。
+            </summary>
+            <typeparam name="OUT">DTO对象的类型。</typeparam>
+            <param name="isInitRelationData">是否转换引用成员</param>
+            <returns>转换结果对象。</returns>
+        </member>
+        <member name="P:GHSoft.Model.AbstratDataObjectBase.TID">
+            <summary>
+            系统唯一标识
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.AbstratDataObjectBase.TGuid">
+            <summary>
+            Guid字符，有需要时使用
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.AbstratDataObjectBase.PID">
+            <summary>
+            分区ID，有需要时使用
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.AbstratDataObjectBase.Expansion">
+            <summary>
+            扩充数据
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.AbstratDataObjectBase.CreatedDate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.AbstratDataObjectBase.Status">
+            <summary>
+            数据对象的状态
+            </summary>
+        </member>
+        <member name="T:GHSoft.Model.Entity.IParameter">
+            <summary>
+            参数对象接口
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.IParameter.Parent">
+            <summary>
+            父级对象
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.IParameter.Name">
+            <summary>
+            参数名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.IParameter.Title">
+            <summary>
+            参数标题
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.IParameter.Value">
+            <summary>
+            参数值
+            </summary>
+        </member>
+        <member name="T:GHSoft.Model.RemotingServiceResultBase`1">
+            <summary>
+            服务返回的基类
+            </summary>
+            <remarks>
+                <para>    Creator：FRANK-E420</para>
+                <para>CreatedTime：2012-5-11 11:52:34</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.Model.RemotingServiceResultBase`1.Success">
+            <summary>
+            是否成功,Default value is true.
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.RemotingServiceResultBase`1.IsAuthenticated">
+            <summary>
+            是否身份验证， 默认是已验证，只有 Success==false 时才有意义
+            即只有捕获到 AuthenticationException 异常时 IsAuthenticated才为 false
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.RemotingServiceResultBase`1.Message">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.RemotingServiceResultBase`1.Others">
+            <summary>
+            其他附带信息.
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.RemotingServiceResultBase`1.Data">
+             <summary>
+            返回数据
+             </summary>
+        </member>
+        <member name="T:GHSoft.Model.RemotingServiceResultByPage`1">
+            <summary>
+            运程服务返回的基类(返回列表时用)带分页信息
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:GHSoft.Model.RemotingServiceResultByPage`1.RecordCount">
+            <summary>
+            总行数
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.RemotingServiceResultByPage`1.PageIndex">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.RemotingServiceResultByPage`1.PageSize">
+            <summary>
+            每页行数
+            </summary>
+        </member>
+        <member name="T:GHSoft.Model.GHLinkType">
+            <summary>
+            条件连接类型
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/12/5 10:31:09</para>
+            </remarks>
+        </member>
+        <member name="F:GHSoft.Model.GHLinkType.And">
+            <summary>
+            and
+            </summary>
+        </member>
+        <member name="F:GHSoft.Model.GHLinkType.Or">
+            <summary>
+            or
+            </summary>
+        </member>
+        <member name="T:GHSoft.Model.GHRType">
+            <summary>
+            条件类型
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/12/5 10:31:09</para>
+            </remarks>
+        </member>
+        <member name="F:GHSoft.Model.GHRType.In">
+            <summary>
+            in
+            </summary>
+        </member>
+        <member name="F:GHSoft.Model.GHRType.Like">
+            <summary>
+            like
+            </summary>
+        </member>
+        <member name="F:GHSoft.Model.GHRType.Eq">
+            <summary>
+            = 相等
+            </summary>
+        </member>
+        <member name="F:GHSoft.Model.GHRType.Ne">
+            <summary>
+            &lt;&gt; 不等
+            </summary>
+        </member>
+        <member name="F:GHSoft.Model.GHRType.Gt">
+            <summary>
+            &gt; 大于
+            </summary>
+        </member>
+        <member name="F:GHSoft.Model.GHRType.Ge">
+            <summary>
+            &gt;= 大于等于
+            </summary>
+        </member>
+        <member name="F:GHSoft.Model.GHRType.Lt">
+            <summary>
+            &lt; 小于
+            </summary>
+        </member>
+        <member name="F:GHSoft.Model.GHRType.Le">
+            <summary>
+            &lt;= 小于等于
+            </summary>
+        </member>
+        <member name="F:GHSoft.Model.GHRType.IsNull">
+            <summary>
+            is null
+            </summary>
+        </member>
+        <member name="F:GHSoft.Model.GHRType.NotNull">
+            <summary>
+            is not null
+            </summary>
+        </member>
+        <member name="T:GHSoft.Model.Common.GHSoftQuery`1">
+            <summary>
+            GHSoftQuery GH查询类
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/12/12 16:37:11</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.Model.Common.GHSoftQuery`1.#ctor(System.String,GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}},System.Object[])">
+            <summary>
+            GHSoftQuery GH查询类
+            </summary>
+            <param name="query"></param>
+            <param name="dtoInput"></param>
+            <param name="positionalParameters"></param>
+        </member>
+        <member name="T:GHSoft.Model.Enum.ObjectStatusEnum">
+            <summary>
+            关于对象的枚举
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-5-2 15:16:22</para>
+            </remarks>
+        </member>
+        <member name="T:GHSoft.Model.Enum.ObjectStatusEnum.DataObjectStatus">
+            <summary>
+            数据对象状态枚举
+            </summary>
+        </member>
+        <member name="F:GHSoft.Model.Enum.ObjectStatusEnum.DataObjectStatus.Deleted">
+            <summary>
+            删除状态
+            </summary>
+        </member>
+        <member name="F:GHSoft.Model.Enum.ObjectStatusEnum.DataObjectStatus.Overdue">
+            <summary>
+            过期状态
+            </summary>
+        </member>
+        <member name="F:GHSoft.Model.Enum.ObjectStatusEnum.DataObjectStatus.Locked">
+            <summary>
+            锁定状态
+            </summary>
+        </member>
+        <member name="F:GHSoft.Model.Enum.ObjectStatusEnum.DataObjectStatus.Sync">
+            <summary>
+            同步状态
+            </summary>
+        </member>
+        <member name="F:GHSoft.Model.Enum.ObjectStatusEnum.DataObjectStatus.Temporary">
+            <summary>
+            临时状态
+            </summary>
+        </member>
+        <member name="F:GHSoft.Model.Enum.ObjectStatusEnum.DataObjectStatus.Normal">
+            <summary>
+            正常状态
+            </summary>
+        </member>
+        <member name="T:GHSoft.Model.Enum.DataOperationType">
+            <summary>
+            数据操作枚举
+            </summary>
+        </member>
+        <member name="F:GHSoft.Model.Enum.DataOperationType.Create">
+            <summary>
+            创建
+            </summary>
+        </member>
+        <member name="F:GHSoft.Model.Enum.DataOperationType.Save">
+            <summary>
+            保存
+            </summary>
+        </member>
+        <member name="F:GHSoft.Model.Enum.DataOperationType.Delete">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:GHSoft.Model.LogicAccessBase`2">
+            <summary>
+            逻辑层基础类。
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <typeparam name="TDto"></typeparam>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/22 11:50:36</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.Model.LogicAccessBase`2.GetObjectList(GHSoft.Model.GHR,System.Int32,System.Int32)">
+            <summary>
+            获取对象列表
+            </summary>
+            <param name="restriction">条件对象。</param>
+            <param name="pageSize"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.LogicAccessBase`2.GetObjectList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象列表
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 ghr: 已序列化为XML的GHR对象.
+            	2 getchild : 是否取得子对象
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.LogicAccessBase`2.GetObjectCount(GHSoft.Model.GHR)">
+            <summary>
+            获取对象数量
+            </summary>
+            <param name="restriction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.LogicAccessBase`2.GetObjectCount(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象数量
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHR: 已序列化为XML的GHR对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.LogicAccessBase`2.GetObject(GHSoft.Model.GHR)">
+            <summary>
+            获取对象信息
+            </summary>
+            <param name="restriction">条件对象。</param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.LogicAccessBase`2.GetObjectById(System.Int64)">
+            <summary>
+            获取对象信息
+            </summary>
+            <param name="id">对象的TID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.LogicAccessBase`2.GetObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHR: 已序列化为XML的GHR对象.
+            	2 [可选]是否获取子对象。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.LogicAccessBase`2.GetObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHR: 已序列化为XML的GHR对象.
+            	2 [可选]是否获取子对象。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.LogicAccessBase`2.AddObject(`1)">
+            <summary>
+            添加对象。
+            </summary>
+            <param name="data">DTO对象。</param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.LogicAccessBase`2.AddObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            添加对象
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 DTO: 已序列化为XML的DTO对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.LogicAccessBase`2.UpdateObject(`1)">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="data">DTO对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.LogicAccessBase`2.UpdateObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 DTO: 已序列化为XML的DTO对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.LogicAccessBase`2.DeleteObject(GHSoft.Model.GHR,System.Boolean)">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="restriction">条件对象。</param>
+            <param name="delChild">是否删除子项内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.LogicAccessBase`2.DeleteObjectById(System.Int64,System.Boolean)">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="id">对象编号</param>
+            <param name="delChild">是否删除子项内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.LogicAccessBase`2.DeleteObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号删除对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 id: 要删除对象的ID.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.LogicAccessBase`2.DeleteObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHR: 已序列化为XML的GHR对象.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.LogicAccessBase`2.Exists(GHSoft.Model.GHR)">
+            <summary>
+            检测对象是否存在。
+            </summary>
+            <param name="restriction">条件对象。</param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.LogicAccessBase`2.ExistsById(System.Int64)">
+            <summary>
+            检测对象是否存在。
+            </summary>
+            <param name="id">对象TID。</param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.LogicAccessBase`2.Exists(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHR: 已序列化为XML的GHR对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="T:GHSoft.Model.SimpleDataObjectBase`1">
+            <summary>
+             对象的抽象基类(使用数据库自带自增主键值)
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2013-6-18 10:13:02</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.Model.SimpleDataObjectBase`1.#ctor">
+            <summary>
+            对象的抽象基类
+            </summary>
+        </member>
+        <member name="M:GHSoft.Model.SimpleDataObjectBase`1.Save">
+            <summary>
+            重写Create方法
+            </summary>
+        </member>
+        <member name="M:GHSoft.Model.SimpleDataObjectBase`1.SaveAndFlush">
+            <summary>
+            重写CreateAndFlush方法
+            </summary>
+        </member>
+        <member name="M:GHSoft.Model.SimpleDataObjectBase`1.ConvertToDTO``1(System.Boolean)">
+            <summary>
+            将当前对象转换为DTO对象。
+            </summary>
+            <typeparam name="OUT">DTO对象的类型。</typeparam>
+            <param name="isInitRelationData">是否转换引用成员</param>
+            <returns>转换结果对象。</returns>
+        </member>
+        <member name="P:GHSoft.Model.SimpleDataObjectBase`1.TID">
+            <summary>
+            系统唯一标识
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.SimpleDataObjectBase`1.TGuid">
+            <summary>
+            Guid字符，有需要时使用
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.SimpleDataObjectBase`1.PID">
+            <summary>
+            分区ID，有需要时使用
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.SimpleDataObjectBase`1.Expansion">
+            <summary>
+            扩充数据
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.SimpleDataObjectBase`1.CreatedDate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.SimpleDataObjectBase`1.Status">
+            <summary>
+            数据对象的状态
+            </summary>
+        </member>
+        <member name="T:GHSoft.Model.IServiceBase`3">
+            <summary>
+            服务基础接口。
+            </summary>
+            <typeparam name="T">BLL接口。</typeparam>
+            <typeparam name="TEntity">实体类</typeparam>
+            <typeparam name="TDto">DTO类</typeparam>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 16:55:25</para>
+            </remarks>
+        </member>
+        <member name="T:GHSoft.Model.IServiceFunction">
+            <summary>
+            服务基础功能接口。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/24 14:35:49</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.Model.IServiceFunction.GetObjectList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象列表
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.IServiceFunction.GetObjectCount(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象数量
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.IServiceFunction.GetObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            	2 [可选]是否获取子对象。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.IServiceFunction.GetObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号获取对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 id: 对象的TID
+            	2 [可选]是否获取子对象。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.IServiceFunction.AddObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            添加对象
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 DTO: 已序列化为XML的DTO对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.IServiceFunction.UpdateObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 DTO: 已序列化为XML的DTO对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.IServiceFunction.DeleteObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号删除对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 id: 要删除对象的ID.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.IServiceFunction.DeleteObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.IServiceFunction.Exists(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="T:GHSoft.Model.GHSessionScope">
+            <summary>
+            
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/7/6 10:57:41</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.Model.GHSessionScope.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GHSoft.Model.GHSessionScope.#ctor(Castle.ActiveRecord.FlushAction)">
+            <summary>
+            
+            </summary>
+            <param name="flushAction"></param>
+        </member>
+        <member name="M:GHSoft.Model.GHSessionScope.#ctor(Castle.ActiveRecord.FlushAction,Castle.ActiveRecord.SessionScopeType)">
+            <summary>
+            
+            </summary>
+            <param name="flushAction"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:GHSoft.Model.GHSessionScope.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:GHSoft.Model.GHSessionScope.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="discardChanges"></param>
+        </member>
+        <member name="T:GHSoft.Model.GenerateIDSingleton">
+            <summary>
+            使用单例模式，数据库中所有表需要的ID，都由此类生成全局唯一ID
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012-7-5 23:35:34</para>
+            </remarks>
+        </member>
+        <member name="F:GHSoft.Model.GenerateIDSingleton.m_instance">
+            <summary>
+            系统生成ID的唯一实例
+            </summary>
+        </member>
+        <member name="M:GHSoft.Model.GenerateIDSingleton.Instance">
+            <summary>
+            获取生成ID的单一实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:GHSoft.Model.GenerateIDSingleton.serialService">
+            <summary>
+            序号服务接口
+            </summary>
+        </member>
+        <member name="M:GHSoft.Model.GenerateIDSingleton.GetNewID(System.String)">
+            <summary>
+            返回唯一的ID号
+            </summary>
+            <returns>如果返回的值为-1视为生成出错</returns>
+        </member>
+        <member name="P:GHSoft.Model.GenerateIDSingleton.SyncRoot">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:GHSoft.Model.GHTransactionScope">
+            <summary>
+            
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/7/6 10:45:47</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.Model.GHTransactionScope.VoteCommit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GHSoft.Model.GHTransactionScope.VoteRollBack">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:GHSoft.Model.Entity.DBSerialItem">
+            <summary>
+            
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/7/5 16:20:15</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.Model.Entity.DBSerialItem.Serial">
+            <summary>
+            所属序号器
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.DBSerialItem.ID">
+            <summary>
+            系统唯一标识
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.DBSerialItem.Name">
+            <summary>
+            规则名
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.DBSerialItem.Type">
+            <summary>
+            序号类型。
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.DBSerialItem.MaxValue">
+            <summary>
+            最大值。
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.DBSerialItem.MinValue">
+            <summary>
+            最小值。
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.DBSerialItem.Length">
+            <summary>
+            值长度。
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.DBSerialItem.ZeroPad">
+            <summary>
+            零位补齐。
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.DBSerialItem.DefValue">
+            <summary>
+            默认值。
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.DBSerialItem.DefStart">
+            <summary>
+            默认起始值。
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.DBSerialItem.SerialValues">
+            <summary>
+            序号项列表
+            </summary>
+        </member>
+        <member name="T:GHSoft.Model.Entity.DBSerial">
+            <summary>
+            序号器
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/7/5 16:17:44</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.Model.Entity.DBSerial.ID">
+            <summary>
+            系统唯一标识
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.DBSerial.Name">
+            <summary>
+            序号器名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.DBSerial.Format">
+            <summary>
+            序号器格式
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.DBSerial.Items">
+            <summary>
+            序号项列表
+            </summary>
+        </member>
+        <member name="T:GHSoft.Model.GHR">
+            <summary>
+            GHR
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/12/5 10:07:56</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.Model.GHR.Link(GHSoft.Model.GHR)">
+            <summary>
+            连接另一个GHR对象。
+            </summary>
+            <param name="ghr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.GHR.Add(System.String,System.Object,GHSoft.Model.GHRType,GHSoft.Model.GHLinkType)">
+            <summary>
+            添加一个条件。
+            </summary>
+            <param name="key">条件关键字。</param>
+            <param name="value">条件值。</param>
+            <param name="type">条件判断类型。</param>
+            <param name="compose">组合连接类型。</param>
+        </member>
+        <member name="M:GHSoft.Model.GHR.And(System.String,System.Object,GHSoft.Model.GHRType)">
+            <summary>
+            添加一个条件。
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:GHSoft.Model.GHR.Or(System.String,System.Object,GHSoft.Model.GHRType)">
+            <summary>
+            添加一个条件。
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:GHSoft.Model.GHR.GetSQL(System.String)">
+            <summary>
+            获取SQL语句
+            </summary>
+            <param name="prefix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.GHR.GetParameters">
+            <summary>
+            获取查询参数列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.GHR.ToString">
+            <summary>
+            转换为字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.GHR.ToString(System.String)">
+            <summary>
+            转换为字符串
+            </summary>
+            <param name="prefix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.GHR.Sql(System.String)">
+            <summary>
+            用SQL语句创建一个条件对象.
+            </summary>
+            <param name="sql">SQL语句</param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.GHR.In(System.String,System.Object)">
+            <summary>
+            like
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.GHR.Like(System.String,System.Object)">
+            <summary>
+            like
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.GHR.Eq(System.String,System.Object)">
+            <summary>
+            =
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.GHR.Ne(System.String,System.Object)">
+            <summary>
+            &lt;&gt;
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.GHR.Gt(System.String,System.Object)">
+            <summary>
+            &gt;
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.GHR.Ge(System.String,System.Object)">
+            <summary>
+            &gt;=
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.GHR.Lt(System.String,System.Object)">
+            <summary>
+            &lt;
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.GHR.Le(System.String,System.Object)">
+            <summary>
+            &lt;=
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.GHR.IsNull(System.String)">
+            <summary>
+            is null
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.GHR.NotNull(System.String)">
+            <summary>
+            is not null
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.GHR.Parse(System.String)">
+            <summary>
+            从 XML 解析对象。
+            </summary>
+            <param name="xml"></param>
+            <returns></returns>
+        </member>
+        <member name="P:GHSoft.Model.GHR.SqlString">
+            <summary>
+            SQL字符串
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.GHR.Prefix">
+            <summary>
+            SQL字符串
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.GHR.Column">
+            <summary>
+            允许的字段范围
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.GHR.OrderKey">
+            <summary>
+            排序字段。
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.GHR.OrderASC">
+            <summary>
+            是否为顺序排列
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.GHR.ColumnCount">
+            <summary>
+            允许的字段数量
+            </summary>
+        </member>
+        <member name="T:GHSoft.Model.ServiceBase`3">
+            <summary>
+            服务的抽象基础类。
+            </summary>
+            <typeparam name="T">BLL接口。</typeparam>
+            <typeparam name="TEntity">实体类</typeparam>
+            <typeparam name="TDto">DTO类</typeparam>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:03:52</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.Model.ServiceBase`3.GetObjectList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象列表
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ServiceBase`3.GetObjectCount(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象数量
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ServiceBase`3.GetObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            	2 [可选]是否获取子对象。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ServiceBase`3.GetObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号获取对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 id: 对象的TID
+            	2 [可选]是否获取子对象。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ServiceBase`3.AddObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            添加对象
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 DTO: 已序列化为XML的DTO对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ServiceBase`3.UpdateObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 DTO: 已序列化为XML的DTO对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ServiceBase`3.DeleteObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号删除对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 id: 要删除对象的ID.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ServiceBase`3.DeleteObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GHSoft.Model.ServiceBase`3.Exists(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="P:GHSoft.Model.ServiceBase`3.BLL">
+            <summary>
+            BLL类
+            </summary>
+        </member>
+        <member name="T:GHSoft.Model.Entity.GHParameter">
+            <summary>
+            参数对象基础类
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/11/30 15:31:37</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.Model.Entity.GHParameter.ConvertToDTO``1(System.Boolean)">
+            <summary>
+            将当前对象转换为DTO对象。
+            </summary>
+            <typeparam name="T">DTO对象的类型。</typeparam>
+            <param name="isInitRelationData">是否把关联的属性列表一并加载出来，默认不加载</param>
+            <returns>转换结果对象。</returns>
+        </member>
+        <member name="P:GHSoft.Model.Entity.GHParameter.Parent">
+            <summary>
+            父级对象
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.GHParameter.Name">
+            <summary>
+            参数名称
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.GHParameter.Title">
+            <summary>
+            参数标题
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.GHParameter.Value">
+            <summary>
+            参数值
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.GHParameter.Children">
+            <summary>
+            子类信息，延时加载
+            </summary>
+        </member>
+        <member name="T:GHSoft.Model.Entity.DBSerialValue">
+            <summary>
+            
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/7/5 16:25:04</para>
+            </remarks>
+        </member>
+        <member name="P:GHSoft.Model.Entity.DBSerialValue.SerialItem">
+            <summary>
+            所属序号项
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.DBSerialValue.ID">
+            <summary>
+            系统唯一标识
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.DBSerialValue.Key">
+            <summary>
+            键
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.DBSerialValue.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:GHSoft.Model.Entity.DBSerialValue.Start">
+            <summary>
+            开始值
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,801 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Peacock.ESB.Menu</name>
+    </assembly>
+    <members>
+        <member name="T:Peacock.ESB.IService.MenuServiceGlobal">
+            <summary>
+            服务层接口的注入
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-8-20 16:58:39</para>
+            </remarks>
+        </member>
+        <member name="P:Peacock.ESB.IService.MenuServiceGlobal.Container">
+            <summary>
+            IoC容器对象
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Model.Entity.MenuInfo">
+            <summary>
+            菜单信息
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-8-20 15:35:36</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Model.Entity.MenuInfo.ConvertToDTO``1(System.Boolean)">
+            <summary>
+            将当前对象转换为DTO对象。
+            </summary>
+            <typeparam name="T">DTO对象的类型。</typeparam>
+            <param name="isInitRelationData">是否把关联的属性列表一并加载出来，默认不加载</param>
+            <returns>转换结果对象。</returns>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.MenuInfo.IsCopy">
+            <summary>
+            是否是复制而来的属性
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.MenuInfo.Title">
+            <summary>
+            菜单标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.MenuInfo.Parent">
+            <summary>
+            父节点，构成菜单树的重要属性
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.MenuInfo.Level">
+            <summary>
+            所处级别，所在菜单树中的层次级别
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.MenuInfo.Order">
+            <summary>
+            位置顺序，根据此数值调整显示顺序
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.MenuInfo.ActionType">
+            <summary>
+            动作类型，事件的附属属性，是一种标识，事件监听器中使用
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.MenuInfo.ComponentInfo">
+            <summary>
+            所属组件
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.MenuInfo.PowerPackages">
+            <summary>
+            包含的权限包, 1,2,3,...
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.MenuInfo.SystemInfo">
+            <summary>
+            所属系统
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.MenuInfo.FunctionalModuleInfo">
+            <summary>
+            对应的功能模块
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.MenuInfo.Childs">
+            <summary>
+            子节点列表，构成菜单树的重要属性
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.MenuInfo.Configs">
+            <summary>
+            菜单对应的配置信息
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Service.MenuInfoService">
+            <summary>
+            菜单信息服务实现类
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-8-20 17:01:51</para>
+            </remarks>
+        </member>
+        <member name="T:Peacock.ESB.IService.IMenuInfoService">
+            <summary>
+            菜单信息服务接口
+            </summary>   
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-8-20 17:01:38</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IService.IMenuInfoService.GetMenuInfoList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取所有的菜单信息
+            </summary>
+            <param name="dtoInput">
+            参数:
+                1. 所在系统ID
+            	2. 父级对象的名称，Name字段
+            	3. 是否只拿第一级别的菜单信息，子信息都不要
+            	4. 默认为false，是否把所有的子类信息都获取出来，只在第二个参数为False时生效
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IService.IMenuInfoService.GetMenuInfo(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取某个指定的菜单信息
+            </summary>
+            <param name="dtoInput">
+            参数:
+            	1. MenuInfo对象的TID值，即唯一标识
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IService.IMenuInfoService.SaveMenuInfo(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            添加或更新一个菜单信息
+            </summary>
+            <param name="dtoInput">
+            参数:
+            	1.Menu DTO对象的XML值，即MenuInfoDTO对象的XML值，字符串值。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IService.IMenuInfoService.DeleteMenuInfo(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            删除一个菜单信息
+            </summary>
+            <param name="dtoInput">
+            参数:
+            	1. MenuInfo对象的TID值，即唯一标识
+            	2. 是否删除其下面的子类信息（默认是删除，如果一个菜单的子模块同时属于两个不同的父级时，删除子模块，则两边都删除。）
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IService.IMenuInfoService.GetMenuPackage(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取菜单权限包
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.MenuInfoService.GetMenuInfoList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取所有的菜单信息
+            </summary>
+            <param name="dtoInput">
+            参数:
+                1. 所在系统ID
+            	2. 父级对象的名称，Name字段
+            	3. 是否只拿第一级别的菜单信息，子信息都不要
+            	4. 默认为false，是否把所有的子类信息都获取出来，只在第二个参数为False时生效
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.MenuInfoService.GetMenuInfo(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取某个指定的菜单信息
+            </summary>
+            <param name="dtoInput">
+            参数:
+            	1. MenuInfo对象的TID值，即唯一标识
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.MenuInfoService.SaveMenuInfo(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            添加或更新一个菜单信息
+            </summary>
+            <param name="dtoInput">
+            参数:
+            	1.Menu DTO对象的XML值，即MenuInfoDTO对象的XML值，字符串值。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.MenuInfoService.DeleteMenuInfo(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            删除一个菜单信息
+            </summary>
+            <param name="dtoInput">
+            参数:
+            	1. MenuInfo对象的TID值，即唯一标识
+            	2. 是否删除其下面的子类信息（默认是删除，如果一个菜单的子模块同时属于两个不同的父级时，删除子模块，则两边都删除。）
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.MenuInfoService.GetMenuPackage(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取菜单权限包
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.IService.IMenuInfoConfigService">
+            <summary>
+            菜单配置信息服务类
+            </summary>   
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-9-6 20:29:09</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IService.IMenuInfoConfigService.GetMenuInfoConfigList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取数据信息列表。
+            </summary>
+            <param name="dtoInput">
+             参数:
+            	1. 父级对象的ID，MenuInfoConfig的ID字段
+            </param>
+            <returns>返回数据DTO列表</returns>
+        </member>
+        <member name="M:Peacock.ESB.IService.IMenuInfoConfigService.GetMenuInfoConfigById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取指定ID的数据信息。
+            </summary>
+            <param name="dtoInput">ID值</param>
+            <returns>返回数据DTO</returns>
+        </member>
+        <member name="M:Peacock.ESB.IService.IMenuInfoConfigService.SaveMenuInfoConfig(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            保存数据信息，如果不存在则自动添加，否则更新数据。
+            </summary>
+            <param name="dtoInput">已序列化为XML的MenuInfoConfigDTO对象.</param>
+            <returns>返回操作结果DTO</returns>
+        </member>
+        <member name="M:Peacock.ESB.IService.IMenuInfoConfigService.DeleteMenuInfoConfig(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            删除数据信息
+            </summary>
+            <param name="dtoInput">ID值</param>
+            <returns>返回操作结果DTO</returns>
+        </member>
+        <member name="T:Peacock.ESB.DTO.MenuInfoDTO">
+            <summary>
+            菜单信息DTO
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-8-20 16:46:32</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.DTO.MenuInfoDTO.#ctor">
+            <summary>
+            MenuInfoDTO的构造函数
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.MenuInfoDTO.FunctionalModuleInfo">
+            <summary>
+            系统功能模块信息
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.MenuInfoDTO.Title">
+            <summary>
+            菜单标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.MenuInfoDTO.ParentID">
+            <summary>
+            父级对象ID
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.MenuInfoDTO.ParentTitle">
+            <summary>
+            父级对象标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.MenuInfoDTO.Level">
+            <summary>
+            所处级别，所在菜单树中的层次级别
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.MenuInfoDTO.Order">
+            <summary>
+            位置顺序，根据此数值调整显示顺序
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.MenuInfoDTO.ActionType">
+            <summary>
+            动作类型，事件的附属属性，是一种标识，事件监听器中使用
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.MenuInfoDTO.children">
+            <summary>
+            子节点列表，构成菜单树的重要属性
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.MenuInfoDTO.ComponentInfo">
+            <summary>
+            所属组件
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.MenuInfoDTO.SystemID">
+            <summary>
+            所属系统的编号
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.MenuInfoDTO.SystemName">
+            <summary>
+            所属系统名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.MenuInfoDTO.SystemTitle">
+            <summary>
+            所属系统标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.MenuInfoDTO.SystemRootUrl">
+            <summary>
+            所属系统根地址
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.MenuInfoDTO.Configs">
+            <summary>
+            配置信息列表
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.MenuInfoDTO.PowerPackages">
+            <summary>
+            包含的权限包, 1,2,3,...
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.IBLL.IMenuInfoBLL">
+            <summary>
+            菜单信息逻辑功能接口
+            </summary>   
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-8-20 17:09:21</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IMenuInfoBLL.GetMenuInfoList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取所有的菜单信息
+            </summary>
+            <param name="dtoInput">
+            参数:
+                1. 所在系统ID
+            	2. 父级对象的名称，Name字段
+            	3. 是否只拿第一级别的菜单信息，子信息都不要
+            	4. 默认为false，是否把所有的子类信息都获取出来，只在第二个参数为False时生效
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IMenuInfoBLL.GetMenuInfo(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取某个指定的菜单信息
+            </summary>
+            <param name="dtoInput">
+            参数:
+            	1. MenuInfo对象的TID值，即唯一标识
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IMenuInfoBLL.SaveMenuInfo(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            添加或更新一个菜单信息
+            </summary>
+            <param name="dtoInput">
+            参数:
+            	1.Menu DTO对象的XML值，即MenuInfoDTO对象的XML值，字符串值。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IMenuInfoBLL.DeleteMenuInfo(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            删除一个菜单信息
+            </summary>
+            <param name="dtoInput">
+            参数:
+            	1. MenuInfo对象的TID值，即唯一标识
+            	2. 是否删除其下面的子类信息（默认是删除，如果一个菜单的子模块同时属于两个不同的父级时，删除子模块，则两边都删除。）
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IMenuInfoBLL.GetMenuInfoEntityList(System.Int64,System.String,System.Boolean,System.Boolean)">
+            <summary>
+             获取所有的菜单信息
+            </summary>
+            <param name="systemID">所属系统</param>
+            <param name="parentName">父级结点名称，如果没有则获取全部</param>
+            <param name="isLoadFirstLevelMenu">是否只加载首层的菜单出来</param>
+            <param name="isLoadAllChilds">默认为false，是否把所有的子类信息都获取出来，只在isSystem为False时生效</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IMenuInfoBLL.GetMenuInfoEntity(System.Int64)">
+            <summary>
+            获取某个指定的菜单信息
+            </summary>
+            <param name="id">模块对象的系统唯一标识</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IMenuInfoBLL.SaveMenuInfoEntity(Peacock.ESB.Model.Entity.MenuInfo)">
+            <summary>
+             添加或更新一个菜单信息
+            </summary>
+            <param name="saveItem">添加或更新的完整对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IMenuInfoBLL.DeleteMenuInfoEntity(System.Int64,System.Boolean)">
+            <summary>
+            删除一个菜单信息
+            </summary>
+            <param name="id">MenuInfo对象的TID值，即唯一标识</param>
+            <param name="isDeleteChilds"> 是否删除其下面的子类信息（默认是删除，如果一个菜单的子模块同时属于两个不同的父级时，删除子模块，则两边都删除。）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IMenuInfoBLL.GetMenuPackage(System.Int64)">
+            <summary>
+            获取菜单权限包
+            </summary>
+            <param name="sysid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IMenuInfoBLL.GetMenuPackage(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取菜单权限包
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.DataConvert.DTOToMenuInfoConfig">
+            <summary>
+            把菜单配置信息DTO对象转成数据库对象
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-9-6 16:40:37</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.DataConvert.DTOToMenuInfoConfig.ToMenuInfoConfig(Peacock.ESB.DTO.MenuInfoConfigDTO)">
+            <summary>
+             只转换普通属性，关联列表等不进行转换
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.BLL.MenuInfoBLL">
+            <summary>
+            菜单信息逻辑功能实现类
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-8-20 17:10:13</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.BLL.MenuInfoBLL.GetMenuInfoList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取所有的菜单信息
+            </summary>
+            <param name="dtoInput">
+            参数:
+                1. 所在系统ID
+            	2. 父级对象的名称，Name字段
+            	3. 是否只拿第一级别的菜单信息，子信息都不要
+            	4. 默认为false，是否把所有的子类信息都获取出来，只在第二个参数为False时生效
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.MenuInfoBLL.GetMenuInfo(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取某个指定的菜单信息
+            </summary>
+            <param name="dtoInput">
+            参数:
+            	1. MenuInfo对象的TID值，即唯一标识
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.MenuInfoBLL.SaveMenuInfo(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            添加或更新一个菜单信息
+            </summary>
+            <param name="dtoInput">
+            参数:
+            	1.Menu DTO对象的XML值，即MenuInfoDTO对象的XML值，字符串值。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.MenuInfoBLL.DeleteMenuInfo(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            删除一个菜单信息
+            </summary>
+            <param name="dtoInput">
+            参数:
+            	1. MenuInfo对象的TID值，即唯一标识
+            	2. 是否删除其下面的子类信息（默认是删除，如果一个菜单的子模块同时属于两个不同的父级时，删除子模块，则两边都删除。）
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.MenuInfoBLL.GetMenuInfoEntityList(System.Int64,System.String,System.Boolean,System.Boolean)">
+            <summary>
+             获取所有的菜单信息
+            </summary>
+            <param name="systemID">所属系统</param>
+            <param name="parentName">父级结点名称，如果没有则获取全部</param>
+            <param name="isLoadFirstLevelMenu">是否只加载首层的菜单出来</param>
+            <param name="isLoadAllChilds">默认为false，是否把所有的子类信息都获取出来，只在isSystem为False时生效</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.MenuInfoBLL.loadChilds(System.Collections.Generic.IList{Peacock.ESB.Model.Entity.MenuInfo})">
+            <summary>
+            填充所有子项目的信息
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.MenuInfoBLL.GetMenuInfoEntity(System.Int64)">
+            <summary>
+            获取某个指定的菜单信息
+            </summary>
+            <param name="id">模块对象的系统唯一标识</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.MenuInfoBLL.SaveMenuInfoEntity(Peacock.ESB.Model.Entity.MenuInfo)">
+            <summary>
+             添加或更新一个菜单信息
+            </summary>
+            <param name="saveItem">添加或更新的完整对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.MenuInfoBLL.DeleteMenuInfoEntity(System.Int64,System.Boolean)">
+            <summary>
+            删除一个菜单信息
+            </summary>
+            <param name="id">MenuInfo对象的TID值，即唯一标识</param>
+            <param name="isDeleteChilds"> 是否删除其下面的子类信息（默认是删除，如果一个菜单的子模块同时属于两个不同的父级时，删除子模块，则两边都删除。）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.MenuInfoBLL.deleteChild(Peacock.ESB.Model.Entity.MenuInfo)">
+            <summary>
+            删除对象和其下所有的子类
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Peacock.ESB.BLL.MenuInfoBLL.GetMenuPackage(System.Int64)">
+            <summary>
+            获取菜单权限包
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.MenuInfoBLL.GetMenuPackage(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取菜单权限包
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.Model.Entity.MenuInfoConfig">
+            <summary>
+            菜单配置信息记录，菜单配置信息从菜单对应的FIL配置信息中提取
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-9-6 16:24:47</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Model.Entity.MenuInfoConfig.ConvertToDTO``1(System.Boolean)">
+            <summary>
+            将当前对象转换为DTO对象。
+            </summary>
+            <typeparam name="T">DTO对象的类型。</typeparam>
+            <param name="isInitRelationData">是否把关联的属性列表一并加载出来，默认不加载</param>
+            <returns>转换结果对象。</returns>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.MenuInfoConfig.KeyValue">
+            <summary>
+            设置的配置值
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.MenuInfoConfig.Parent">
+            <summary>
+            所属的菜单信息
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.MenuInfoConfig.FunctionalModuleConfig">
+            <summary>
+            对应的系统模块配置信息
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.IBLL.MenuBLLGlobal">
+            <summary>
+            逻辑层接口的注入
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-8-20 17:00:04</para>
+            </remarks>
+        </member>
+        <member name="P:Peacock.ESB.IBLL.MenuBLLGlobal.Container">
+            <summary>
+            IoC容器对象
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.BLL.InitMenuInfoBLL">
+            <summary>
+            初始化功能
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-8-20 17:11:06</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.BLL.InitMenuInfoBLL.Initialize(System.Object[])">
+            <summary>
+            初始化方法。
+            </summary>
+            <param name="args">可选参数列表。</param>
+            <returns>是否初始化成功。</returns>
+        </member>
+        <member name="T:Peacock.ESB.DataConvert.DTOToMenuInfo">
+            <summary>
+            把菜单信息的DTO对象转成数据库对象
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-8-20 17:16:56</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.DataConvert.DTOToMenuInfo.ToMenuInfo(Peacock.ESB.DTO.MenuInfoDTO)">
+            <summary>
+            只转换普通属性，关联属性等不进行转换
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.DTO.MenuInfoConfigDTO">
+            <summary>
+            菜单配置信息的DTO
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-9-6 16:30:46</para>
+            </remarks>
+        </member>
+        <member name="P:Peacock.ESB.DTO.MenuInfoConfigDTO.KeyValue">
+            <summary>
+            设置的配置值
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.MenuInfoConfigDTO.FunctionalModuleConfig">
+            <summary>
+            对应的系统模块配置信息
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.MenuInfoConfigDTO.MenuID">
+            <summary>
+            对应菜单的ID
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.MenuInfoConfigDTO.MenuTitle">
+            <summary>
+            对应菜单的名称
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.IBLL.IMenuInfoConfigBLL">
+            <summary>
+            菜单配置信息提供的操作方法
+            </summary>   
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-9-6 20:26:33</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IMenuInfoConfigBLL.GetMenuInfoConfigList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取数据信息列表。
+            </summary>
+            <param name="dtoInput">
+             参数:
+            	1. 父级对象的ID，MenuInfoConfig的ID字段
+            </param>
+            <returns>返回数据DTO列表</returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IMenuInfoConfigBLL.GetMenuInfoConfigById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取指定ID的数据信息。
+            </summary>
+            <param name="dtoInput">ID值</param>
+            <returns>返回数据DTO</returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IMenuInfoConfigBLL.SaveMenuInfoConfig(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            保存数据信息，如果不存在则自动添加，否则更新数据。
+            </summary>
+            <param name="dtoInput">已序列化为XML的MenuInfoConfigDTO对象.</param>
+            <returns>返回操作结果DTO</returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IMenuInfoConfigBLL.DeleteMenuInfoConfig(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            删除数据信息
+            </summary>
+            <param name="dtoInput">ID值</param>
+            <returns>返回操作结果DTO</returns>
+        </member>
+        <member name="T:Peacock.ESB.BLL.MenuInfoConfigBLL">
+            <summary>
+            菜单配置信息提供的操作方法
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-9-6 20:27:55</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.BLL.MenuInfoConfigBLL.GetMenuInfoConfigList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取数据信息列表。
+            </summary>
+            <param name="dtoInput">
+             参数:
+            	1. 父级对象的ID，MenuInfoConfig的ID字段
+            </param>
+            <returns>返回数据DTO列表</returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.MenuInfoConfigBLL.GetMenuInfoConfigById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取指定ID的数据信息。
+            </summary>
+            <param name="dtoInput">ID值</param>
+            <returns>返回数据DTO</returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.MenuInfoConfigBLL.SaveMenuInfoConfig(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            保存数据信息，如果不存在则自动添加，否则更新数据。
+            </summary>
+            <param name="dtoInput">已序列化为XML的MenuInfoConfigDTO对象.</param>
+            <returns>返回操作结果DTO</returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.MenuInfoConfigBLL.DeleteMenuInfoConfig(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            删除数据信息
+            </summary>
+            <param name="dtoInput">ID值</param>
+            <returns>返回操作结果DTO</returns>
+        </member>
+        <member name="T:Peacock.ESB.Service.MenuInfoConfigService">
+            <summary>
+            
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-9-6 20:30:17</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Service.MenuInfoConfigService.GetMenuInfoConfigList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取数据信息列表。
+            </summary>
+            <param name="dtoInput">
+             参数:
+            	1. 父级对象的ID，MenuInfoConfig的ID字段
+            </param>
+            <returns>返回数据DTO列表</returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.MenuInfoConfigService.GetMenuInfoConfigById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取指定ID的数据信息。
+            </summary>
+            <param name="dtoInput">ID值</param>
+            <returns>返回数据DTO</returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.MenuInfoConfigService.SaveMenuInfoConfig(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            保存数据信息，如果不存在则自动添加，否则更新数据。
+            </summary>
+            <param name="dtoInput">已序列化为XML的MenuInfoConfigDTO对象.</param>
+            <returns>返回操作结果DTO</returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.MenuInfoConfigService.DeleteMenuInfoConfig(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            删除数据信息
+            </summary>
+            <param name="dtoInput">ID值</param>
+            <returns>返回操作结果DTO</returns>
+        </member>
+    </members>
+</doc>

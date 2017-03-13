@@ -1,0 +1,1145 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Peacock.ESB.UI</name>
+    </assembly>
+    <members>
+        <member name="T:Peacock.ESB.IService.IComponentService">
+            <summary>
+            系统界面服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:21:14</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IService.IComponentService.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名系对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IService.IComponentService.ExistsTitle(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检查同标题对象是否存在
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.BLL.UIInitializeBLL">
+            <summary>
+            界面初始化功能
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 12:03:05</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.BLL.UIInitializeBLL.Initialize(System.Object[])">
+            <summary>
+            初始化方法。
+            </summary>
+            <param name="args">可选参数列表。</param>
+            <returns>是否初始化成功。</returns>
+        </member>
+        <member name="T:Peacock.ESB.IBLL.IComponentBLL">
+            <summary>
+            组件信息操作逻辑接口
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/22 11:50:36</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IComponentBLL.ExistsName(System.String)">
+            <summary>
+            检测同名组件是否存在
+            </summary>
+            <param name="name">组件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IComponentBLL.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名组件是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 组件名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IComponentBLL.ExistsTitle(System.String)">
+            <summary>
+            检查同标题组件是否存在
+            </summary>
+            <param name="title">组件标题</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IComponentBLL.ExistsTitle(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检查同标题组件是否存在
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.IBLL.IControlBLL">
+            <summary>
+            控件信息操作逻辑接口
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/22 11:50:36</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IControlBLL.ExistsName(System.String)">
+            <summary>
+            检测同名控件是否存在
+            </summary>
+            <param name="name">控件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IControlBLL.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名控件是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 控件名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IControlBLL.ExistsTitle(System.String)">
+            <summary>
+            检查同标题控件是否存在
+            </summary>
+            <param name="title">控件标题</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IControlBLL.ExistsTitle(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检查同标题控件是否存在
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.Model.Entity.PositionInfo">
+            <summary>
+            UI组件位置信息
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/6/29 16:09:06</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Model.Entity.PositionInfo.ConvertToDTO``1(System.Boolean)">
+            <summary>
+            将当前对象转换为DTO对象。
+            </summary>
+            <typeparam name="T">DTO对象的类型。</typeparam>
+            <param name="isInitRelationData">是否把关联的属性列表一并加载出来，默认不加载</param>
+            <returns>转换结果对象。</returns>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PositionInfo.System">
+            <summary>
+            所属系统
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PositionInfo.IsCopy">
+            <summary>
+            是否是复制而来的属性
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PositionInfo.Name">
+            <summary>
+            位置名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PositionInfo.Title">
+            <summary>
+            系统标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PositionInfo.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PositionInfo.StyleName">
+            <summary>
+            样式名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PositionInfo.AppendStyle">
+            <summary>
+            附加样式内容
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PositionInfo.Content">
+            <summary>
+            占位内容字符串
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PositionInfo.Width">
+            <summary>
+            位置宽度
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PositionInfo.Height">
+            <summary>
+            位置高度
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PositionInfo.Left">
+            <summary>
+            位置左边距
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PositionInfo.Top">
+            <summary>
+            位置顶边距
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PositionInfo.ZIndex">
+            <summary>
+            位置图层索引
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PositionInfo.Sequence">
+            <summary>
+            优先顺序
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PositionInfo.Background">
+            <summary>
+            背景颜色
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.PositionInfo.Action">
+            <summary>
+            动作
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Service.ComponentService">
+            <summary>
+            系统界面服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:23:22</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Service.ComponentService.#ctor">
+            <summary>
+            系统界面服务。
+            </summary>
+        </member>
+        <member name="M:Peacock.ESB.Service.ComponentService.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名系对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.ComponentService.ExistsTitle(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检查同标题对象是否存在
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.Model.Entity.ControlInfo">
+            <summary>
+            界面控件
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/6/29 11:19:08</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Model.Entity.ControlInfo.ConvertToDTO``1(System.Boolean)">
+            <summary>
+            将当前对象转换为DTO对象。
+            </summary>
+            <typeparam name="T">DTO对象的类型。</typeparam>
+            <param name="isInitRelationData">是否把关联的属性列表一并加载出来，默认不加载</param>
+            <returns>转换结果对象。</returns>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.ControlInfo.Component">
+            <summary>
+            所属组件
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.ControlInfo.IsCopy">
+            <summary>
+            是否是复制而来的属性
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.ControlInfo.Parent">
+            <summary>
+            父级控件
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.ControlInfo.Name">
+            <summary>
+            控件名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.ControlInfo.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.ControlInfo.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.ControlInfo.Controls">
+            <summary>
+            子控件列表
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.IBLL.IPositionBLL">
+            <summary>
+            位置信息操作逻辑接口
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/22 11:50:36</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IPositionBLL.ExistsName(System.String)">
+            <summary>
+            检测同名位置是否存在
+            </summary>
+            <param name="name">位置名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IPositionBLL.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名位置是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 位置名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IPositionBLL.ExistsTitle(System.String)">
+            <summary>
+            检查同标题位置是否存在
+            </summary>
+            <param name="title">位置标题</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IPositionBLL.ExistsTitle(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检查同标题位置是否存在
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.BLL.PositionBLL">
+            <summary>
+            位置信息操作逻辑实现
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 12:03:05</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PositionBLL.GetObjectList(GHSoft.Model.GHR,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="restriction"></param>
+            <param name="pageSize"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PositionBLL.AddObject(Peacock.ESB.DTO.PositionDTO)">
+            <summary>
+            添加对象。
+            </summary>
+            <param name="data">DTO对象。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PositionBLL.UpdateObject(Peacock.ESB.DTO.PositionDTO)">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PositionBLL.DeleteObject(GHSoft.Model.GHR,System.Boolean)">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="restriction">条件对象。</param>
+            <param name="delChild">是否删除子项内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PositionBLL.ExistsName(System.String)">
+            <summary>
+            检测同名位置是否存在
+            </summary>
+            <param name="name">位置名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PositionBLL.ExistsTitle(System.String)">
+            <summary>
+            检查同标题位置是否存在
+            </summary>
+            <param name="title">位置标题</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PositionBLL.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名位置是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 位置名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.PositionBLL.ExistsTitle(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检查同标题位置是否存在
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.BLL.ComponentBLL">
+            <summary>
+            组件信息操作逻辑实现
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 12:03:05</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.BLL.ComponentBLL.GetObjectList(GHSoft.Model.GHR,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="restriction"></param>
+            <param name="pageSize"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.ComponentBLL.AddObject(Peacock.ESB.DTO.ComponentDTO)">
+            <summary>
+            添加对象。
+            </summary>
+            <param name="data">DTO对象。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.ComponentBLL.UpdateObject(Peacock.ESB.DTO.ComponentDTO)">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.ComponentBLL.DeleteObject(GHSoft.Model.GHR,System.Boolean)">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="restriction">条件对象。</param>
+            <param name="delChild">是否删除子项内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.ComponentBLL.ExistsName(System.String)">
+            <summary>
+            检测同名组件是否存在
+            </summary>
+            <param name="name">组件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.ComponentBLL.ExistsTitle(System.String)">
+            <summary>
+            检查同标题组件是否存在
+            </summary>
+            <param name="title">组件标题</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.ComponentBLL.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名组件是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 组件名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.ComponentBLL.ExistsTitle(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检查同标题组件是否存在
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.DTO.PositionDTO">
+            <summary>
+            UI组件位置信息
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/22 10:22:08</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.DTO.PositionDTO.#ctor">
+            <summary>
+            UI组件位置信息
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PositionDTO.SystemId">
+            <summary>
+            所属系统ID
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PositionDTO.SystemName">
+            <summary>
+            所属系统名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PositionDTO.SystemTitle">
+            <summary>
+            所属系统标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PositionDTO.Name">
+            <summary>
+            位置名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PositionDTO.Title">
+            <summary>
+            系统标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PositionDTO.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PositionDTO.Text">
+            <summary>
+            占位内容字符串
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PositionDTO.Width">
+            <summary>
+            位置宽度
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PositionDTO.Height">
+            <summary>
+            位置高度
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PositionDTO.Left">
+            <summary>
+            位置左边距
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PositionDTO.Top">
+            <summary>
+            位置顶边距
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PositionDTO.ZIndex">
+            <summary>
+            位置图层索引
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PositionDTO.Sequence">
+            <summary>
+            优先顺序
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PositionDTO.Background">
+            <summary>
+            背景颜色
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PositionDTO.StyleName">
+            <summary>
+            样式名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PositionDTO.AppendStyle">
+            <summary>
+            附加样式内容
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.PositionDTO.Action">
+            <summary>
+            附加样式内容
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.DTO.ComponentDTO">
+            <summary>
+            系统组件信息
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/22 10:35:15</para>
+            </remarks>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ComponentDTO.SystemId">
+            <summary>
+            所属系统ID
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ComponentDTO.SystemName">
+            <summary>
+            所属系统名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ComponentDTO.SystemTitle">
+            <summary>
+            所属系统标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ComponentDTO.Name">
+            <summary>
+            组件名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ComponentDTO.Title">
+            <summary>
+            组件标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ComponentDTO.Type">
+            <summary>
+            组件类型(swf、html)
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ComponentDTO.Path">
+            <summary>
+            组件存储的相对路径
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ComponentDTO.Description">
+            <summary>
+            组件说明
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ComponentDTO.PositionId">
+            <summary>
+            组件所在默认位置
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ComponentDTO.PositionName">
+            <summary>
+            组件所在默认位置名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ComponentDTO.PositionTitle">
+            <summary>
+            组件所在默认位置标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ComponentDTO.Width">
+            <summary>
+            组件宽度
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ComponentDTO.Height">
+            <summary>
+            组件高度
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ComponentDTO.Left">
+            <summary>
+            组件左边距
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ComponentDTO.Top">
+            <summary>
+            组件顶边距
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ComponentDTO.IsAutoLoad">
+            <summary>
+            是否自动加载组件
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ComponentDTO.Controls">
+            <summary>
+            控件列表
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.DTO.ControlDTO">
+            <summary>
+            UI控件信息。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/22 10:40:47</para>
+            </remarks>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ControlDTO.SystemId">
+            <summary>
+            系统编号
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ControlDTO.SystemName">
+            <summary>
+            系统名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ControlDTO.SystemTitle">
+            <summary>
+            系统标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ControlDTO.ComponentId">
+            <summary>
+            组件编号
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ControlDTO.ComponentName">
+            <summary>
+            组件名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ControlDTO.ComponentTitle">
+            <summary>
+            组件标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ControlDTO.ParentId">
+            <summary>
+            父控件编号
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ControlDTO.ParentName">
+            <summary>
+            父控件名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ControlDTO.ParentTitle">
+            <summary>
+            父控件标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ControlDTO.Name">
+            <summary>
+            控件名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ControlDTO.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ControlDTO.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.ControlDTO.Controls">
+            <summary>
+            子控件列表
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.BLL.ControlBLL">
+            <summary>
+            组件信息操作逻辑实现
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 12:03:05</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.BLL.ControlBLL.GetObjectList(GHSoft.Model.GHR,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="restriction"></param>
+            <param name="pageSize"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.ControlBLL.AddObject(Peacock.ESB.DTO.ControlDTO)">
+            <summary>
+            添加对象。
+            </summary>
+            <param name="data">DTO对象。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.ControlBLL.UpdateObject(Peacock.ESB.DTO.ControlDTO)">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.ControlBLL.DeleteObject(GHSoft.Model.GHR,System.Boolean)">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="restriction">条件对象。</param>
+            <param name="delChild">是否删除子项内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.ControlBLL.ExistsName(System.String)">
+            <summary>
+            检测同名组件是否存在
+            </summary>
+            <param name="name">组件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.ControlBLL.ExistsTitle(System.String)">
+            <summary>
+            检查同标题组件是否存在
+            </summary>
+            <param name="title">组件标题</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.ControlBLL.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名组件是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 组件名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.ControlBLL.ExistsTitle(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检查同标题组件是否存在
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.Service.ControlService">
+            <summary>
+            系统界面服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:23:22</para>
+            </remarks>
+        </member>
+        <member name="T:Peacock.ESB.IService.IControlService">
+            <summary>
+            系统界面服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:21:14</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IService.IControlService.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名系对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IService.IControlService.ExistsTitle(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检查同标题对象是否存在
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.ControlService.#ctor">
+            <summary>
+            系统界面服务。
+            </summary>
+        </member>
+        <member name="M:Peacock.ESB.Service.ControlService.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名系对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.ControlService.ExistsTitle(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检查同标题对象是否存在
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.IBLL.UIBLLGlobal">
+            <summary>
+             逻辑层接口的注入
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-8-16 10:32:40</para>
+            </remarks>
+        </member>
+        <member name="P:Peacock.ESB.IBLL.UIBLLGlobal.ComponentBLL">
+            <summary>
+            组件操作BLL
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.IBLL.UIBLLGlobal.ControlBLL">
+            <summary>
+            控件操作BLL
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.IBLL.UIBLLGlobal.PositionBLL">
+            <summary>
+            位置操作BLL
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.IBLL.UIBLLGlobal.Container">
+            <summary>
+            IoC容器对象
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.IService.UIServiceGlobal">
+            <summary>
+            服务层接口的注入
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-8-16 10:24:20</para>
+            </remarks>
+        </member>
+        <member name="P:Peacock.ESB.IService.UIServiceGlobal.Container">
+            <summary>
+            IoC容器对象
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.IService.IPositionService">
+            <summary>
+            系统界面服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:21:14</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IService.IPositionService.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名系对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IService.IPositionService.ExistsTitle(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检查同标题对象是否存在
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.Model.Enum.UI">
+            <summary>
+            关于界面的相关定义
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012-8-21 10:48:61</para>
+            </remarks>
+        </member>
+        <member name="T:Peacock.ESB.Model.Enum.UI.SequenceType">
+            <summary>
+            组件大小的定义优先级。
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Model.Enum.UI.SequenceType.CodeComponentPosition">
+            <summary>
+            组件代码 > 组件定义 > 位置定义
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Model.Enum.UI.SequenceType.CodePositionComponent">
+            <summary>
+            组件代码 > 位置定义 > 组件定义
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Model.Enum.UI.SequenceType.ComponentCodePosition">
+            <summary>
+            组件定义 > 组件代码 > 位置定义
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Model.Enum.UI.SequenceType.ComponentPositionCode">
+            <summary>
+            组件定义 > 位置定义 > 组件代码
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Model.Enum.UI.SequenceType.PositionCodeComponent">
+            <summary>
+            位置定义 > 组件代码 > 组件定义
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Model.Enum.UI.SequenceType.PositionComponentCode">
+            <summary>
+            位置定义 > 组件定义 > 组件代码
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Model.Enum.UI.ComponentType">
+            <summary>
+            界面类型的枚举
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Model.Enum.UI.ComponentType.SWF">
+            <summary>
+            Flash控件
+            </summary>
+        </member>
+        <member name="F:Peacock.ESB.Model.Enum.UI.ComponentType.HTML">
+            <summary>
+            静态网页控件
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Service.PositionService">
+            <summary>
+            系统界面服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:23:22</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Service.PositionService.#ctor">
+            <summary>
+            系统界面服务。
+            </summary>
+        </member>
+        <member name="M:Peacock.ESB.Service.PositionService.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名系对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.PositionService.ExistsTitle(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检查同标题对象是否存在
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.Model.Entity.ComponentInfo">
+            <summary>
+            系统组件信息
+            </summary>
+            <remarks>
+                <para>    Creator：FRANK-E420</para>
+                <para>CreatedTime：2012-6-21 11:09:11</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Model.Entity.ComponentInfo.ConvertToDTO``1(System.Boolean)">
+            <summary>
+            将当前对象转换为DTO对象。
+            </summary>
+            <typeparam name="T">DTO对象的类型。</typeparam>
+            <param name="isInitRelationData">是否把关联的属性列表一并加载出来，默认不加载</param>
+            <returns>转换结果对象。</returns>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.ComponentInfo.System">
+            <summary>
+            所属系统
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.ComponentInfo.Name">
+            <summary>
+            组件名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.ComponentInfo.Title">
+            <summary>
+            组件标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.ComponentInfo.Type">
+            <summary>
+            组件类型(swf、html)
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.ComponentInfo.Path">
+            <summary>
+            组件存储的相对路径
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.ComponentInfo.Description">
+            <summary>
+            组件说明
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.ComponentInfo.Position">
+            <summary>
+            组件所在默认位置
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.ComponentInfo.IsCopy">
+            <summary>
+            是否是复制而来的属性
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.ComponentInfo.Width">
+            <summary>
+            组件宽度
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.ComponentInfo.Height">
+            <summary>
+            组件高度
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.ComponentInfo.Left">
+            <summary>
+            组件左边距
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.ComponentInfo.Top">
+            <summary>
+            组件顶边距
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.ComponentInfo.IsAutoLoad">
+            <summary>
+            是否自动加载组件
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.ComponentInfo.Controls">
+            <summary>
+            控件列表
+            </summary>
+        </member>
+    </members>
+</doc>

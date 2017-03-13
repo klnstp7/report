@@ -1,0 +1,1017 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Peacock.ESB.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Peacock.ESB.IService.IServiceFolderHelper">
+            <summary>
+            文件夹基本操作
+            </summary>   
+            <remarks>
+                <para>    Creator：WWW-KL56E48W33V</para>
+                <para>CreatedTime：2012-9-12 14:21:19</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IService.IServiceFolderHelper.CopyFolder(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            文件夹拷贝
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1、sSourceFolder: 源文件路径。
+            	2、sDestFolder：目标文件路径
+            	3、sSpecifyFolderName：指定文件夹名称（复制到目标文件夹下的文件夹名）
+            	4、是否备份目标文件
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IService.IServiceFolderHelper.ZipFolder(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            压缩文件
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1、sSourceFolderPath: 源文件路径
+            	2、sZippedFolderPath：压缩文件路径
+            	3、sZippedFileName：压缩文件名 
+            </param>
+            <returns>返回压缩文件路径</returns>
+        </member>
+        <member name="T:Peacock.ESB.Coder64">
+            <summary>
+            Coder64（给权限码用的）
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/11/30 10:43:34</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Coder64.Compress(System.Int64)">
+            <summary>
+            十进制转换为 64 进制
+            </summary>
+            <param name="number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Coder64.UnCompress(System.String)">
+            <summary>
+            64 进制转换为 10 进制
+            </summary>
+            <param name="decompStr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.BLL.ParameterBLL">
+            <summary>
+            参数参数操作逻辑实现
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 12:03:05</para>
+            </remarks>
+        </member>
+        <member name="T:Peacock.ESB.IBLL.IParameterBLL">
+            <summary>
+            参数参数操作逻辑接口
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/22 11:50:36</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IParameterBLL.GetParameterTree">
+            <summary>
+            获取对象树列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IParameterBLL.GetParameterTree(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象树列表
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IParameterBLL.GetSysParameterTree(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取系统参数的集合以树结构完成
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.ParameterBLL.GetParameterTree">
+            <summary>
+            获取对象树列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.ParameterBLL.GetParameterTree(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象树列表
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.ParameterBLL.AddObject(GHSoft.DTO.ParameterDTO)">
+            <summary>
+            添加对象。
+            </summary>
+            <param name="data">DTO对象。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.ParameterBLL.UpdateObject(GHSoft.DTO.ParameterDTO)">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.ParameterBLL.DeleteObject(GHSoft.Model.GHR,System.Boolean)">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="restriction">条件对象。</param>
+            <param name="delChild">是否删除子项内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.ParameterBLL.GetSysParameterTree(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取系统参数的集合以树结构完成
+            </summary>
+            <param name="InputDT"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.IService.IParameterService">
+            <summary>
+            系统参数服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:21:14</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IService.IParameterService.GetParameterTree(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象树列表
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IService.IParameterService.GetSysParameterTree(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取系统参数的集合以树结构完成
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.BLL.SystemInfoBLL">
+            <summary>
+            系统界面信息操作逻辑实现
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 12:03:05</para>
+            </remarks>
+        </member>
+        <member name="T:Peacock.ESB.IBLL.ISystemInfoBLL">
+            <summary>
+            系统界面信息操作逻辑接口
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/22 11:50:36</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.ISystemInfoBLL.ExistsName(System.String)">
+            <summary>
+            检测同名系统界面是否存在
+            </summary>
+            <param name="name">系统名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.ISystemInfoBLL.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名系统界面是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 系统名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.ISystemInfoBLL.ExistsTitle(System.String)">
+            <summary>
+            检查同标题系统是否存在
+            </summary>
+            <param name="title">系统标题</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.ISystemInfoBLL.ExistsTitle(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检查同标题系统是否存在
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.SystemInfoBLL.AddObject(Peacock.ESB.DTO.SystemInfoDTO)">
+            <summary>
+            添加对象。
+            </summary>
+            <param name="data">DTO对象。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.SystemInfoBLL.UpdateObject(Peacock.ESB.DTO.SystemInfoDTO)">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.SystemInfoBLL.DeleteObject(GHSoft.Model.GHR,System.Boolean)">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="restriction">条件对象。</param>
+            <param name="delChild">是否删除子项内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.SystemInfoBLL.ExistsName(System.String)">
+            <summary>
+            检测同名系统界面是否存在
+            </summary>
+            <param name="name">系统名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.SystemInfoBLL.ExistsTitle(System.String)">
+            <summary>
+            检查同标题系统是否存在
+            </summary>
+            <param name="title">系统标题</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.SystemInfoBLL.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名系统界面是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 系统名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.SystemInfoBLL.ExistsTitle(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检查同标题系统是否存在
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.IService.ESBServiceGlobal">
+            <summary>
+            服务层接口的注入
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-8-16 10:24:20</para>
+            </remarks>
+        </member>
+        <member name="P:Peacock.ESB.IService.ESBServiceGlobal.Container">
+            <summary>
+            IoC容器对象
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.BLL.FolderHelperBLL">
+            <summary>
+            文件夹基本操作
+            </summary>
+            <remarks>
+                <para>    Creator：RoseGao</para>
+                <para>CreatedTime：2012-9-12 10:34:12</para>
+            </remarks>
+        </member>
+        <member name="T:Peacock.ESB.IBLL.IFolderHelperBLL">
+            <summary>
+            文件夹基本操作
+            </summary>   
+            <remarks>
+                <para>    Creator：RoseGao</para>
+                <para>CreatedTime：2012-9-12 15:49:34</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IFolderHelperBLL.CopyFolder(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            文件夹拷贝
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1、sSourceFolder: 源文件路径。
+            	2、sDestFolder：目标文件路径
+            	3、sSpecifyFolderName：指定文件夹名称（复制到目标文件夹下的文件夹名）
+            	4、是否备份目标文件
+            </param>
+        </member>
+        <member name="M:Peacock.ESB.IBLL.IFolderHelperBLL.ZipFolder(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            压缩文件
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1、sSourceFolderPath: 源文件路径
+            	2、sZippedFolderPath：压缩文件路径
+            	3、sZippedFileName：压缩文件名 
+            </param>       
+        </member>
+        <member name="M:Peacock.ESB.BLL.FolderHelperBLL.CreateFolder(System.String)">
+            <summary>
+            创建文件夹
+            </summary>
+            <param name="sFolderPath">文件夹路径</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.FolderHelperBLL.CopyFolder(System.String,System.String,System.String@,System.String,System.Boolean)">
+            <summary>
+            把文件夹复制到另一个文件夹下
+            </summary>
+            <param name="sSourceFolder">源文件夹</param>
+            <param name="sDestFolder">目标文件夹</param>
+            <param name="sSpecifyFolderName">复制到目标文件夹下的文件夹名</param>
+            <param name="sMsg">异常信息描述</param>
+            <param name="bBackUp">如果目标文件夹存在，是否需要备份</param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.FolderHelperBLL.CopyFolder(System.String,System.String,System.Boolean)">
+            <summary>
+             复制文件夹
+             </summary>
+             <param name="sSourceFolderPath">源文件夹路径</param>
+             <param name="sDestFolderPath">目标文件夹路径</param>
+             <param name="bBackUp">如果目标文件夹存在，是否需要备份</param>
+             <returns>受影响的文件数量</returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.FolderHelperBLL.ZipFolder(System.String,System.String,System.String)">
+            <summary>
+            压缩文件夹
+            </summary>
+            <param name="sSourceFolderPath">源文件夹物理地址</param>
+            <param name="sZippedFolderPath">目标文件夹物理地址</param>
+            <param name="sZippedFileName">压缩文件名</param>
+        </member>
+        <member name="M:Peacock.ESB.BLL.FolderHelperBLL.ZipFolder(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            压缩文件夹
+            </summary>
+            <param name="sSourceFolderPath">源文件夹物理地址</param>
+            <param name="sZippedFolderPath">目标文件夹物理地址</param>
+            <param name="sZippedFileName">压缩文件名</param>
+            <param name="iZipLevel">压缩等级，0-9，数字越大压缩质量越好(默认值=6)</param>
+        </member>
+        <member name="M:Peacock.ESB.BLL.FolderHelperBLL.ZipFiles(System.String,System.String,ICSharpCode.SharpZipLib.Zip.ZipOutputStream)">
+            <summary>
+            压缩文件
+            </summary>
+            <param name="sSourceFolderPath">源文件夹物理地址</param>
+            <param name="sFolderPath">文件路径</param>
+            <param name="zosStream">输出流</param>
+        </member>
+        <member name="M:Peacock.ESB.BLL.FolderHelperBLL.CopyFolder(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            文件夹拷贝
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1、sSourceFolder: 源文件路径。
+            	2、sDestFolder：目标文件路径
+            	3、sSpecifyFolderName：指定文件夹名称（复制到目标文件夹下的文件夹名）
+            	4、是否备份目标文件
+            </param>
+            <returns>返回是否拷贝成功</returns>
+        </member>
+        <member name="M:Peacock.ESB.BLL.FolderHelperBLL.ZipFolder(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            压缩文件
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1、sSourceFolderPath: 源文件路径
+            	2、sZippedFolderPath：压缩文件路径
+            	3、sZippedFileName：压缩文件名 
+            </param>
+            <returns>返回压缩文件路径</returns>
+        </member>
+        <member name="T:Peacock.ESB.BLL.DBHelper">
+            <summary>
+            数据助手。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/5/16 17:12:12</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.BLL.DBHelper.GetCount``1(System.String,System.String,System.Object[])">
+            <summary>
+            用于统计行数
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="countBy"></param>
+            <param name="hql"></param>
+            <param name="paramList"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.Model.Entity.SystemInfo">
+            <summary>
+            系统信息(给客户组装生成的目标系统，不是我们的报告生成系统、内业系统、外采系统，这些在ESB里面称做组件）
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/22 9:29:08</para>
+            </remarks>
+        </member>
+        <member name="T:Peacock.ESB.Model.AbstratDataObjectBaseESB`1">
+            <summary>
+            数据实体对象的抽象基类。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/22 9:25:28</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Model.Entity.SystemInfo.ConvertToDTO``1(System.Boolean)">
+            <summary>
+            将当前对象转换为DTO对象。
+            </summary>
+            <typeparam name="T">DTO对象的类型。</typeparam>
+            <param name="isInitRelationData">是否把关联的属性列表一并加载出来，默认不加载</param>
+            <returns>转换结果对象。</returns>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.SystemInfo.Name">
+            <summary>
+            系统名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.SystemInfo.Title">
+            <summary>
+            系统标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.SystemInfo.RootUrl">
+            <summary>
+            系统根地址
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.SystemInfo.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.SystemInfo.SecurityUrl">
+            <summary>
+            安全文件地址
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.SystemInfo.ServiceUrl">
+            <summary>
+            服务地址
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.SystemInfo.DBType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.SystemInfo.Database">
+            <summary>
+            数据库名
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.SystemInfo.DBUser">
+            <summary>
+            数据库用户名
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.SystemInfo.DBPassword">
+            <summary>
+            数据库密码
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.SystemInfo.DBAddress">
+            <summary>
+            数据库地址
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.Model.Entity.SystemInfo.Theme">
+            <summary>
+            样式
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.DTO.SystemInfoDTO">
+            <summary>
+            系统信息DTO
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-9-5 11:56:45</para>
+            </remarks>
+        </member>
+        <member name="P:Peacock.ESB.DTO.SystemInfoDTO.Name">
+            <summary>
+            系统名称
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.SystemInfoDTO.Title">
+            <summary>
+            系统标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.SystemInfoDTO.RootUrl">
+            <summary>
+            系统根地址
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.SystemInfoDTO.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.SystemInfoDTO.SecurityUrl">
+            <summary>
+            安全文件地址（没有用到了）
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.SystemInfoDTO.ServiceUrl">
+            <summary>
+            服务地址（给别人调用的服务地址）
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.SystemInfoDTO.DBType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.SystemInfoDTO.Database">
+            <summary>
+            数据库名
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.SystemInfoDTO.DBUser">
+            <summary>
+            数据库用户名
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.SystemInfoDTO.DBPassword">
+            <summary>
+            数据库密码
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.SystemInfoDTO.DBAddress">
+            <summary>
+            数据库地址
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.DTO.SystemInfoDTO.Theme">
+            <summary>
+            样式（）
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.IBLL.ESBBLLGlobal">
+            <summary>
+             逻辑层接口的注入
+            </summary>
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-8-16 10:32:40</para>
+            </remarks>
+        </member>
+        <member name="P:Peacock.ESB.IBLL.ESBBLLGlobal.SystemBLL">
+            <summary>
+            系统操作BLL
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.IBLL.ESBBLLGlobal.ParameterBLL">
+            <summary>
+            系统参数BLL
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.IBLL.ESBBLLGlobal.FolderBLL">
+            <summary>
+            文件操作BLL
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.IBLL.ESBBLLGlobal.Container">
+            <summary>
+            IoC容器对象
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.BLL.ESBInitializeBLL">
+            <summary>
+            界面初始化功能（ESB数据库的初始化，目前没有用到）
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 12:03:05</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.BLL.ESBInitializeBLL.Initialize(System.Object[])">
+            <summary>
+            初始化方法。
+            </summary>
+            <param name="args">可选参数列表。</param>
+            <returns>是否初始化成功。</returns>
+        </member>
+        <member name="T:Peacock.ESB.InitDataTable">
+            <summary>
+            初始化数据表的接口（ESB初始化数据的接口）
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/10/9 14:45:34</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.InitDataTable.Initialize(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            初始化数据表
+            </summary>
+            <param name="properties">数据库连接设置</param>
+            <returns>权限代码字符串 "123123,123123,123123123,....."</returns>
+        </member>
+        <member name="T:Peacock.ESB.Helper.ParameterList">
+            <summary>
+            为了区别ESB里面的参数列表和公共库里面的参数列表。
+            为了解决ESB里面的参数列表和公共库里面数据列表的冲突。
+            [XmlRoot( "dictionary" )]
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.AuthorityAttribute">
+            <summary>
+            权限属性
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/6/29 10:59:58</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.AuthorityAttribute.#ctor(System.String,System.Boolean)">
+            <summary>
+            新建权限属性
+            </summary>
+            <param name="title">权限标题|行为权限集合 示例 用户权限$Add|添加,Delete|删除,Search|查询</param>
+            <param name="except">可否排除权限验证</param>
+            <param name="isCollection">是否表示为权限集合</param>
+        </member>
+        <member name="P:Peacock.ESB.AuthorityAttribute.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Peacock.ESB.AuthorityAttribute.IsCollection">
+            <summary>
+            判断该权限是否属于权限集合设置，若属于权限集合设置，该属性只有给类设置的时候才有用
+            设置为false的时候，title属性和原有一样，表示权限的标题
+            若设置为true，则title中表达的意义为类权限名称、行为权限标题，行为权限名称（方法名称）
+            </summary>
+        </member>
+        <member name="T:Peacock.ESB.Service.SystemInfoService">
+            <summary>
+            系统界面服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:23:22</para>
+            </remarks>
+        </member>
+        <member name="T:Peacock.ESB.IService.ISystemInfoService">
+            <summary>
+            系统界面服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:21:14</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.IService.ISystemInfoService.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名系对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.IService.ISystemInfoService.ExistsTitle(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检查同标题对象是否存在
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.SystemInfoService.GetObjectList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象列表
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.SystemInfoService.GetObjectCount(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象数量
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.SystemInfoService.GetObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            	2 [可选]是否获取子对象。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.SystemInfoService.GetObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号获取对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 id: 对象的TID
+            	2 [可选]是否获取子对象。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.SystemInfoService.AddObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            添加对象
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 DTO: 已序列化为XML的DTO对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.SystemInfoService.UpdateObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 DTO: 已序列化为XML的DTO对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.SystemInfoService.DeleteObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号删除对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 id: 要删除对象的ID.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.SystemInfoService.DeleteObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.SystemInfoService.Exists(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.SystemInfoService.#ctor">
+            <summary>
+            系统界面服务。
+            </summary>
+        </member>
+        <member name="M:Peacock.ESB.Service.SystemInfoService.ExistsName(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测同名系对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 name: 对象名称。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.SystemInfoService.ExistsTitle(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检查同标题对象是否存在
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.Service.ParameterService">
+            <summary>
+            系统界面服务。
+            </summary>
+            <remarks>
+                <para>    Creator：lally</para>
+                <para>CreatedTime：2012/8/23 17:23:22</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Service.ParameterService.GetObjectList(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象列表
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.ParameterService.GetObjectCount(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象数量
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.ParameterService.GetObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            	2 [可选]是否获取子对象。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.ParameterService.GetObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号获取对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 id: 对象的TID
+            	2 [可选]是否获取子对象。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.ParameterService.AddObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            添加对象
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 DTO: 已序列化为XML的DTO对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.ParameterService.UpdateObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            修改对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 DTO: 已序列化为XML的DTO对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.ParameterService.DeleteObjectById(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            按照编号删除对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 id: 要删除对象的ID.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.ParameterService.DeleteObject(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            删除对象信息
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            	2 bool : [可选]是否删除子项内容。
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.ParameterService.Exists(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            检测对象是否存在。
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1 GHRestriction: 已序列化为XML的GHRestriction对象.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.ParameterService.#ctor">
+            <summary>
+            系统界面服务。
+            </summary>
+        </member>
+        <member name="M:Peacock.ESB.Service.ParameterService.GetParameterTree(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Peacock.ESB.Service.ParameterService.GetSysParameterTree(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            获取系统参数的集合以树结构完成
+            </summary>
+            <param name="dtoInput"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Peacock.ESB.Service.ServiceFolderHelper">
+            <summary>
+            文件夹基本操作
+            </summary>
+            <remarks>
+                <para>    Creator：RoseGao</para>
+                <para>CreatedTime：2012-9-12 14:22:19</para>
+            </remarks>
+        </member>
+        <member name="M:Peacock.ESB.Service.ServiceFolderHelper.CopyFolder(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            文件夹拷贝
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1、sSourceFolder: 源文件路径。
+            	2、sDestFolder：目标文件路径
+            	3、sSpecifyFolderName：指定文件夹名称（复制到目标文件夹下的文件夹名）
+            	4、是否备份目标文件
+            </param>
+        </member>
+        <member name="M:Peacock.ESB.Service.ServiceFolderHelper.ZipFolder(GHSoft.DTO.WSInputDTO{GHSoft.Collections.SerializableDictionary{System.String,System.Object}})">
+            <summary>
+            压缩文件
+            </summary>
+            <param name="dtoInput">
+            输入的DTO对象。
+            参数:
+            	1、sSourceFolderPath: 源文件路径
+            	2、sZippedFolderPath：压缩文件路径
+            	3、sZippedFileName：压缩文件名 
+            </param>
+            <returns>返回压缩文件路径</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GHSoft.IService</name>
+    </assembly>
+    <members>
+        <member name="T:GHSoft.IService.IWSService">
+            <summary>
+            项目中提供的WS调用服务
+            </summary>   
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-4-19 9:53:11</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.IService.IWSService.WSMethod(System.String)">
+            <summary>
+            项目中提供的WS调用服务
+            </summary>
+            <param name="inputDTOXML">调用对象WSInputDTO的XML字符串</param>
+            <returns>WSOutputDTO的XML字符串</returns>
+        </member>
+        <member name="M:GHSoft.IService.IWSService.GetServiceList(System.String)">
+            <summary>
+            对外提供本项目提供的服务信息
+            </summary>
+            <param name="inputDTOXML">调用对象WSInputDTO的XML字符串</param>
+            <returns>WSOutputDTO的XML字符串</returns>
+        </member>
+        <member name="T:GHSoft.IService.ICallWSService">
+            <summary>
+            调用外部服务接口的服务
+            </summary>   
+            <remarks>
+                <para>    Creator：GORSON</para>
+                <para>CreatedTime：2012-4-19 9:54:27</para>
+            </remarks>
+        </member>
+        <member name="M:GHSoft.IService.ICallWSService.CallWSMethod(System.String)">
+            <summary>
+            调用外部的Web Service方法
+            </summary>
+            <param name="inputDTOXML">调用对象WSInputDTO的XML字符串</param>
+            <returns>WSOutputDTO的XML字符串</returns>
+        </member>
+        <member name="M:GHSoft.IService.ICallWSService.GetESBServiceList(System.String)">
+            <summary>
+            获取ESB里的服务列表
+            </summary>
+            <param name="inputDTOXML">调用对象WSInputDTO的XML字符串</param>
+            <returns>WSOutputDTO的XML字符串</returns>
+        </member>
+    </members>
+</doc>
